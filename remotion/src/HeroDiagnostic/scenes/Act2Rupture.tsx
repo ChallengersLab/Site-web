@@ -146,7 +146,7 @@ export const Act2Rupture: React.FC = () => {
                   lineHeight: 1.4,
                 }}
               >
-                Les bons {"\u00e9"}l{"\u00e9"}ments, vous les avez.
+                Les bons éléments, vous les avez.
               </span>
 
               {/* Line 2 — same as Act 1 */}
@@ -240,7 +240,7 @@ export const Act2Rupture: React.FC = () => {
                 transform: `scale(${pivotTextScale})`,
               }}
             >
-              Le probl{"\u00e8"}me, c{"'"}est pas votre {"\u00e9"}quipe.
+              {"Le problème, c'est pas votre équipe."}
             </div>
           </div>
         </>

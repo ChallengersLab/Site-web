@@ -61,7 +61,7 @@ export const Act1Mirror: React.FC = () => {
       >
         {/* Line 1: Typewriter */}
         <Typewriter
-          text="Les bons \u00e9l\u00e9ments, vous les avez."
+          text="Les bons éléments, vous les avez."
           startFrame={15}
           msPerChar={35}
           style={{

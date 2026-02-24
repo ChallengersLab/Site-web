@@ -112,7 +112,7 @@ export const Act3Response: React.FC = () => {
               textAlign: "center",
             }}
           >
-            {`Ce qu\u2019on livre\u00A0:`}
+            {"Ce qu\u2019on livre\u00a0:"}
           </span>
         </div>
       )}
@@ -162,7 +162,7 @@ export const Act3Response: React.FC = () => {
               }}
             >
               <GradientText>
-                {`Vos \u00e9quipes performent. Votre croissance acc\u00e9l\u00e8re.`}
+                {"Vos équipes performent. Votre croissance accélère."}
               </GradientText>
             </div>
           </div>
