@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Ressource } from "@/lib/ressources";
+import { ressources } from "@/lib/ressources";
 
 function renderMarkdown(content: string) {
   const lines = content.split("\n");
@@ -395,6 +396,44 @@ export function ArticleLayout({ ressource }: { ressource: Ressource }) {
             </a>
           </div>
         </div>
+
+        {/* Related articles */}
+        {ressource.relatedSlugs && ressource.relatedSlugs.length > 0 && (
+          <div className="mt-16">
+            <div className="section-divider mb-10" />
+            <h2 className="font-display text-[22px] text-white/85">
+              Articles connexes
+            </h2>
+            <div className="mt-6 space-y-4">
+              {ressource.relatedSlugs.map((slug) => {
+                const related = ressources.find((r) => r.slug === slug);
+                if (!related) return null;
+                return (
+                  <Link
+                    key={slug}
+                    href={`/ressources/${slug}`}
+                    className="group flex items-center gap-4 rounded-xl border border-white/[0.04] p-5 transition-all hover:border-white/[0.08] hover:bg-white/[0.02]"
+                  >
+                    <span
+                      className="inline-flex shrink-0 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.12em]"
+                      style={{
+                        background: `${related.tagColor}12`,
+                        border: `1px solid ${related.tagColor}25`,
+                        color: related.tagColor,
+                      }}
+                    >
+                      {related.tag}
+                    </span>
+                    <span className="flex-1 text-[14px] font-medium text-white/60 transition-colors group-hover:text-white/80">
+                      {related.title}
+                    </span>
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0 text-white/20 transition-all group-hover:text-white/50 group-hover:translate-x-0.5" />
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Back link */}
         <div className="mt-10">

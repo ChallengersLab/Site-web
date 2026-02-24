@@ -13,6 +13,7 @@ export interface Ressource {
   soon: boolean;
   content: string;
   faq?: { question: string; answer: string }[];
+  relatedSlugs?: string[];
 }
 
 export const ressources: Ressource[] = [
@@ -49,6 +50,8 @@ export const ressources: Ressource[] = [
           "La mise en place d'une machine de prospection B2B assistée par IA prend entre 2 et 4 semaines. La première semaine est consacrée au sourcing et à l'enrichissement de la base, la deuxième aux séquences et aux workflows d'automatisation, et les semaines suivantes à l'itération sur les résultats.",
       },
     ],
+
+    relatedSlugs: ["prompt-engineering-commercial", "automatisation-crm-workflows-ia", "audit-stack-sales-checklist"],
     content: `## Pourquoi la prospection B2B traditionnelle ne fonctionne plus
 
 La prospection B2B a radicalement changé. Les acheteurs B2B reçoivent en moyenne 120 emails de prospection par semaine. Le cold calling classique affiche des taux de conversion sous les 1%. Les équipes commerciales perdent 60% de leur temps sur des tâches qui ne génèrent pas directement de revenu.
@@ -166,6 +169,8 @@ Résultat moyen : triplement du nombre de rendez-vous qualifiés en 8 semaines.`
           "Challenger Sales se distingue car il se concentre sur l'enseignement commercial (commercial insight) plutôt que sur la simple découverte des besoins. Là où SPIN Selling pose des questions et MEDDIC qualifie, le Challenger apporte une perspective nouvelle au prospect et reframe son problème. C'est particulièrement efficace quand l'acheteur ne sait pas encore qu'il a un problème.",
       },
     ],
+
+    relatedSlugs: ["head-of-sales-fractionne-pme", "prospection-b2b-ia-guide-complet", "prompt-engineering-commercial"],
     content: `## La recherche derrière Challenger Sales
 
 En 2011, Matthew Dixon et Brent Adamson ont publié "The Challenger Sale" après avoir étudié les comportements de 6 000 commerciaux B2B dans 90 entreprises. Leur conclusion a bouleversé le monde de la vente : le profil de commercial qui surperforme n'est pas celui qu'on croit.
@@ -287,6 +292,8 @@ Résultat moyen : +85% de taux de closing sur les deals complexes.`,
           "L'intégration de l'IA dans un CRM passe par des workflows automatisés : enrichissement de fiches contacts via API, scoring prédictif des leads, rédaction automatique de résumés d'appels, et alertes intelligentes basées sur les signaux d'intention. Les plateformes Make et n8n permettent de connecter Claude ou GPT-4 directement dans ces workflows.",
       },
     ],
+
+    relatedSlugs: ["crm-b2b-guide-configuration", "ia-ventes-b2b-roi", "prospection-b2b-ia-guide-complet"],
     content: `## Pourquoi automatiser son CRM en 2026
 
 Un CRM non automatisé est un CRM mort. Les données montrent que les commerciaux passent en moyenne 5,5 heures par semaine sur la saisie manuelle dans leur CRM. C'est du temps qui ne génère aucun revenu.
@@ -436,6 +443,8 @@ Résultat moyen : 15 heures gagnées par personne et par semaine.`,
           "Un Head of Sales fractionné coûte généralement entre 3 000€ et 7 000€ par mois, contre 120 000€ à 180 000€ de package annuel pour un Head of Sales en CDI (salaire + variable + charges). C'est 3 à 5 fois moins cher pour une expertise souvent supérieure.",
       },
     ],
+
+    relatedSlugs: ["challenger-sales-methode-b2b", "audit-stack-sales-checklist", "ia-ventes-b2b-roi"],
     content: `## Le problème du recrutement commercial en PME
 
 Vous êtes CEO d'une PME B2B de 20 à 50 collaborateurs. Vos ventes stagnent ou croissent de manière chaotique. La solution évidente semble être de recruter un Head of Sales.
@@ -541,6 +550,8 @@ ChallengersLab propose un service de Head of Sales fractionné qui combine direc
           "Un commercial B2B peut utiliser l'IA (Claude, ChatGPT) pour 4 tâches principales : la recherche pré-call (analyse du prospect en 30 secondes), la rédaction d'emails personnalisés, la préparation d'argumentaires adaptés au secteur, et l'analyse post-call pour identifier les next steps et les objections non traitées.",
       },
     ],
+
+    relatedSlugs: ["prospection-b2b-ia-guide-complet", "automatisation-crm-workflows-ia", "challenger-sales-methode-b2b"],
     content: `## Pourquoi le prompt engineering est une compétence commerciale
 
 L'IA est disponible pour tous. La différence entre un commercial qui gagne 15 minutes par jour et un qui gagne 2 heures réside dans la qualité de ses prompts.
@@ -757,6 +768,8 @@ Chez ChallengersLab, on intègre le prompt engineering dans nos formations Chall
           "Un audit de stack sales B2B couvre 5 domaines : le CRM (configuration, adoption, données), la prospection (sources, séquences, enrichissement), le pipeline (étapes, scoring, vélocité), le reporting (KPIs, dashboards, rituels) et l'automatisation (workflows, intégrations, IA). Chaque domaine se note sur 6 points pour un score total sur 30.",
       },
     ],
+
+    relatedSlugs: ["crm-b2b-guide-configuration", "automatisation-crm-workflows-ia", "ia-ventes-b2b-roi"],
     content: `## Comment utiliser cette checklist
 
 Répondez à chaque point par oui ou non. Comptez vos "oui". Votre score indique votre maturité :
@@ -860,6 +873,8 @@ C'est exactement le type de situation où ChallengersLab intervient. On diagnost
           "L'investissement pour intégrer l'IA dans un process de vente B2B varie de 500€ à 5 000€ par mois selon la taille de l'équipe et la complexité des workflows. Cela inclut les outils (CRM, automatisation, IA), la configuration et la formation. Le point de rentabilité est généralement atteint entre 4 et 8 semaines.",
       },
     ],
+
+    relatedSlugs: ["automatisation-crm-workflows-ia", "prospection-b2b-ia-guide-complet", "head-of-sales-fractionne-pme"],
     content: `## L'IA dans les ventes B2B : au-delà du buzz
 
 Tout le monde parle d'IA. Peu mesurent son impact réel sur les ventes. Cet article présente des chiffres concrets, issus du terrain et d'études de référence, pour vous aider à évaluer le retour sur investissement de l'IA dans votre organisation commerciale.
@@ -1038,6 +1053,8 @@ Chez ChallengersLab, on commence toujours par un diagnostic. Pas de promesses en
           "Pour une PME B2B de 10 à 50 collaborateurs, HubSpot (version gratuite puis Pro) et Pipedrive sont les deux meilleurs choix. HubSpot est plus complet (marketing + sales) mais plus complexe. Pipedrive est plus simple, orienté pipeline, et moins cher. Salesforce n'est recommandé qu'à partir de 50+ collaborateurs et avec un admin dédié.",
       },
     ],
+
+    relatedSlugs: ["automatisation-crm-workflows-ia", "audit-stack-sales-checklist", "ia-ventes-b2b-roi"],
     content: `## Le problème n'est pas l'outil
 
 Chaque année, des milliers de PME B2B investissent dans un CRM. 6 mois plus tard, seuls 20% des commerciaux l'utilisent vraiment. Le CRM coûte 3 000€/mois et personne ne s'en sert.
