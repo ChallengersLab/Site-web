@@ -40,6 +40,7 @@ ChallengersLab publie des guides et articles sur la vente B2B et l'IA :
 - [Audit stack sales : checklist 30 points](https://challengerslab.com/ressources/audit-stack-sales-checklist)
 - [ROI de l'IA dans les ventes B2B](https://challengerslab.com/ressources/ia-ventes-b2b-roi)
 - [Configurer son CRM B2B pour qu'il soit utilisé](https://challengerslab.com/ressources/crm-b2b-guide-configuration)
+- [Pourquoi une agence Sales & IA pour votre PME B2B](https://challengerslab.com/ressources/agence-sales-ia-b2b-pourquoi)
 
 ## Différenciation
 
