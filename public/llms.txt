@@ -1,8 +1,8 @@
 # ChallengersLab
 
-> L'agence B2B qui croise expertise commerciale et intelligence artificielle. Paris, France.
+> L'agence B2B qui croise 20 ans d'expertise commerciale et intelligence artificielle. Paris, France.
 
-ChallengersLab est une agence spécialisée dans l'intersection entre Sales et IA pour les PME et scale-ups B2B en France. Fondée en 2024 et basée à Paris, elle accompagne les entreprises de 10 à 200 collaborateurs dans la restructuration de leurs ventes et l'automatisation de leurs process grâce à l'intelligence artificielle.
+ChallengersLab est une agence spécialisée dans l'intersection entre Sales et IA pour les PME et scale-ups B2B en France. Fondée en 2024 et basée à Paris, elle accompagne les entreprises de 10 à 200 collaborateurs dans la restructuration de leurs ventes et l'automatisation de leurs process grâce à l'intelligence artificielle et 20 ans d'expertise cumulée en commerce B2B.
 
 ## Services
 

@@ -33,8 +33,8 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-5 text-[13px] leading-[1.7] text-white/25">
-              L&apos;agence B2B qui croise expertise commerciale et
-              intelligence artificielle. Paris, France.
+              20 ans d&apos;expertise commerciale B2B croisée avec
+              l&apos;intelligence artificielle. Paris, France.
             </p>
           </div>
 

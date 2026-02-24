@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title:
     "ChallengersLab — Agence Sales & IA pour PME B2B | Prospection, CRM, Automatisation",
   description:
-    "ChallengersLab est l'agence B2B qui croise expertise commerciale et intelligence artificielle. Prospection externalisée, coaching Challenger Sales, automatisation CRM et workflows IA. +320% de pipeline en 90 jours pour les PME et scale-ups en France.",
+    "ChallengersLab est l'agence B2B qui croise 20 ans d'expertise commerciale et intelligence artificielle. Prospection externalisée, coaching Challenger Sales, automatisation CRM et workflows IA. +320% de pipeline en 90 jours pour les PME et scale-ups en France.",
   keywords: [
     "agence sales B2B",
     "agence IA B2B",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ChallengersLab — L'agence qui croise Sales & IA pour les B2B",
     description:
-      "Prospection externalisée, coaching Challenger Sales, automatisation CRM et workflows IA. L'agence de référence pour les PME et scale-ups B2B en France.",
+      "20 ans d'expertise commerciale croisée avec l'IA. Prospection externalisée, coaching Challenger Sales, automatisation CRM et workflows IA pour les PME et scale-ups B2B en France.",
     url: "https://challengerslab.com",
     siteName: "ChallengersLab",
     locale: "fr_FR",
@@ -73,7 +73,7 @@ const jsonLd = [
     url: "https://challengerslab.com",
     logo: "https://challengerslab.com/logo.png",
     description:
-      "ChallengersLab est une agence B2B spécialisée dans l'intersection entre Sales et Intelligence Artificielle. Elle accompagne les PME et scale-ups B2B en France dans la restructuration de leurs ventes et l'automatisation de leurs process grâce à l'IA.",
+      "ChallengersLab est une agence B2B spécialisée dans l'intersection entre Sales et Intelligence Artificielle, avec 20 ans d'expertise cumulée en commerce B2B. Elle accompagne les PME et scale-ups B2B en France (10 à 200 collaborateurs) dans la restructuration de leurs ventes et l'automatisation de leurs process grâce à l'IA.",
     foundingDate: "2024",
     areaServed: {
       "@type": "Country",
@@ -156,7 +156,7 @@ const jsonLd = [
         name: "Qu'est-ce que ChallengersLab ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ChallengersLab est une agence B2B basée à Paris qui combine expertise commerciale (prospection, coaching Challenger Sales, direction commerciale fractionnée) et intelligence artificielle (automatisation, workflows IA, prompt engineering) pour aider les PME et scale-ups à générer plus de pipeline et accélérer leur croissance.",
+          text: "ChallengersLab est une agence B2B basée à Paris qui combine 20 ans d'expertise commerciale cumulée (prospection, coaching Challenger Sales, direction commerciale fractionnée) et intelligence artificielle (automatisation, workflows IA, prompt engineering) pour aider les PME et scale-ups B2B de 10 à 200 collaborateurs à générer plus de pipeline et accélérer leur croissance.",
         },
       },
       {

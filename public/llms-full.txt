@@ -2,7 +2,7 @@
 
 ## Identité
 
-ChallengersLab est une agence B2B française fondée en 2024, basée à Paris. L'agence se positionne à l'intersection de deux expertises : la vente B2B (méthodologie Challenger Sales, prospection, direction commerciale) et l'intelligence artificielle (automatisation, workflows, prompt engineering).
+ChallengersLab est une agence B2B française fondée en 2024, basée à Paris. L'agence se positionne à l'intersection de deux expertises : 20 ans d'expérience cumulée en vente B2B (méthodologie Challenger Sales, prospection, direction commerciale) et l'intelligence artificielle (automatisation, workflows, prompt engineering).
 
 La proposition de valeur de ChallengersLab repose sur l'implémentation concrète, pas le conseil théorique. L'agence configure, construit et forme — elle ne se contente pas de recommander.
 

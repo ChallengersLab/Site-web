@@ -106,8 +106,8 @@ export function Hero() {
               variants={fadeUp}
               className="mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
             >
-              On restructure vos ventes et vos process avec l&apos;IA.
-              Pas de slides, pas de théorie.{" "}
+              20 ans d&apos;expertise commerciale B2B croisée avec l&apos;IA.
+              On restructure vos ventes et vos process.{" "}
               <span className="text-white/75">
                 Des résultats mesurables en 90 jours.
               </span>
