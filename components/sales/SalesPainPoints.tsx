@@ -4,58 +4,35 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TiltCard } from "@/components/ui/TiltCard";
-import { Clock, AlertTriangle, CreditCard, Target, Users } from "lucide-react";
+import { Phone, Route, BarChart3 } from "lucide-react";
 
-/* ── Prospection pains (row 1: 1 featured + 2 stacked) ── */
-const prospectionPains = [
+const painPoints = [
   {
-    icon: Clock,
-    stat: "20",
-    statLabel: "appels/jour max",
-    title: "Vos SDR composent un par un pendant que d'autres en passent 80",
+    icon: Phone,
+    stat: "x3",
+    statLabel: "appels possibles",
+    title: "Vos équipes pourraient prospecter 3 fois plus — avec les bons outils",
     description:
-      "Sans power dialer, vos commerciaux passent plus de temps à chercher des numéros qu'à parler à des prospects. Avec les bons outils, un SDR triple son volume d'appels — et vous ne payez pas 3 commerciaux pour le travail d'un seul.",
+      "Power dialer, séquences automatisées, transcription IA en temps réel. Un SDR bien équipé passe 80 appels par jour au lieu de 20. Et chaque call est enregistré, résumé, exploitable pour coacher et progresser.",
     accentColor: "#7B5EFF",
   },
   {
-    icon: AlertTriangle,
-    stat: "x0",
-    statLabel: "process reproductible",
-    title: "Chaque commercial invente sa méthode — et vous recommencez à zéro à chaque départ",
+    icon: Route,
+    stat: "90j",
+    statLabel: "pour structurer",
+    title: "Un playbook, des scripts, un onboarding — et vos résultats ne dépendent plus d'une seule personne",
     description:
-      "Pas de playbook, pas de scripts, pas de séquences. Les bons résultats dépendent de la personne, pas du process. Quand elle part, tout repart à zéro.",
+      "Quand le process est dans la tête du meilleur commercial, tout repart à zéro à chaque départ. On met en place les méthodes, les séquences et la formation pour que la performance soit dans le système — pas dans l'individu.",
     accentColor: "#a78bfa",
   },
   {
-    icon: CreditCard,
-    stat: "0",
-    statLabel: "trace de vos calls",
-    title: "Vos appels disparaissent — zéro trace, zéro apprentissage",
+    icon: BarChart3,
+    stat: "KPIs",
+    statLabel: "clairs dès le mois 1",
+    title: "Piloter par les chiffres, pas par l'instinct — MRR, conversion, coût d'acquisition",
     description:
-      "Pas de transcription, pas de synthèse, pas de CRM mis à jour après l'appel. L'IA sait aujourd'hui transcrire, résumer et qualifier un call en temps réel. Vos concurrents l'utilisent déjà pour coacher leurs équipes et raccourcir leurs cycles de vente.",
+      "Sans tableau de bord fiable, chaque décision est un pari. On installe les KPIs qui comptent, le reporting qui tourne tout seul, et la visibilité dont vous avez besoin pour recruter, investir et scaler en confiance.",
     accentColor: "#00F5FF",
-  },
-];
-
-/* ── Direction commerciale pains (row 2: 2 equal cards) ── */
-const dirCoPains = [
-  {
-    icon: Target,
-    stat: "0",
-    statLabel: "KPI suivi",
-    title: "Vous pilotez votre croissance au feeling — pas aux chiffres",
-    description:
-      "Pas de MRR tracké, pas de taux de conversion par étape, pas de coût d'acquisition mesuré. Sans tableau de bord commercial fiable, chaque décision est un pari. Et quand ça ne marche pas, vous ne savez pas pourquoi.",
-    accentColor: "#7B5EFF",
-  },
-  {
-    icon: Users,
-    stat: "6",
-    statLabel: "mois pour être rentable",
-    title: "Chaque recrutement commercial est un coup de poker à 30K€",
-    description:
-      "Pas de fiche de poste calibrée, pas d'onboarding structuré, pas de méthode de vente transmise. Votre nouveau SDR met 6 mois à performer — quand il ne part pas avant. Sans direction commerciale, vous recrutez à l'instinct et formez au cas par cas.",
-    accentColor: "#a78bfa",
   },
 ];
 
@@ -94,128 +71,46 @@ export function SalesPainPoints() {
             Votre offre est bonne.
             <br />
             <span className="gradient-text">
-              <em>Votre machine commerciale, non.</em>
+              <em>On peut en faire beaucoup plus.</em>
             </span>
           </h2>
           <p className="mt-5 max-w-xl text-[15px] leading-[1.7] text-white/30">
-            On voit les mêmes problèmes dans 80% des PME B2B. La bonne nouvelle : ils se règlent en 90 jours.
+            On voit les mêmes leviers inexploités dans 80% des PME B2B. La bonne nouvelle : ça se structure en 90 jours.
           </p>
         </ScrollReveal>
 
-        {/* ── Row 1: Prospection pains — 1 large featured + 2 stacked ── */}
-        <div className="mt-16 grid gap-5 lg:grid-cols-5">
-          {/* Featured card — spans 3 cols */}
-          <ScrollReveal delay={0} className="lg:col-span-3">
-            <TiltCard className="h-full p-10 transition-all duration-500">
-              <div className="flex items-end gap-4">
-                <span
-                  className="font-display text-7xl tracking-tight md:text-8xl"
-                  style={{ color: prospectionPains[0].accentColor }}
-                >
-                  {prospectionPains[0].stat}
-                </span>
-                <span className="mb-3 text-[11px] uppercase tracking-widest text-white/25">
-                  {prospectionPains[0].statLabel}
-                </span>
-              </div>
-
-              <div className="mt-8 flex items-start gap-4">
-                <div
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl"
-                  style={{
-                    background: `${prospectionPains[0].accentColor}12`,
-                    border: `1px solid ${prospectionPains[0].accentColor}20`,
-                  }}
-                >
-                  <Clock className="h-5 w-5" style={{ color: prospectionPains[0].accentColor }} />
-                </div>
-                <div>
-                  <h3 className="text-[17px] font-semibold text-white/90">
-                    {prospectionPains[0].title}
-                  </h3>
-                  <p className="mt-2 max-w-md text-[14px] leading-[1.7] text-white/35">
-                    {prospectionPains[0].description}
-                  </p>
-                </div>
-              </div>
-            </TiltCard>
-          </ScrollReveal>
-
-          {/* 2 stacked cards — span 2 cols */}
-          <div className="flex flex-col gap-5 lg:col-span-2">
-            {prospectionPains.slice(1).map((point, i) => (
-              <ScrollReveal key={point.title} delay={0.15 * (i + 1)}>
-                <TiltCard className="h-full p-7 transition-all duration-500" intensity={8}>
-                  <div className="flex items-end gap-3">
-                    <span
-                      className="font-display text-4xl tracking-tight"
-                      style={{ color: point.accentColor }}
-                    >
-                      {point.stat}
-                    </span>
-                    <span className="mb-0.5 text-[10px] uppercase tracking-widest text-white/25">
-                      {point.statLabel}
-                    </span>
-                  </div>
-
-                  <div
-                    className="mt-4 flex h-8 w-8 items-center justify-center rounded-lg"
-                    style={{
-                      background: `${point.accentColor}12`,
-                      border: `1px solid ${point.accentColor}20`,
-                    }}
-                  >
-                    <point.icon className="h-4 w-4" style={{ color: point.accentColor }} />
-                  </div>
-
-                  <h3 className="mt-4 text-[14px] font-semibold leading-snug text-white/90">
-                    {point.title}
-                  </h3>
-                  <p className="mt-2 text-[12px] leading-[1.7] text-white/30">
-                    {point.description}
-                  </p>
-                </TiltCard>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-
-        {/* ── Row 2: Direction commerciale pains — 2 equal cards ── */}
-        <div className="mt-5 grid gap-5 lg:grid-cols-2">
-          {dirCoPains.map((point, i) => (
-            <ScrollReveal key={point.title} delay={0.1 * i}>
-              <TiltCard className="h-full p-8 transition-all duration-500" intensity={6}>
-                <div className="flex items-end gap-4">
+        <div className="mt-16 grid gap-5 lg:grid-cols-3">
+          {painPoints.map((point, i) => (
+            <ScrollReveal key={point.title} delay={0.12 * i}>
+              <TiltCard className="group h-full p-8 transition-all duration-500" intensity={6}>
+                <div className="flex items-end gap-3">
                   <span
-                    className="font-display text-5xl tracking-tight md:text-6xl"
+                    className="font-display text-4xl tracking-tight md:text-5xl"
                     style={{ color: point.accentColor }}
                   >
                     {point.stat}
                   </span>
-                  <span className="mb-2 text-[11px] uppercase tracking-widest text-white/25">
+                  <span className="mb-1 text-[10px] uppercase tracking-widest text-white/25">
                     {point.statLabel}
                   </span>
                 </div>
 
-                <div className="mt-6 flex items-start gap-4">
-                  <div
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl"
-                    style={{
-                      background: `${point.accentColor}12`,
-                      border: `1px solid ${point.accentColor}20`,
-                    }}
-                  >
-                    <point.icon className="h-4 w-4" style={{ color: point.accentColor }} />
-                  </div>
-                  <div>
-                    <h3 className="text-[15px] font-semibold leading-snug text-white/90">
-                      {point.title}
-                    </h3>
-                    <p className="mt-2 text-[13px] leading-[1.7] text-white/35">
-                      {point.description}
-                    </p>
-                  </div>
+                <div
+                  className="mt-5 flex h-9 w-9 items-center justify-center rounded-xl"
+                  style={{
+                    background: `${point.accentColor}12`,
+                    border: `1px solid ${point.accentColor}20`,
+                  }}
+                >
+                  <point.icon className="h-4 w-4" style={{ color: point.accentColor }} />
                 </div>
+
+                <h3 className="mt-5 text-[15px] font-semibold leading-snug text-white/90">
+                  {point.title}
+                </h3>
+                <p className="mt-3 text-[13px] leading-[1.7] text-white/35">
+                  {point.description}
+                </p>
               </TiltCard>
             </ScrollReveal>
           ))}

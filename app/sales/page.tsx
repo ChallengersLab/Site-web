@@ -68,6 +68,36 @@ const jsonLd = [
       name: "ChallengersLab",
     },
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Combien de temps avant les premiers résultats ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Les premiers RDV qualifiés tombent dès la semaine 3-4 en prospection externalisée. Pour l'accompagnement CRO, les premiers effets structurants sont visibles dès le premier mois. Le vrai shift se mesure à 90 jours.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "C'est quoi la méthode Challenger Sale ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "C'est une méthodologie de vente B2B basée sur la recherche de Matthew Dixon. Au lieu de chercher à plaire au prospect, le commercial challenge sa vision, apporte un éclairage nouveau et pousse à l'action. C'est la méthode la plus efficace en vente complexe.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Quelle différence avec une agence de lead gen classique ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Une agence vous envoie des leads et c'est fini. Nous, on construit votre machine : process, outils, formation, playbook. L'objectif est que vous soyez autonome. On ne crée pas de dépendance — on transfère les compétences.",
+        },
+      },
+    ],
+  },
 ];
 
 export default function SalesPage() {

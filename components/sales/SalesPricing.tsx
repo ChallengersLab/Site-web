@@ -30,6 +30,7 @@ const offers = [
   {
     tag: "Done with you",
     title: "Accompagnement CRO",
+    recommended: true,
     description:
       "Structurer la machine, transmettre les méthodes, puis s'effacer. Votre équipe est autonome à l'issue de l'intervention.",
     pricing: [
@@ -81,26 +82,33 @@ export function SalesPricing() {
           {offers.map((offer, i) => (
             <ScrollReveal key={offer.title} delay={0.15 * i}>
               <TiltCard
-                className="group relative h-full overflow-hidden p-10 transition-all duration-500"
+                className={`group relative h-full overflow-hidden p-10 transition-all duration-500 ${"recommended" in offer && offer.recommended ? "border border-[#00F5FF]/15" : ""}`}
                 intensity={5}
               >
                 {/* Hover corner glow */}
                 <div
-                  className="absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 transition-opacity duration-700 group-hover:opacity-40"
+                  className={`absolute -right-16 -top-16 h-40 w-40 rounded-full transition-opacity duration-700 ${"recommended" in offer && offer.recommended ? "opacity-20 group-hover:opacity-50" : "opacity-0 group-hover:opacity-40"}`}
                   style={{ background: offer.accent, filter: "blur(50px)" }}
                 />
 
-                {/* Tag */}
-                <span
-                  className="inline-flex rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em]"
-                  style={{
-                    background: `${offer.accent}10`,
-                    border: `1px solid ${offer.accent}25`,
-                    color: offer.accent,
-                  }}
-                >
-                  {offer.tag}
-                </span>
+                {/* Tags */}
+                <div className="flex items-center gap-2">
+                  <span
+                    className="inline-flex rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em]"
+                    style={{
+                      background: `${offer.accent}10`,
+                      border: `1px solid ${offer.accent}25`,
+                      color: offer.accent,
+                    }}
+                  >
+                    {offer.tag}
+                  </span>
+                  {"recommended" in offer && offer.recommended && (
+                    <span className="inline-flex rounded-full bg-[#00F5FF]/10 border border-[#00F5FF]/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-[#00F5FF]">
+                      Recommandé
+                    </span>
+                  )}
+                </div>
 
                 {/* Title */}
                 <h3 className="font-display mt-6 text-[clamp(1.5rem,3vw,2rem)] leading-[1.1] text-white">

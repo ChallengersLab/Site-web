@@ -1,75 +1,59 @@
 "use client";
 
+import { useRef } from "react";
 import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { BookOpen, ArrowRight } from "lucide-react";
-import { TiltCard } from "@/components/ui/TiltCard";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-const testimonials = [
-  {
-    metric: "15h/semaine",
-    quote:
-      "On a r\u00E9cup\u00E9r\u00E9 15h par semaine en automatisant nos process de qualification. L\u2019\u00E9quipe se concentre enfin sur ce qui compte.",
-    name: "Marc K.",
-    role: "COO, SaaS B2B \u00B7 30 employ\u00E9s",
-    initials: "MK",
-  },
-  {
-    metric: "10j delivery",
-    quote:
-      "Notre app interne a \u00E9t\u00E9 livr\u00E9e en 10 jours. On attendait depuis 6 mois avec notre prestataire pr\u00E9c\u00E9dent.",
-    name: "Julie R.",
-    role: "Head of Ops, Scale-up \u00B7 80 employ\u00E9s",
-    initials: "JR",
-  },
-];
-
 export function IAProof() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const orbY = useTransform(scrollYProgress, [0, 1], [50, -70]);
+
   return (
-    <section className="relative py-32 overflow-hidden">
-      <div className="mx-auto max-w-[1100px] px-6">
-        <div className="text-center">
+    <section ref={sectionRef} className="relative py-32 overflow-hidden">
+      <motion.div
+        style={{ y: orbY }}
+        className="absolute right-[10%] bottom-[10%] h-[350px] w-[350px] rounded-full"
+      >
+        <div
+          className="h-full w-full rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(0,245,255,0.1) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-orb-reverse 20s ease-in-out infinite",
+          }}
+        />
+      </motion.div>
+
+      <div className="relative z-10 mx-auto max-w-[1100px] px-6">
+        <ScrollReveal>
           <span className="badge-glow inline-flex rounded-full px-3 py-1 text-[11px] font-medium tracking-wider uppercase">
-            T&eacute;moignages
+            Témoignages
           </span>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.1}>
           <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
-            Ils en parlent
-            <br />
+            Nos clients parlent<br />
             <em className="gradient-text">mieux que nous</em>
           </h2>
-        </div>
+        </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-16">
-          {testimonials.map((testimonial) => (
-            <ScrollReveal key={testimonial.initials}>
-              <TiltCard className="p-8">
-                <span
-                  className="inline-flex rounded-full px-3 py-1 text-[12px] font-bold"
-                  style={{ background: "#00F5FF15", color: "#00F5FF" }}
-                >
-                  {testimonial.metric}
-                </span>
-                <blockquote className="mt-6 text-[15px] leading-[1.7] text-white/50 italic">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-[#00F5FF] to-[#7B5EFF] flex items-center justify-center text-[10px] font-bold text-white">
-                    {testimonial.initials}
-                  </div>
-                  <div>
-                    <p className="text-[13px] font-medium text-white/70">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-[11px] text-white/30">
-                      {testimonial.role}
-                    </p>
-                  </div>
-                </div>
-              </TiltCard>
-            </ScrollReveal>
-          ))}
-        </div>
+        <ScrollReveal delay={0.2}>
+          <div className="mt-16 flex items-center justify-center rounded-2xl border border-white/[0.04] bg-white/[0.02] py-20 px-8">
+            <p className="text-center text-[15px] text-white/40 leading-relaxed max-w-md">
+              Leurs retours arrivent bientôt.<br />
+              <span className="text-white/20">En attendant, on bosse.</span>
+            </p>
+          </div>
+        </ScrollReveal>
 
+        {/* Article links */}
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
           <Link
             href="/ressources/automatisation-crm-workflows-ia"

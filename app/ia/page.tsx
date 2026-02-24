@@ -73,6 +73,36 @@ const jsonLd = [
       name: "ChallengersLab",
     },
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Combien de temps pour livrer un projet no-code ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Entre 48h et 3 semaines selon la complexité. Une landing page ou un dashboard : quelques jours. Une application métier complète : 2 à 3 semaines.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "C'est fiable, le no-code en production ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Oui, à condition de bien l'architecturer. Bubble, Retool et FlutterFlow font tourner des apps en production pour des milliers d'utilisateurs.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Quels types de process peut-on automatiser ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Tout ce qui est répétitif et basé sur des règles : qualification de leads, enrichissement de données, reporting, onboarding client, relances, synchronisation CRM, génération de documents.",
+        },
+      },
+    ],
+  },
 ];
 
 export default function IAPage() {

@@ -66,7 +66,7 @@ export function SalesCTA() {
             <ArrowRight className="h-4 w-4" />
           </a>
           <p className="mt-5 text-[12px] text-white/15">
-            Gratuit &middot; Sans engagement &middot; Max 5 clients / trimestre
+            Gratuit &middot; Sans engagement &middot; 5 clients max par trimestre pour garantir la qualité
           </p>
         </ScrollReveal>
       </div>

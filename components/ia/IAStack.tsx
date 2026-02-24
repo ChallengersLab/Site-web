@@ -2,19 +2,39 @@
 
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-const tools = [
-  { name: "Make", emoji: "\u26A1" },
-  { name: "n8n", emoji: "\uD83D\uDD17" },
-  { name: "Zapier", emoji: "\u2699\uFE0F" },
-  { name: "Bubble", emoji: "\uD83E\uDEE7" },
-  { name: "FlutterFlow", emoji: "\uD83D\uDCF1" },
-  { name: "Retool", emoji: "\uD83D\uDEE0" },
-  { name: "OpenAI", emoji: "\uD83E\uDD16" },
-  { name: "Claude", emoji: "\uD83E\uDDE0" },
-  { name: "Mistral", emoji: "\uD83C\uDF2C" },
-  { name: "Airtable", emoji: "\uD83D\uDCCA" },
-  { name: "Notion", emoji: "\uD83D\uDCDD" },
-  { name: "HubSpot", emoji: "\uD83C\uDFAF" },
+const categories = [
+  {
+    label: "Automatisation",
+    tools: [
+      { name: "Make", monogram: "Mk" },
+      { name: "n8n", monogram: "n8" },
+      { name: "Zapier", monogram: "Zp" },
+    ],
+  },
+  {
+    label: "No-code",
+    tools: [
+      { name: "Bubble", monogram: "Bb" },
+      { name: "FlutterFlow", monogram: "FF" },
+      { name: "Retool", monogram: "Rt" },
+    ],
+  },
+  {
+    label: "IA",
+    tools: [
+      { name: "OpenAI", monogram: "Oi" },
+      { name: "Claude", monogram: "Cl" },
+      { name: "Mistral", monogram: "Ms" },
+    ],
+  },
+  {
+    label: "Data & CRM",
+    tools: [
+      { name: "Airtable", monogram: "At" },
+      { name: "Notion", monogram: "Nt" },
+      { name: "HubSpot", monogram: "Hs" },
+    ],
+  },
 ];
 
 export function IAStack() {
@@ -34,14 +54,35 @@ export function IAStack() {
           </h2>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-          {tools.map((tool, i) => (
-            <ScrollReveal key={tool.name} delay={0.05 * i}>
-              <div className="glass-card group flex flex-col items-center gap-3 rounded-xl p-5 transition-all duration-300 hover:border-[#00F5FF]/20 hover:scale-105 cursor-default">
-                <span className="text-2xl">{tool.emoji}</span>
-                <span className="text-[12px] font-semibold text-white/50 group-hover:text-white/80 transition-colors">
-                  {tool.name}
+        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {categories.map((cat, catIdx) => (
+            <ScrollReveal key={cat.label} delay={0.08 * catIdx}>
+              <div>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-white/20">
+                  {cat.label}
                 </span>
+                <div className="mt-3 space-y-2">
+                  {cat.tools.map((tool) => (
+                    <div
+                      key={tool.name}
+                      className="group flex items-center gap-3 rounded-xl border border-white/[0.04] bg-white/[0.02] px-4 py-3 transition-all duration-300 hover:border-[#00F5FF]/15 hover:bg-white/[0.04]"
+                    >
+                      <span
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[11px] font-bold tracking-tight transition-colors duration-300"
+                        style={{
+                          background: "rgba(0,245,255,0.06)",
+                          border: "1px solid rgba(0,245,255,0.1)",
+                          color: "rgba(0,245,255,0.5)",
+                        }}
+                      >
+                        {tool.monogram}
+                      </span>
+                      <span className="text-[13px] font-medium text-white/50 group-hover:text-white/80 transition-colors">
+                        {tool.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </ScrollReveal>
           ))}

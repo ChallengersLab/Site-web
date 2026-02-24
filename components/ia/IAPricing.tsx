@@ -26,6 +26,7 @@ const offers = [
   {
     tag: "Done for you",
     title: "Automatisations",
+    popular: true,
     price: "2 000€",
     priceDetail: "à partir de",
     description:
@@ -90,26 +91,33 @@ export function IAPricing() {
             return (
               <ScrollReveal key={offer.title} delay={0.12 * i}>
                 <TiltCard
-                  className="group relative h-full overflow-hidden p-8 transition-all duration-500"
+                  className={`group relative h-full overflow-hidden p-8 transition-all duration-500 ${"popular" in offer && offer.popular ? "border border-[#7B5EFF]/20" : ""}`}
                   intensity={5}
                 >
                   {/* Hover corner glow */}
                   <div
-                    className="absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 transition-opacity duration-700 group-hover:opacity-40"
+                    className={`absolute -right-16 -top-16 h-40 w-40 rounded-full transition-opacity duration-700 ${"popular" in offer && offer.popular ? "opacity-20 group-hover:opacity-50" : "opacity-0 group-hover:opacity-40"}`}
                     style={{ background: offer.accent, filter: "blur(50px)" }}
                   />
 
-                  {/* Tag */}
-                  <span
-                    className="inline-flex rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em]"
-                    style={{
-                      background: `${offer.accent}10`,
-                      border: `1px solid ${offer.accent}25`,
-                      color: offer.accent,
-                    }}
-                  >
-                    {offer.tag}
-                  </span>
+                  {/* Tags */}
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="inline-flex rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em]"
+                      style={{
+                        background: `${offer.accent}10`,
+                        border: `1px solid ${offer.accent}25`,
+                        color: offer.accent,
+                      }}
+                    >
+                      {offer.tag}
+                    </span>
+                    {"popular" in offer && offer.popular && (
+                      <span className="inline-flex rounded-full bg-[#7B5EFF]/10 border border-[#7B5EFF]/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-[#7B5EFF]">
+                        Populaire
+                      </span>
+                    )}
+                  </div>
 
                   {/* Icon */}
                   <div

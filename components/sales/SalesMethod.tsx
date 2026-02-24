@@ -9,7 +9,7 @@ const steps = [
   {
     number: "01",
     phase: "Audit",
-    timeline: "Sem. 1–2",
+    timeline: "Sem. 1-2",
     description:
       "Pipeline, stack, process, équipe. On identifie les quick wins et les chantiers structurants.",
     deliverables: ["Diagnostic complet", "Roadmap priorisée", "KPIs cibles"],
@@ -18,7 +18,7 @@ const steps = [
   {
     number: "02",
     phase: "Déploiement",
-    timeline: "Sem. 3–10",
+    timeline: "Sem. 3-10",
     description:
       "Lancement prospection, setup CRM, coaching équipe, scripts, séquences. On fait.",
     deliverables: ["Process opérationnels", "Équipe formée", "Pipeline actif"],
@@ -42,6 +42,9 @@ export function SalesMethod() {
     offset: ["start end", "end start"],
   });
   const orbY = useTransform(scrollYProgress, [0, 1], [60, -60]);
+
+  // Progress bar fills as user scrolls through the section
+  const progressWidth = useTransform(scrollYProgress, [0.15, 0.65], ["0%", "100%"]);
 
   return (
     <section ref={sectionRef} className="relative py-32 overflow-hidden">
@@ -75,14 +78,25 @@ export function SalesMethod() {
           </p>
         </ScrollReveal>
 
-        {/* Horizontal progress bar (desktop only) */}
+        {/* Animated progress bar */}
         <div className="mt-16 hidden lg:block">
           <div className="relative mx-auto mb-10 h-px max-w-[80%]">
+            {/* Background track */}
             <div
               className="absolute inset-0"
               style={{
                 background: "linear-gradient(to right, #7B5EFF, #a78bfa, #00F5FF)",
-                opacity: 0.3,
+                opacity: 0.1,
+              }}
+            />
+            {/* Animated fill */}
+            <motion.div
+              className="absolute inset-y-0 left-0 h-full"
+              style={{
+                width: progressWidth,
+                background: "linear-gradient(to right, #7B5EFF, #a78bfa, #00F5FF)",
+                opacity: 0.6,
+                boxShadow: "0 0 12px rgba(123,94,255,0.3)",
               }}
             />
             {/* Step dots on the line */}
@@ -92,7 +106,7 @@ export function SalesMethod() {
                 className="absolute top-1/2 -translate-y-1/2"
                 style={{ left: `${i * 50}%` }}
               >
-                <div
+                <motion.div
                   className="h-3 w-3 rounded-full border-2"
                   style={{
                     borderColor: step.accent,

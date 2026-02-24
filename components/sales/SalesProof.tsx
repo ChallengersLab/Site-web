@@ -1,28 +1,10 @@
 "use client";
 
+import { useRef } from "react";
 import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { BookOpen, ArrowRight } from "lucide-react";
-import { TiltCard } from "@/components/ui/TiltCard";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-
-const testimonials = [
-  {
-    metric: "\u00d73 pipeline",
-    quote:
-      "En 3 mois, notre pipeline a tripl\u00e9. L\u2019\u00e9quipe n\u2019y croyait pas au d\u00e9but.",
-    name: "Thomas M.",
-    role: "CEO, SaaS B2B \u00b7 45 employ\u00e9s",
-    initials: "TM",
-  },
-  {
-    metric: "+85% close rate",
-    quote:
-      "Le coaching Challenger Sales a transform\u00e9 notre approche. On ne vend plus, on conseille.",
-    name: "Sophie L.",
-    role: "Head of Sales, Scale-up \u00b7 120 employ\u00e9s",
-    initials: "SL",
-  },
-];
 
 const articles = [
   {
@@ -30,59 +12,57 @@ const articles = [
     href: "/ressources/prospection-b2b-ia-guide-complet",
   },
   {
-    label: "M\u00e9thode Challenger Sales",
+    label: "Méthode Challenger Sales",
     href: "/ressources/challenger-sales-methode-b2b",
   },
 ];
 
 export function SalesProof() {
-  return (
-    <section className="relative py-32 overflow-hidden">
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="text-center">
-          <ScrollReveal>
-            <span className="badge">T\u00e9moignages</span>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
-              Ils en parlent
-              <br />
-              <em className="gradient-text">mieux que nous</em>
-            </h2>
-          </ScrollReveal>
-        </div>
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const orbY = useTransform(scrollYProgress, [0, 1], [50, -70]);
 
-        {/* Testimonial cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-16">
-          {testimonials.map((testimonial, i) => (
-            <ScrollReveal key={testimonial.initials} delay={0.15 * i}>
-              <TiltCard className="p-8">
-                <span
-                  className="inline-flex rounded-full px-3 py-1 text-[12px] font-bold"
-                  style={{ background: "#7B5EFF15", color: "#7B5EFF" }}
-                >
-                  {testimonial.metric}
-                </span>
-                <blockquote className="mt-6 text-[15px] leading-[1.7] text-white/50 italic">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-[#7B5EFF] to-[#a78bfa] flex items-center justify-center text-[10px] font-bold text-white">
-                    {testimonial.initials}
-                  </div>
-                  <div>
-                    <p className="text-[13px] font-medium text-white/70">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-[11px] text-white/30">
-                      {testimonial.role}
-                    </p>
-                  </div>
-                </div>
-              </TiltCard>
-            </ScrollReveal>
-          ))}
-        </div>
+  return (
+    <section ref={sectionRef} className="relative py-32 overflow-hidden">
+      <motion.div
+        style={{ y: orbY }}
+        className="absolute left-[10%] bottom-[10%] h-[350px] w-[350px] rounded-full"
+      >
+        <div
+          className="h-full w-full rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(123,94,255,0.1) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-orb-reverse 20s ease-in-out infinite",
+          }}
+        />
+      </motion.div>
+
+      <div className="relative z-10 mx-auto max-w-[1100px] px-6">
+        <ScrollReveal>
+          <span className="badge-glow inline-flex rounded-full px-3 py-1 text-[11px] font-medium tracking-wider uppercase">
+            Témoignages
+          </span>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.1}>
+          <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
+            Nos clients parlent<br />
+            <em className="gradient-text">mieux que nous</em>
+          </h2>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.2}>
+          <div className="mt-16 flex items-center justify-center rounded-2xl border border-white/[0.04] bg-white/[0.02] py-20 px-8">
+            <p className="text-center text-[15px] text-white/40 leading-relaxed max-w-md">
+              Leurs retours arrivent bientôt.<br />
+              <span className="text-white/20">En attendant, on bosse.</span>
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Article links */}
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
