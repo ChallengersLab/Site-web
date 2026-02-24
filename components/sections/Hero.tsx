@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useCountUp } from "@/hooks/use-count-up";
-import { HeroDashboard } from "@/components/ui/HeroDashboard";
+
 
 const stagger = {
   hidden: {},
@@ -77,9 +77,7 @@ export function Hero() {
 
       {/* ---- Content ---- */}
       <div className="relative z-10 mx-auto w-full max-w-[1100px] px-6 pt-36 pb-24 md:pt-44 md:pb-32">
-        <div className="grid items-center gap-16 lg:grid-cols-[1fr,420px] lg:gap-12">
-          {/* Left: text content */}
-          <motion.div variants={stagger} initial="hidden" animate="show">
+        <motion.div variants={stagger} initial="hidden" animate="show">
             {/* Badge */}
             <motion.div variants={fadeUp}>
               <span className="badge-glow inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-medium tracking-wider uppercase">
@@ -141,13 +139,7 @@ export function Hero() {
             <motion.p variants={fadeUp} className="mt-6 text-[13px] text-white/20">
               30 min &middot; Gratuit &middot; Sans engagement &middot; Max 5 clients / trimestre
             </motion.p>
-          </motion.div>
-
-          {/* Right: dashboard visual */}
-          <div className="hidden lg:block">
-            <HeroDashboard />
-          </div>
-        </div>
+        </motion.div>
 
         {/* Stats bar */}
         <motion.div

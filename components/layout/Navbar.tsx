@@ -10,8 +10,7 @@ import {
 const navLinks = [
   { name: "Sales", href: "#sales" },
   { name: "AI & Auto", href: "#ai" },
-  { name: "Méthode", href: "#method" },
-  { name: "Résultats", href: "#results" },
+  { name: "Ressources", href: "/ressources" },
 ];
 
 export function Navbar() {
