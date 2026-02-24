@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GrainTexture } from "@/components/effects/GrainTexture";
 import "./globals.css";
 
 const inter = Inter({
@@ -44,6 +45,7 @@ export default function RootLayout({
     <html lang="fr" className="dark">
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
+        <GrainTexture />
       </body>
     </html>
   );
