@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Challengerslab - Performance Commerciale & IA";
+export const alt = "ChallengersLab - Sales × AI pour PME & Scale-ups B2B";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -12,61 +12,86 @@ export default async function Image() {
         style={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
           justifyContent: "center",
           width: "100%",
           height: "100%",
-          background: "linear-gradient(135deg, #000000 0%, #0A0A0A 50%, #1a0a2e 100%)",
-          fontFamily: "Inter, system-ui, sans-serif",
+          padding: "80px",
+          background: "#050505",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "baseline",
-            gap: "12px",
-          }}
-        >
+        {/* Brand */}
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "40px",
+              height: "40px",
+              borderRadius: "10px",
+              background: "linear-gradient(135deg, #7B5EFF, #00F5FF)",
+              fontSize: "14px",
+              fontWeight: 800,
+              color: "white",
+            }}
+          >
+            CL
+          </div>
+          <span style={{ fontSize: 20, fontWeight: 700, color: "white" }}>
+            ChallengersLab
+          </span>
+        </div>
+
+        {/* Headline */}
+        <div style={{ marginTop: 48, display: "flex", flexDirection: "column" }}>
           <span
             style={{
-              fontSize: 72,
+              fontSize: 64,
               fontWeight: 800,
-              background: "linear-gradient(to right, #7B5EFF, #00F5FF)",
-              backgroundClip: "text",
-              color: "transparent",
+              color: "white",
+              lineHeight: 1,
               letterSpacing: "-0.03em",
             }}
           >
-            Challengerslab
+            Vos concurrents utilisent
           </span>
-          <span
-            style={{
-              fontSize: 24,
-              color: "#00F5FF",
-              fontWeight: 600,
-            }}
-          >
-            ESN
-          </span>
+          <div style={{ display: "flex", alignItems: "baseline", gap: "16px" }}>
+            <span
+              style={{
+                fontSize: 64,
+                fontWeight: 800,
+                color: "white",
+                lineHeight: 1.1,
+                letterSpacing: "-0.03em",
+              }}
+            >
+              déjà l&apos;IA.
+            </span>
+            <span
+              style={{
+                fontSize: 64,
+                fontWeight: 800,
+                background: "linear-gradient(135deg, #7B5EFF, #00F5FF)",
+                backgroundClip: "text",
+                color: "transparent",
+                lineHeight: 1.1,
+                letterSpacing: "-0.03em",
+              }}
+            >
+              Et vous ?
+            </span>
+          </div>
         </div>
+
+        {/* Subtitle */}
         <p
           style={{
-            fontSize: 28,
-            color: "rgba(255,255,255,0.7)",
-            marginTop: 16,
-            fontWeight: 500,
+            fontSize: 22,
+            color: "rgba(255,255,255,0.45)",
+            marginTop: 24,
           }}
         >
-          L&apos;avenir de la performance commerciale est IA
-        </p>
-        <p
-          style={{
-            fontSize: 18,
-            color: "rgba(255,255,255,0.4)",
-            marginTop: 8,
-          }}
-        >
-          Cold Call &bull; DIR CO &bull; Sites IA &bull; No-Code
+          Sales × AI pour PME et Scale-ups B2B
         </p>
       </div>
     ),
