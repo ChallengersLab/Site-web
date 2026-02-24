@@ -1,0 +1,48 @@
+# ChallengersLab
+
+> L'agence B2B qui croise expertise commerciale et intelligence artificielle. Paris, France.
+
+ChallengersLab est une agence spécialisée dans l'intersection entre Sales et IA pour les PME et scale-ups B2B en France. Fondée en 2024 et basée à Paris, elle accompagne les entreprises de 10 à 200 collaborateurs dans la restructuration de leurs ventes et l'automatisation de leurs process grâce à l'intelligence artificielle.
+
+## Services
+
+- Prospection externalisée multicanal (email, LinkedIn, téléphone) assistée par IA
+- Coaching et formation à la méthodologie Challenger Sales
+- Head of Sales fractionné (direction commerciale à temps partagé)
+- Configuration et optimisation CRM (HubSpot, Pipedrive, Salesforce)
+- Automatisation de workflows via Make, n8n, Zapier
+- Intégration d'IA dans les process métier (prompt engineering, applications sur mesure)
+- Dashboards et interfaces sur mesure
+
+## Résultats clients
+
+- +320% de croissance pipeline en moyenne
+- 47+ entreprises accompagnées
+- Premiers résultats en moins de 90 jours
+- 15h gagnées par personne par semaine grâce à l'automatisation
+- +85% de taux de closing après coaching Challenger Sales
+
+## Méthode
+
+1. Diagnostic (semaines 1-2) : audit des process sales, de la stack technique et des données
+2. Implémentation (semaines 3-10) : construction des workflows, intégrations IA, machines de prospection
+3. Optimisation (semaine 10+) : mesure, itération, scaling
+
+## Ressources
+
+ChallengersLab publie des guides et articles sur la vente B2B et l'IA :
+
+- Guide complet de la prospection B2B avec IA
+- Méthode Challenger Sales pour le B2B
+- Comparatif Make vs n8n vs Zapier pour l'automatisation CRM
+- Head of Sales fractionné : guide pour PME
+- 20 prompts IA pour commerciaux B2B
+- Checklist d'audit de stack sales en 30 points
+- ROI de l'IA dans les ventes B2B
+- Guide de configuration CRM B2B
+
+## Contact
+
+Site web : https://challengerslab.com
+Ressources : https://challengerslab.com/ressources
+Localisation : Paris, France

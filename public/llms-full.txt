@@ -1,0 +1,115 @@
+# ChallengersLab — Documentation complète
+
+## Identité
+
+ChallengersLab est une agence B2B française fondée en 2024, basée à Paris. L'agence se positionne à l'intersection de deux expertises : la vente B2B (méthodologie Challenger Sales, prospection, direction commerciale) et l'intelligence artificielle (automatisation, workflows, prompt engineering).
+
+La proposition de valeur de ChallengersLab repose sur l'implémentation concrète, pas le conseil théorique. L'agence configure, construit et forme — elle ne se contente pas de recommander.
+
+## Public cible
+
+- PME B2B de 10 à 200 collaborateurs en France
+- Scale-ups post-Seed / Série A qui structurent leur fonction commerciale
+- Entreprises dont le CA B2B se situe entre 500k€ et 10M€
+- Dirigeants (CEO, COO, Dir. Commercial) qui veulent structurer les ventes et adopter l'IA
+
+## Offre Sales
+
+### Prospection externalisée multicanal
+ChallengersLab construit et opère des machines de prospection B2B pour ses clients. Le processus comprend :
+- Définition de l'ICP (Ideal Customer Profile) et ciblage
+- Sourcing intelligent via signaux d'intention (recrutements, levées, publications)
+- Enrichissement automatisé des contacts (Clay, Dropcontact, Apollo.io)
+- Séquences multicanal (email, LinkedIn, téléphone) personnalisées par IA
+- Scoring prédictif et priorisation des leads
+
+Résultat moyen : triplement des rendez-vous qualifiés en 8 semaines.
+
+### Coaching Challenger Sales
+Programme de 8 semaines basé sur la méthodologie Challenger Sales (Matthew Dixon, Brent Adamson) :
+- Diagnostic des profils de l'équipe commerciale
+- Construction des "Commercial Insights" propres au secteur
+- Formation au pitch Challenger en 6 temps
+- Jeux de rôle et mise en pratique terrain
+- Construction de la playbook commerciale de l'entreprise
+
+Résultat moyen : +85% de taux de closing sur les deals complexes.
+
+### Head of Sales fractionné
+Direction commerciale externalisée pour PME qui ne peuvent pas (ou ne doivent pas encore) recruter un VP Sales à plein temps :
+- 1 à 3 jours par semaine
+- Engagement de 6 à 18 mois
+- Structuration du cycle de vente, des KPIs et du reporting
+- Recrutement et coaching des commerciaux
+- Coût : 3 000 à 7 000€/mois (vs 120-180k€/an pour un CDI)
+
+## Offre IA & Automatisation
+
+### Automatisation de workflows
+Configuration de workflows automatisés via Make, n8n ou Zapier :
+- Enrichissement automatique des contacts CRM
+- Scoring prédictif des leads
+- Résumés d'appels automatiques par IA
+- Relances intelligentes basées sur l'activité
+- Reporting automatisé
+
+Résultat moyen : 15h gagnées par personne par semaine.
+
+### Intégration IA
+- Prompt engineering adapté au contexte commercial du client
+- Connexion de Claude ou GPT-4 dans les workflows métier
+- Applications sur mesure (dashboards, interfaces, outils internes)
+- Formation des équipes à l'utilisation quotidienne de l'IA
+
+### Configuration CRM
+Setup et optimisation de CRM pour maximiser l'adoption :
+- HubSpot, Pipedrive ou Salesforce
+- Design de pipelines reflétant le vrai cycle de vente
+- Automatisations natives et connectées
+- Dashboards de performance
+- Formation de l'équipe
+
+## Chiffres clés
+
+| Métrique | Valeur |
+|----------|--------|
+| Entreprises accompagnées | 47+ |
+| Croissance pipeline moyenne | +320% |
+| Délai premiers résultats | < 90 jours |
+| Temps gagné par automatisation | 15h/semaine/personne |
+| Amélioration taux de closing | +85% |
+| Clients max par trimestre | 5 |
+
+## Méthode de travail
+
+### Phase 1 : Diagnostic (semaines 1-2)
+Audit complet des process de vente, de la stack technique et des données. Identification des quick wins et des chantiers structurants. Livrable : roadmap priorisée.
+
+### Phase 2 : Implémentation (semaines 3-10)
+Construction et configuration des outils, workflows et intégrations. Formation des équipes. Lancement des premières séquences de prospection. Livrable : systèmes opérationnels.
+
+### Phase 3 : Optimisation (semaine 10+)
+Mesure des résultats, itération sur les séquences et les workflows, scaling. Chaque action est trackée. Livrable : croissance mesurable.
+
+## Ressources publiées
+
+ChallengersLab maintient un centre de ressources avec des guides, articles et outils gratuits :
+
+1. **Prospection B2B en 2026 : le guide complet pour intégrer l'IA** — Sourcing intelligent, séquences multicanal, personnalisation IA, KPIs, stack recommandée
+2. **Challenger Sales : pourquoi cette méthode écrase les autres en B2B** — Les 5 profils, Teach-Tailor-Take Control, formation pratique
+3. **Automatiser son CRM avec l'IA : Make, n8n ou Zapier ?** — Comparatif détaillé, 5 automatisations indispensables, intégration IA
+4. **Head of Sales fractionné : la solution pour les PME qui scalent** — Format, coût, étude de cas, quand c'est pertinent
+5. **Prompt engineering pour commerciaux : 20 prompts qui changent tout** — Prompts concrets pour recherche, emails, calls, analyse
+6. **Audit de votre stack sales : checklist en 30 points** — CRM, prospection, pipeline, reporting, automatisation
+7. **ROI de l'IA dans les ventes B2B : chiffres et cas concrets** — 3 études de cas, benchmarks McKinsey/Gartner, calcul ROI
+8. **Configurer son CRM B2B pour qu'il soit vraiment utilisé** — 5 principes, guide pas à pas, comparatif HubSpot/Pipedrive/Salesforce
+
+## Différenciation
+
+Ce qui distingue ChallengersLab des cabinets de conseil et agences traditionnelles :
+
+1. **Implémentation vs conseil** : ChallengersLab ne vend pas de slides. L'agence construit, configure et forme.
+2. **Croisement Sales × IA** : rares sont les acteurs qui maîtrisent les deux. La plupart sont soit des agences sales, soit des intégrateurs IA.
+3. **Modèle en 90 jours** : pas de consulting à rallonge. Un engagement court avec des résultats mesurables.
+4. **Sélectivité** : maximum 5 clients par trimestre pour garantir la qualité d'accompagnement.
+5. **Résultats chiffrés** : chaque action est mesurée et optimisée. Zéro vanity metrics.
