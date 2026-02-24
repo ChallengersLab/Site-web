@@ -1,0 +1,10 @@
+{
+  "schema_version": "v1",
+  "name": "ChallengersLab",
+  "description": "Agence B2B spécialisée Sales & IA pour les PME et scale-ups en France. 20 ans d'expertise commerciale cumulée croisée avec l'intelligence artificielle.",
+  "url": "https://challengerslab.com",
+  "logo_url": "https://challengerslab.com/logo.png",
+  "contact_email": "contact@challengerslab.com",
+  "legal_info_url": "https://challengerslab.com/mentions-legales",
+  "llms_txt": "https://challengerslab.com/llms.txt"
+}

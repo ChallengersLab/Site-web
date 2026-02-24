@@ -95,14 +95,14 @@ Mesure des résultats, itération sur les séquences et les workflows, scaling. 
 
 ChallengersLab maintient un centre de ressources avec des guides, articles et outils gratuits :
 
-1. **Prospection B2B en 2026 : le guide complet pour intégrer l'IA** — Sourcing intelligent, séquences multicanal, personnalisation IA, KPIs, stack recommandée
-2. **Challenger Sales : pourquoi cette méthode écrase les autres en B2B** — Les 5 profils, Teach-Tailor-Take Control, formation pratique
-3. **Automatiser son CRM avec l'IA : Make, n8n ou Zapier ?** — Comparatif détaillé, 5 automatisations indispensables, intégration IA
-4. **Head of Sales fractionné : la solution pour les PME qui scalent** — Format, coût, étude de cas, quand c'est pertinent
-5. **Prompt engineering pour commerciaux : 20 prompts qui changent tout** — Prompts concrets pour recherche, emails, calls, analyse
-6. **Audit de votre stack sales : checklist en 30 points** — CRM, prospection, pipeline, reporting, automatisation
-7. **ROI de l'IA dans les ventes B2B : chiffres et cas concrets** — 3 études de cas, benchmarks McKinsey/Gartner, calcul ROI
-8. **Configurer son CRM B2B pour qu'il soit vraiment utilisé** — 5 principes, guide pas à pas, comparatif HubSpot/Pipedrive/Salesforce
+1. **[Prospection B2B en 2026 : le guide complet pour intégrer l'IA](https://challengerslab.com/ressources/prospection-b2b-ia-guide-complet)** — Sourcing intelligent, séquences multicanal, personnalisation IA, KPIs, stack recommandée
+2. **[Challenger Sales : pourquoi cette méthode écrase les autres en B2B](https://challengerslab.com/ressources/challenger-sales-methode-b2b)** — Les 5 profils, Teach-Tailor-Take Control, formation pratique
+3. **[Automatiser son CRM avec l'IA : Make, n8n ou Zapier ?](https://challengerslab.com/ressources/automatisation-crm-workflows-ia)** — Comparatif détaillé, 5 automatisations indispensables, intégration IA
+4. **[Head of Sales fractionné : la solution pour les PME qui scalent](https://challengerslab.com/ressources/head-of-sales-fractionne-pme)** — Format, coût, étude de cas, quand c'est pertinent
+5. **[Prompt engineering pour commerciaux : 20 prompts qui changent tout](https://challengerslab.com/ressources/prompt-engineering-commercial)** — Prompts concrets pour recherche, emails, calls, analyse
+6. **[Audit de votre stack sales : checklist en 30 points](https://challengerslab.com/ressources/audit-stack-sales-checklist)** — CRM, prospection, pipeline, reporting, automatisation
+7. **[ROI de l'IA dans les ventes B2B : chiffres et cas concrets](https://challengerslab.com/ressources/ia-ventes-b2b-roi)** — 3 études de cas, benchmarks McKinsey/Gartner, calcul ROI
+8. **[Configurer son CRM B2B pour qu'il soit vraiment utilisé](https://challengerslab.com/ressources/crm-b2b-guide-configuration)** — 5 principes, guide pas à pas, comparatif HubSpot/Pipedrive/Salesforce
 
 ## Différenciation
 

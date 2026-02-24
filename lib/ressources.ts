@@ -304,6 +304,8 @@ Un CRM non automatisé est un CRM mort. Les données montrent que les commerciau
 
 L'automatisation du CRM ne consiste pas à remplacer le commercial. C'est éliminer les tâches répétitives pour que l'humain se concentre sur ce qui compte : la relation et la vente.
 
+> En 20 ans d'accompagnement commercial B2B, le CRM a toujours été le nerf de la guerre. La différence aujourd'hui, c'est qu'on peut enfin l'automatiser intelligemment.
+
 ## Les 3 plateformes comparées
 
 ### Make (ex-Integromat)
@@ -884,6 +886,8 @@ C'est exactement le type de situation où ChallengersLab intervient. On diagnost
     content: `## L'IA dans les ventes B2B : au-delà du buzz
 
 Tout le monde parle d'IA. Peu mesurent son impact réel sur les ventes. Cet article présente des chiffres concrets, issus du terrain et d'études de référence, pour vous aider à évaluer le retour sur investissement de l'IA dans votre organisation commerciale.
+
+> Après 20 ans dans le commerce B2B et des dizaines d'implémentations IA, voici ce qu'on constate vraiment sur le terrain — pas la théorie, le concret.
 
 ## Les chiffres macro
 
