@@ -13,8 +13,8 @@ const footerLinks = {
     { name: "Make vs n8n vs Zapier", href: "/ressources/automatisation-crm-workflows-ia" },
   ],
   Entreprise: [
-    { name: "Mentions légales", href: "#" },
-    { name: "Confidentialité", href: "#" },
+    { name: "Mentions légales", href: "/mentions-legales" },
+    { name: "Confidentialité", href: "/confidentialite" },
   ],
 };
 
