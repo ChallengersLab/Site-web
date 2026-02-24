@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/sheet";
 
 const navLinks = [
-  { name: "Sales", href: "#sales" },
-  { name: "AI & Auto", href: "#ai" },
+  { name: "Sales", href: "/#sales" },
+  { name: "AI & Auto", href: "/#ai" },
   { name: "Ressources", href: "/ressources" },
 ];
 
@@ -49,7 +49,7 @@ export function Navbar() {
           {/* CTA + Mobile */}
           <div className="flex items-center gap-3">
             <a
-              href="#contact"
+              href="/#contact"
               className="btn-glow hidden items-center gap-2 rounded-lg px-5 py-2 text-[13px] md:inline-flex"
             >
               Parlons-en
@@ -79,7 +79,7 @@ export function Navbar() {
                   ))}
                   <div className="mt-6 border-t border-white/6 pt-6">
                     <a
-                      href="#contact"
+                      href="/#contact"
                       className="btn-glow flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-[14px]"
                     >
                       Parlons-en <ArrowRight className="h-3.5 w-3.5" />

@@ -57,7 +57,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: {
     canonical: "https://challengerslab.com",
+    languages: {
+      "fr-FR": "https://challengerslab.com",
+    },
   },
+  category: "technology",
 };
 
 const jsonLd = [
