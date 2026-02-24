@@ -1,10 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { BrainCircuit, Menu, X } from "lucide-react";
-import { MagneticButton } from "@/components/ui/MagneticButton";
+import { Menu } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -12,125 +10,84 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 
-const navColumns = [
-  {
-    label: "Services",
-    links: [
-      { name: "Cold Call Outsourcing", href: "#services" },
-      { name: "AI Websites", href: "#services" },
-    ],
-  },
-  {
-    label: "Solutions",
-    links: [
-      { name: "DIR CO Externalisé", href: "#solutions" },
-      { name: "Apps No-Code", href: "#solutions" },
-    ],
-  },
-  {
-    label: "Résultats",
-    links: [
-      { name: "Case Studies", href: "#results" },
-      { name: "Live Results", href: "#results" },
-    ],
-  },
-  {
-    label: "Entreprise",
-    links: [
-      { name: "À propos", href: "#about" },
-      { name: "Blog", href: "#blog" },
-    ],
-  },
+const navLinks = [
+  { name: "Sales", href: "#sales" },
+  { name: "AI & Auto", href: "#ai" },
+  { name: "Méthode", href: "#method" },
+  { name: "Résultats", href: "#results" },
 ];
 
 export function Navbar() {
   return (
-    <nav className="fixed top-0 z-50 w-full">
-      <div className="bg-black/90 backdrop-blur-3xl border-b border-white/10">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <motion.nav
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const }}
+      className="fixed top-0 z-50 w-full"
+    >
+      <div className="mx-auto max-w-6xl px-6 pt-4">
+        <div className="glassmorphism-strong flex items-center justify-between rounded-2xl px-6 py-3">
           {/* Logo */}
-          <Link href="/" className="group flex items-center gap-2.5">
-            <BrainCircuit
-              className="h-7 w-7 text-accent-start transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(123,94,255,0.6)]"
-            />
-            <span className="text-lg font-bold tracking-tight text-white">
-              Challengerslab
+          <Link href="/" className="group flex items-center gap-2">
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent-start to-accent-end text-xs font-bold text-white">
+              CL
+            </span>
+            <span className="font-display text-base font-bold tracking-tight text-white">
+              ChallengersLab
             </span>
           </Link>
 
-          {/* Desktop 4-column nav */}
-          <div className="hidden lg:grid lg:grid-cols-4 lg:gap-12">
-            {navColumns.map((col) => (
-              <div key={col.label}>
-                <span className="text-xs font-medium uppercase tracking-widest text-white/50">
-                  {col.label}
-                </span>
-                <ul className="mt-2 space-y-1">
-                  {col.links.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-white/70 transition-colors hover:text-white"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          {/* Desktop nav */}
+          <div className="hidden items-center gap-1 md:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="rounded-lg px-4 py-2 text-sm font-medium text-white/60 transition-colors hover:bg-white/5 hover:text-white"
+              >
+                {link.name}
+              </Link>
             ))}
           </div>
 
-          {/* Right side: CTA + lang + mobile */}
-          <div className="flex items-center gap-4">
-            <div className="hidden lg:block">
-              <MagneticButton href="#audit" size="default">
-                Réserver un Audit Gratuit
-              </MagneticButton>
-            </div>
+          {/* CTA + Mobile */}
+          <div className="flex items-center gap-3">
+            <a
+              href="#contact"
+              className="hidden items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-black transition-all hover:bg-white/90 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] md:inline-flex"
+            >
+              Parlons-en
+              <span className="text-base">&#8594;</span>
+            </a>
 
-            <button className="hidden text-xs font-medium text-white/50 transition-colors hover:text-white lg:block">
-              FR/EN
-            </button>
-
-            {/* Mobile menu */}
             <Sheet>
               <SheetTrigger asChild>
-                <button className="lg:hidden text-white p-2">
-                  <Menu className="h-6 w-6" />
+                <button className="rounded-lg p-2 text-white/60 transition-colors hover:bg-white/5 hover:text-white md:hidden">
+                  <Menu className="h-5 w-5" />
                 </button>
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-[320px] bg-black/95 backdrop-blur-3xl border-l border-white/10 p-8"
+                className="w-[300px] border-l border-white/8 bg-[#0a0a0a]/95 backdrop-blur-2xl p-8"
               >
-                <div className="flex flex-col gap-8 mt-8">
-                  {navColumns.map((col) => (
-                    <div key={col.label}>
-                      <span className="text-xs font-medium uppercase tracking-widest text-white/50">
-                        {col.label}
-                      </span>
-                      <ul className="mt-3 space-y-2">
-                        {col.links.map((link) => (
-                          <li key={link.name}>
-                            <SheetClose asChild>
-                              <Link
-                                href={link.href}
-                                className="block text-base text-white/70 transition-colors hover:text-white"
-                              >
-                                {link.name}
-                              </Link>
-                            </SheetClose>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                <div className="mt-8 flex flex-col gap-2">
+                  {navLinks.map((link) => (
+                    <SheetClose key={link.name} asChild>
+                      <Link
+                        href={link.href}
+                        className="rounded-xl px-4 py-3 text-lg font-medium text-white/70 transition-colors hover:bg-white/5 hover:text-white"
+                      >
+                        {link.name}
+                      </Link>
+                    </SheetClose>
                   ))}
-
-                  <div className="pt-4 border-t border-white/10">
-                    <MagneticButton href="#audit" size="default">
-                      Réserver un Audit Gratuit
-                    </MagneticButton>
+                  <div className="mt-6 border-t border-white/8 pt-6">
+                    <a
+                      href="#contact"
+                      className="flex w-full items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black"
+                    >
+                      Parlons-en &#8594;
+                    </a>
                   </div>
                 </div>
               </SheetContent>
@@ -138,6 +95,6 @@ export function Navbar() {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

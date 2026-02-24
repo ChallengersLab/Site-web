@@ -1,57 +1,73 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Syne, DM_Sans } from "next/font/google";
 import { GrainTexture } from "@/components/effects/GrainTexture";
 import { Navbar } from "@/components/layout/Navbar";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const syne = Syne({
+  variable: "--font-display",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-body",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://challengerslab.com"),
-  title: "Challengerslab | L'avenir de la performance commerciale est IA",
+  title: "ChallengersLab | Vos concurrents utilisent déjà l'IA. Et vous ?",
   description:
-    "ESN spécialisée en performance commerciale et IA. Cold Call, DIR CO externalisé, Sites IA, Apps No-Code. Scale x3 en 30 jours.",
+    "On restructure vos ventes et vos process avec l'IA. Pas de slides, pas de théorie. Des résultats mesurables en 90 jours.",
   keywords: [
     "ESN",
     "performance commerciale",
+    "IA ventes",
+    "automatisation",
     "cold call",
     "directeur commercial externalisé",
-    "site web IA",
+    "CRM",
     "no-code",
   ],
   openGraph: {
-    title: "Challengerslab | ESN Performance Commerciale & IA",
-    description: "Scale x3 en 30 jours avec l'IA",
+    title: "ChallengersLab | Sales × AI pour PME & Scale-ups B2B",
+    description:
+      "On restructure vos ventes et vos process avec l'IA. Résultats mesurables en 90 jours.",
     url: "https://challengerslab.com",
-    siteName: "Challengerslab",
+    siteName: "ChallengersLab",
     locale: "fr_FR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Challengerslab",
-    description: "L'avenir de la performance commerciale est IA",
+    title: "ChallengersLab",
+    description: "Vos concurrents utilisent déjà l'IA. Et vous ?",
   },
   robots: { index: true, follow: true },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Challengerslab",
+  "@type": "ProfessionalService",
+  name: "ChallengersLab",
   url: "https://challengerslab.com",
   description:
-    "ESN spécialisée en performance commerciale et IA. Cold Call, DIR CO externalisé, Sites IA, Apps No-Code.",
+    "Agence AI & Sales pour les PME et scale-ups B2B qui refusent le statu quo.",
   foundingDate: "2024",
   areaServed: "FR",
+  priceRange: "€€€",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Paris",
+    addressCountry: "FR",
+  },
   serviceType: [
-    "Cold Call Outsourcing",
-    "Directeur Commercial Externalisé",
-    "Sites Web IA",
-    "Applications No-Code",
+    "Consulting AI",
+    "Sales Consulting",
+    "Business Automation",
+    "No-Code Development",
   ],
 };
 
@@ -68,7 +84,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body
+        className={`${syne.variable} ${dmSans.variable} font-body antialiased`}
+      >
         <Navbar />
         {children}
         <GrainTexture />
