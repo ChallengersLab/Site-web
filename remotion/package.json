@@ -1,0 +1,20 @@
+{
+  "name": "challengerslab-hero-video",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts HeroDiagnostic --output ../public/videos/hero-diagnostic.mp4",
+    "render:webm": "remotion render src/index.ts HeroDiagnostic --codec vp8 --output ../public/videos/hero-diagnostic.webm"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.428",
+    "remotion": "4.0.428",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "typescript": "^5"
+  }
+}
