@@ -114,14 +114,14 @@ export function TrustBar() {
                 </ul>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <a
-                    href="#contact"
+                  <Link
+                    href={pillar.id === "ai" ? "/ia" : `/${pillar.id}`}
                     className="group/link inline-flex items-center gap-2 text-[13px] font-semibold transition-all"
                     style={{ color: pillar.accent }}
                   >
-                    Découvrir l&apos;offre
+                    En savoir plus
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
-                  </a>
+                  </Link>
                   <Link
                     href={`/ressources/${pillar.articleSlug}`}
                     className="group/link inline-flex items-center gap-2 text-[12px] text-white/25 transition-all hover:text-white/50"

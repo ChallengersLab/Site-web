@@ -9,8 +9,8 @@ import {
 
 const navLinks = [
   { name: "Accueil", href: "/" },
-  { name: "Sales", href: "/#sales" },
-  { name: "AI & Auto", href: "/#ai" },
+  { name: "Sales", href: "/sales" },
+  { name: "AI & Auto", href: "/ia" },
   { name: "Ressources", href: "/ressources" },
   { name: "Contact", href: "/#contact" },
 ];

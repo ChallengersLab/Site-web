@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const footerLinks = {
   Offres: [
-    { name: "Sales", href: "/#sales" },
-    { name: "AI & Automation", href: "/#ai" },
+    { name: "Sales", href: "/sales" },
+    { name: "AI & Automation", href: "/ia" },
     { name: "Contact", href: "/#contact" },
   ],
   Ressources: [
