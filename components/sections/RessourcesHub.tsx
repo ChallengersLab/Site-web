@@ -88,57 +88,48 @@ export function RessourcesHub() {
         <motion.div layout className="mt-12 grid gap-5 md:grid-cols-2">
           {filtered.map((r, i) => (
             <ScrollReveal key={r.slug} delay={0.08 * i}>
-              <TiltCard
-                className="group flex h-full flex-col p-8 transition-all duration-500"
-                intensity={4}
-              >
-                {r.soon && (
-                  <div className="absolute right-6 top-6 rounded-full bg-white/[0.06] px-3 py-1 text-[10px] font-medium text-white/30">
-                    Bientôt
-                  </div>
-                )}
-
-                <div className="flex items-center gap-3">
-                  <span
-                    className="inline-flex rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.12em]"
-                    style={{
-                      background: `${r.tagColor}12`,
-                      border: `1px solid ${r.tagColor}25`,
-                      color: r.tagColor,
-                    }}
-                  >
-                    {r.tag}
-                  </span>
-                  <span className="text-[11px] text-white/20">
-                    {r.readTime}
-                  </span>
-                </div>
-
-                <h2 className="font-display mt-5 text-[20px] leading-[1.2] text-white/90 transition-colors group-hover:text-white">
-                  {r.title}
-                </h2>
-
-                <p className="mt-3 flex-1 text-[14px] leading-[1.7] text-white/35">
-                  {r.description}
-                </p>
-
-                <div className="mt-6">
-                  {r.soon ? (
-                    <span className="text-[13px] text-white/20">
-                      Disponible prochainement
-                    </span>
-                  ) : (
-                    <Link
-                      href={`/ressources/${r.slug}`}
-                      className="group/link inline-flex items-center gap-2 text-[13px] font-semibold transition-all"
-                      style={{ color: r.tagColor }}
+              <Link href={`/ressources/${r.slug}`}>
+                <TiltCard
+                  className="group flex h-full flex-col p-8 transition-all duration-500"
+                  intensity={4}
+                >
+                  <div className="flex items-center gap-3">
+                    <span
+                      className="inline-flex rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.12em]"
+                      style={{
+                        background: `${r.tagColor}12`,
+                        border: `1px solid ${r.tagColor}25`,
+                        color: r.tagColor,
+                      }}
                     >
-                      Lire l&apos;article
-                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
-                    </Link>
-                  )}
-                </div>
-              </TiltCard>
+                      {r.tag}
+                    </span>
+                    <span className="text-[11px] text-white/20">
+                      {r.readTime}
+                    </span>
+                    <span className="text-[11px] text-white/15">
+                      {new Date(r.publishedAt).toLocaleDateString("fr-FR", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </span>
+                  </div>
+
+                  <h2 className="font-display mt-5 text-[20px] leading-[1.2] text-white/90 transition-colors group-hover:text-white">
+                    {r.title}
+                  </h2>
+
+                  <p className="mt-3 flex-1 text-[14px] leading-[1.7] text-white/35">
+                    {r.description}
+                  </p>
+
+                  <div className="mt-6 inline-flex items-center gap-2 text-[13px] font-semibold transition-all" style={{ color: r.tagColor }}>
+                    Lire l&apos;article
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </div>
+                </TiltCard>
+              </Link>
             </ScrollReveal>
           ))}
         </motion.div>
