@@ -327,13 +327,16 @@ export function ArticleLayout({ ressource }: { ressource: Ressource }) {
               <Clock className="h-3 w-3" />
               {ressource.readTime}
             </span>
-            <span className="text-[12px] text-white/20">
+            <time
+              dateTime={ressource.publishedAt}
+              className="text-[12px] text-white/20"
+            >
               {new Date(ressource.publishedAt).toLocaleDateString("fr-FR", {
                 day: "numeric",
                 month: "long",
                 year: "numeric",
               })}
-            </span>
+            </time>
           </div>
 
           <h1 className="font-display mt-6 text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.02em] text-white">

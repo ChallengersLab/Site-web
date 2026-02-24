@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { ArrowRight } from "lucide-react";
-import { ressources } from "@/lib/ressources";
+import { getPublishedRessources } from "@/lib/ressources";
 
 const categories = [
   { id: "all", label: "Tout" },
@@ -19,10 +19,11 @@ const categories = [
 export function RessourcesHub() {
   const [activeCategory, setActiveCategory] = useState("all");
 
+  const published = getPublishedRessources();
   const filtered =
     activeCategory === "all"
-      ? ressources
-      : ressources.filter((r) => r.category === activeCategory);
+      ? published
+      : published.filter((r) => r.category === activeCategory);
 
   return (
     <section className="relative min-h-screen overflow-hidden pt-36 pb-32">
