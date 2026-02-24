@@ -2,12 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
+import { Menu, ArrowRight } from "lucide-react";
 import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetClose,
+  Sheet, SheetContent, SheetTrigger, SheetClose,
 } from "@/components/ui/sheet";
 
 const navLinks = [
@@ -22,28 +19,28 @@ export function Navbar() {
     <motion.nav
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
       className="fixed top-0 z-50 w-full"
     >
-      <div className="mx-auto max-w-6xl px-6 pt-4">
-        <div className="glassmorphism-strong flex items-center justify-between rounded-2xl px-6 py-3">
+      <div className="mx-auto max-w-[1100px] px-6 pt-5">
+        <div className="glass-card flex items-center justify-between px-5 py-3">
           {/* Logo */}
-          <Link href="/" className="group flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent-start to-accent-end text-xs font-bold text-white">
+          <Link href="/" className="flex items-center gap-2.5">
+            <span className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-accent-start to-accent-end text-[10px] font-bold text-white shadow-[0_0_12px_rgba(123,94,255,0.4)]">
               CL
             </span>
-            <span className="font-display text-base font-bold tracking-tight text-white">
+            <span className="font-display text-[15px] text-white">
               ChallengersLab
             </span>
           </Link>
 
-          {/* Desktop nav */}
+          {/* Links */}
           <div className="hidden items-center gap-1 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="rounded-lg px-4 py-2 text-sm font-medium text-white/60 transition-colors hover:bg-white/5 hover:text-white"
+                className="rounded-lg px-4 py-2 text-[13px] font-medium text-white/40 transition-colors duration-200 hover:bg-white/[0.04] hover:text-white/80"
               >
                 {link.name}
               </Link>
@@ -54,39 +51,39 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href="#contact"
-              className="hidden items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-black transition-all hover:bg-white/90 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] md:inline-flex"
+              className="btn-glow hidden items-center gap-2 rounded-lg px-5 py-2 text-[13px] md:inline-flex"
             >
               Parlons-en
-              <span className="text-base">&#8594;</span>
+              <ArrowRight className="h-3.5 w-3.5" />
             </a>
 
             <Sheet>
               <SheetTrigger asChild>
-                <button className="rounded-lg p-2 text-white/60 transition-colors hover:bg-white/5 hover:text-white md:hidden">
+                <button className="rounded-lg p-2 text-white/40 transition-colors hover:bg-white/[0.04] hover:text-white md:hidden">
                   <Menu className="h-5 w-5" />
                 </button>
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-[300px] border-l border-white/8 bg-[#0a0a0a]/95 backdrop-blur-2xl p-8"
+                className="w-[300px] border-l border-white/6 bg-[#080808]/95 backdrop-blur-2xl p-8"
               >
-                <div className="mt-8 flex flex-col gap-2">
+                <div className="mt-8 flex flex-col gap-1">
                   {navLinks.map((link) => (
                     <SheetClose key={link.name} asChild>
                       <Link
                         href={link.href}
-                        className="rounded-xl px-4 py-3 text-lg font-medium text-white/70 transition-colors hover:bg-white/5 hover:text-white"
+                        className="rounded-xl px-4 py-3.5 text-[16px] font-medium text-white/50 transition-colors hover:bg-white/[0.04] hover:text-white"
                       >
                         {link.name}
                       </Link>
                     </SheetClose>
                   ))}
-                  <div className="mt-6 border-t border-white/8 pt-6">
+                  <div className="mt-6 border-t border-white/6 pt-6">
                     <a
                       href="#contact"
-                      className="flex w-full items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black"
+                      className="btn-glow flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-[14px]"
                     >
-                      Parlons-en &#8594;
+                      Parlons-en <ArrowRight className="h-3.5 w-3.5" />
                     </a>
                   </div>
                 </div>

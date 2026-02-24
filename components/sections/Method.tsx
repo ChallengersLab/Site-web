@@ -6,18 +6,20 @@ const steps = [
   {
     number: "01",
     phase: "Diagnostic",
-    timeline: "Semaines 1-2",
+    timeline: "Semaines 1–2",
     description:
       "On audite vos process sales, votre stack, vos données. On identifie les quick wins et les chantiers structurants.",
-    deliverable: "Livrable : roadmap priorisée",
+    deliverable: "Roadmap priorisée",
+    accent: "#7B5EFF",
   },
   {
     number: "02",
     phase: "Implémentation",
-    timeline: "Semaines 3-10",
+    timeline: "Semaines 3–10",
     description:
       "On construit, on configure, on forme. Nouveaux workflows, intégrations IA, machines de prospection. On fait, on ne théorise pas.",
-    deliverable: "Livrable : systèmes opérationnels",
+    deliverable: "Systèmes opérationnels",
+    accent: "#a78bfa",
   },
   {
     number: "03",
@@ -25,74 +27,80 @@ const steps = [
     timeline: "Semaine 10+",
     description:
       "On mesure, on itère, on scale. Chaque action est trackée. Si ça ne performe pas, on ajuste. Zéro complaisance.",
-    deliverable: "Livrable : croissance mesurable",
+    deliverable: "Croissance mesurable",
+    accent: "#00F5FF",
   },
 ];
 
 export function Method() {
   return (
-    <section className="relative py-28" id="method">
-      <div className="section-divider mx-auto mb-28 w-full max-w-6xl" />
+    <section className="relative py-32 overflow-hidden" id="method">
+      <div className="section-divider mx-auto mb-32 w-full max-w-[1100px]" />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
+      <div className="relative z-10 mx-auto max-w-[1100px] px-6">
         <ScrollReveal>
-          <span className="badge-glow inline-flex rounded-full px-3 py-1 text-xs font-medium">
+          <span className="badge-glow inline-flex rounded-full px-3 py-1 text-[11px] font-medium tracking-wider uppercase">
             Notre méthode
           </span>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h2 className="font-display mt-6 text-4xl font-bold tracking-tight md:text-5xl">
+          <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
             3 étapes. 90 jours.{" "}
-            <span className="gradient-text">Des résultats.</span>
+            <em className="gradient-text">Des résultats.</em>
           </h2>
-          <p className="mt-4 max-w-xl text-base text-white/40">
+          <p className="mt-5 max-w-md text-[15px] leading-[1.7] text-white/30">
             Pas de consulting à rallonge. Un process clair, mesurable, et
             orienté ROI dès le départ.
           </p>
         </ScrollReveal>
 
-        <div className="relative mt-20">
-          {/* Vertical connecting line */}
-          <div className="absolute bottom-0 left-[27px] top-0 hidden w-px bg-gradient-to-b from-accent-start/30 via-accent-end/20 to-transparent md:block" />
-
-          <div className="space-y-12">
-            {steps.map((step, i) => (
-              <ScrollReveal key={step.number} delay={0.15 * i}>
-                <div className="group flex gap-8">
-                  {/* Step number */}
-                  <div className="relative hidden shrink-0 md:block">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/8 bg-surface font-display text-lg font-bold text-white/60 transition-all duration-300 group-hover:border-accent-start/30 group-hover:text-accent-start group-hover:shadow-[0_0_20px_rgba(123,94,255,0.15)]">
-                      {step.number}
-                    </div>
-                  </div>
-
-                  {/* Content card */}
-                  <div className="flex-1 rounded-2xl border border-white/6 bg-surface p-8 transition-all duration-300 hover:border-white/10 hover:bg-surface-light">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <span className="font-display text-xl font-bold text-white md:hidden">
-                        {step.number}.
-                      </span>
-                      <h3 className="font-display text-xl font-bold text-white">
-                        {step.phase}
-                      </h3>
-                      <span className="rounded-full bg-white/5 px-3 py-0.5 text-xs text-white/35">
-                        {step.timeline}
-                      </span>
-                    </div>
-
-                    <p className="mt-4 text-sm leading-relaxed text-white/45">
-                      {step.description}
-                    </p>
-
-                    <p className="mt-4 text-xs font-semibold text-accent-start/70">
-                      {step.deliverable}
-                    </p>
-                  </div>
+        <div className="relative mt-20 space-y-5">
+          {steps.map((step, i) => (
+            <ScrollReveal key={step.number} delay={0.12 * i}>
+              <div className="glass-card group flex flex-col gap-6 p-8 transition-all duration-500 md:flex-row md:items-start md:gap-10">
+                {/* Number */}
+                <div className="shrink-0">
+                  <span
+                    className="font-display text-6xl tracking-tight opacity-20 transition-opacity duration-500 group-hover:opacity-60"
+                    style={{ color: step.accent }}
+                  >
+                    {step.number}
+                  </span>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
+
+                {/* Content */}
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <h3 className="font-display text-xl text-white">
+                      {step.phase}
+                    </h3>
+                    <span className="rounded-full bg-white/4 px-3 py-0.5 text-[11px] text-white/25">
+                      {step.timeline}
+                    </span>
+                  </div>
+
+                  <p className="mt-3 text-[14px] leading-[1.7] text-white/35">
+                    {step.description}
+                  </p>
+                </div>
+
+                {/* Deliverable */}
+                <div className="shrink-0 md:self-center">
+                  <span
+                    className="inline-flex rounded-lg px-4 py-2 text-[12px] font-semibold"
+                    style={{
+                      background: `${step.accent}10`,
+                      border: `1px solid ${step.accent}20`,
+                      color: step.accent,
+                    }}
+                  >
+                    {step.deliverable}
+                  </span>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>

@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { Syne, DM_Sans } from "next/font/google";
+import { Instrument_Serif, DM_Sans } from "next/font/google";
 import { GrainTexture } from "@/components/effects/GrainTexture";
+import { CursorGlow } from "@/components/effects/CursorGlow";
 import { Navbar } from "@/components/layout/Navbar";
 import "./globals.css";
 
-const syne = Syne({
+const instrumentSerif = Instrument_Serif({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 const dmSans = DM_Sans({
@@ -26,8 +28,6 @@ export const metadata: Metadata = {
     "performance commerciale",
     "IA ventes",
     "automatisation",
-    "cold call",
-    "directeur commercial externalisé",
     "CRM",
     "no-code",
   ],
@@ -85,8 +85,9 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${syne.variable} ${dmSans.variable} font-body antialiased`}
+        className={`${instrumentSerif.variable} ${dmSans.variable} font-body antialiased`}
       >
+        <CursorGlow />
         <Navbar />
         {children}
         <GrainTexture />

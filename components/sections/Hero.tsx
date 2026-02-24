@@ -3,141 +3,138 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-const container = {
+const stagger = {
   hidden: {},
   show: {
-    transition: {
-      delayChildren: 0.2,
-      staggerChildren: 0.12,
-    },
+    transition: { delayChildren: 0.1, staggerChildren: 0.1 },
   },
 };
 
-const item = {
-  hidden: { opacity: 0, y: 30, filter: "blur(4px)" },
+const fadeUp = {
+  hidden: { opacity: 0, y: 30, filter: "blur(6px)" },
   show: {
     opacity: 1,
     y: 0,
     filter: "blur(0px)",
-    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const },
+    transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden">
-      {/* Ambient gradient orbs */}
-      <div
-        className="absolute -left-[300px] top-[10%] h-[600px] w-[600px] rounded-full opacity-30 blur-[120px]"
-        style={{
-          background: "radial-gradient(circle, #7B5EFF 0%, transparent 70%)",
-          animation: "float-slow 20s ease-in-out infinite",
-        }}
-      />
-      <div
-        className="absolute -right-[200px] bottom-[10%] h-[500px] w-[500px] rounded-full opacity-20 blur-[100px]"
-        style={{
-          background: "radial-gradient(circle, #00F5FF 0%, transparent 70%)",
-          animation: "float-slow-reverse 25s ease-in-out infinite",
-        }}
-      />
+    <section className="relative min-h-screen overflow-hidden flex items-center">
+      {/* ---- Background layers ---- */}
 
-      {/* Subtle grid */}
+      {/* Purple orb top-left */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute -left-[20%] -top-[10%] h-[700px] w-[700px] rounded-full"
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
-          backgroundSize: "80px 80px",
+          background: "radial-gradient(circle, rgba(123,94,255,0.35) 0%, transparent 65%)",
+          animation: "float-orb 18s ease-in-out infinite",
+          filter: "blur(80px)",
         }}
       />
+      {/* Cyan orb bottom-right */}
+      <div
+        className="absolute -bottom-[15%] -right-[15%] h-[600px] w-[600px] rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(0,245,255,0.2) 0%, transparent 65%)",
+          animation: "float-orb-reverse 22s ease-in-out infinite",
+          filter: "blur(80px)",
+        }}
+      />
+      {/* Grid with fade mask */}
+      <div className="hero-grid absolute inset-0" />
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20 pt-32">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="max-w-4xl"
-        >
+      {/* ---- Content ---- */}
+      <div className="relative z-10 mx-auto w-full max-w-[1100px] px-6 pt-36 pb-24 md:pt-44 md:pb-32">
+        <motion.div variants={stagger} initial="hidden" animate="show">
           {/* Badge */}
-          <motion.div variants={item}>
-            <span className="badge-glow inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent-end" style={{ boxShadow: "0 0 6px #00F5FF" }} />
-              Agence AI & Sales pour PME et Scale-ups B2B
+          <motion.div variants={fadeUp}>
+            <span className="badge-glow inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-medium tracking-wider uppercase">
+              <span
+                className="h-1.5 w-1.5 rounded-full bg-accent-end"
+                style={{ boxShadow: "0 0 8px 2px rgba(0,245,255,0.6)" }}
+              />
+              Sales &times; AI &mdash; Paris
             </span>
           </motion.div>
 
-          {/* Headline */}
-          <motion.h1
-            variants={item}
-            className="font-display mt-8 text-[clamp(2.5rem,6vw,5.5rem)] font-extrabold leading-[0.95] tracking-[-0.03em]"
-          >
-            <span className="gradient-text-subtle">Vos concurrents</span>
-            <br />
-            <span className="gradient-text-subtle">utilisent déjà l&apos;IA.</span>
-            <br />
-            <span className="gradient-text">Et vous ?</span>
+          {/* Headline — serif display, massive */}
+          <motion.h1 variants={fadeUp} className="mt-10">
+            <span
+              className="font-display block text-[clamp(3rem,7.5vw,6.5rem)] leading-[0.92] tracking-[-0.02em] text-white"
+            >
+              Vos concurrents
+            </span>
+            <span
+              className="font-display block text-[clamp(3rem,7.5vw,6.5rem)] leading-[0.92] tracking-[-0.02em] text-white"
+            >
+              utilisent déjà l&apos;IA.
+            </span>
+            <span
+              className="font-display block text-[clamp(3rem,7.5vw,6.5rem)] leading-[0.92] tracking-[-0.02em] gradient-text mt-2"
+            >
+              <em>Et vous ?</em>
+            </span>
           </motion.h1>
 
-          {/* Subtitle */}
+          {/* Sub copy */}
           <motion.p
-            variants={item}
-            className="mt-7 max-w-xl text-lg leading-relaxed text-white/50 md:text-xl"
+            variants={fadeUp}
+            className="mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
           >
             On restructure vos ventes et vos process avec l&apos;IA.
             Pas de slides, pas de théorie.{" "}
-            <span className="text-white/80 font-medium">
+            <span className="text-white/75">
               Des résultats mesurables en 90 jours.
             </span>
           </motion.p>
 
           {/* CTAs */}
           <motion.div
-            variants={item}
+            variants={fadeUp}
             className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
           >
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 rounded-xl bg-white px-7 py-4 text-base font-semibold text-black transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]"
+              className="btn-glow inline-flex items-center gap-3 rounded-xl px-8 py-4 text-[15px]"
             >
-              Réserver un appel stratégique
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <span>Réserver un appel stratégique</span>
+              <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="#sales"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-7 py-4 text-base font-medium text-white/70 transition-all hover:border-white/20 hover:text-white"
+              className="group inline-flex items-center gap-2 rounded-xl border border-white/8 px-7 py-4 text-[15px] font-medium text-white/50 transition-all hover:border-white/15 hover:text-white/80"
             >
               Découvrir nos offres
+              <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5" />
             </a>
           </motion.div>
 
-          {/* Proof line */}
-          <motion.p
-            variants={item}
-            className="mt-8 text-sm text-white/30"
-          >
-            30 min &middot; Gratuit &middot; Sans engagement &middot; Max 5 nouveaux clients / trimestre
+          {/* Proof */}
+          <motion.p variants={fadeUp} className="mt-6 text-[13px] text-white/20">
+            30 min &middot; Gratuit &middot; Sans engagement &middot; Max 5 clients / trimestre
           </motion.p>
         </motion.div>
 
-        {/* Stats row */}
+        {/* Stats bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const }}
-          className="mt-20 grid grid-cols-3 gap-6 border-t border-white/8 pt-10 max-w-3xl"
+          transition={{ delay: 1, duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
+          className="mt-24 flex flex-col gap-10 border-t border-white/6 pt-10 sm:flex-row sm:gap-16"
         >
           {[
             { value: "47+", label: "Entreprises accompagnées" },
-            { value: "+320%", label: "Croissance pipeline moyenne" },
-            { value: "<90j", label: "Pour voir les premiers résultats" },
+            { value: "+320%", label: "Croissance pipeline" },
+            { value: "<90j", label: "Premiers résultats" },
           ].map((stat) => (
             <div key={stat.label}>
-              <p className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl">
+              <p className="font-display text-4xl tracking-tight text-white md:text-5xl">
                 {stat.value}
               </p>
-              <p className="mt-1.5 text-xs text-white/40 md:text-sm">
+              <p className="mt-2 text-[13px] text-white/30">
                 {stat.label}
               </p>
             </div>
