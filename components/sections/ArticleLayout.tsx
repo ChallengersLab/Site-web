@@ -199,12 +199,21 @@ function renderMarkdown(content: string) {
     if (line.startsWith("## ")) {
       flushList();
       flushTable();
+      const headingText = line.slice(3);
+      const headingId = headingText
+        .replace(/\*\*/g, "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "");
       elements.push(
         <h2
           key={`h2-${elements.length}`}
-          className="font-display mt-14 mb-5 text-[26px] leading-[1.2] text-white/90"
+          id={headingId}
+          className="font-display mt-14 mb-5 text-[26px] leading-[1.2] text-white/90 scroll-mt-24"
         >
-          {renderInline(line.slice(3))}
+          {renderInline(headingText)}
         </h2>
       );
       i++;
@@ -273,7 +282,25 @@ function renderMarkdown(content: string) {
   return elements;
 }
 
+function extractTOC(content: string) {
+  return content
+    .split("\n")
+    .filter((line) => line.startsWith("## "))
+    .map((line) => {
+      const text = line.slice(3).replace(/\*\*/g, "");
+      const id = text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "");
+      return { text, id };
+    });
+}
+
 export function ArticleLayout({ ressource }: { ressource: Ressource }) {
+  const toc = extractTOC(ressource.content);
+
   return (
     <section className="relative overflow-hidden pt-36 pb-32">
       {/* Background */}
@@ -350,6 +377,28 @@ export function ArticleLayout({ ressource }: { ressource: Ressource }) {
 
         {/* Divider */}
         <div className="section-divider my-10" />
+
+        {/* Table of Contents */}
+        {toc.length > 2 && (
+          <nav aria-label="Sommaire" className="mb-10 rounded-xl border border-white/[0.06] bg-white/[0.02] p-6">
+            <p className="text-[12px] font-semibold uppercase tracking-[0.15em] text-white/30">
+              Sommaire
+            </p>
+            <ol className="mt-3 space-y-2">
+              {toc.map((item, i) => (
+                <li key={item.id}>
+                  <a
+                    href={`#${item.id}`}
+                    className="flex items-baseline gap-3 text-[14px] text-white/40 transition-colors hover:text-white/70"
+                  >
+                    <span className="text-[11px] text-white/15 tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                    {item.text}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
 
         {/* Content */}
         <motion.article
