@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "ChallengersLab — Agence Sales & IA pour PME B2B";
+  "Ressources Sales & IA pour B2B — ChallengersLab";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -21,30 +21,17 @@ export default async function Image() {
           position: "relative",
         }}
       >
-        {/* Gradient orbs */}
+        {/* Gradient orb */}
         <div
           style={{
             position: "absolute",
-            left: -100,
-            top: -100,
+            right: -50,
+            top: -50,
             width: 500,
             height: 500,
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(123,94,255,0.3) 0%, transparent 65%)",
-            filter: "blur(80px)",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            right: -80,
-            bottom: -80,
-            width: 400,
-            height: 400,
-            borderRadius: "50%",
-            background:
-              "radial-gradient(circle, rgba(0,245,255,0.15) 0%, transparent 65%)",
+              "radial-gradient(circle, rgba(123,94,255,0.25) 0%, transparent 65%)",
             filter: "blur(80px)",
           }}
         />
@@ -78,48 +65,28 @@ export default async function Image() {
         >
           <span
             style={{
-              fontSize: 60,
+              fontSize: 56,
               fontWeight: 800,
               color: "white",
-              lineHeight: 1,
+              lineHeight: 1.05,
               letterSpacing: "-0.03em",
             }}
           >
-            L&apos;agence qui croise
+            Ressources
           </span>
-          <div
+          <span
             style={{
-              display: "flex",
-              alignItems: "baseline",
-              gap: "16px",
-              marginTop: 8,
+              fontSize: 56,
+              fontWeight: 800,
+              background: "linear-gradient(135deg, #7B5EFF, #00F5FF)",
+              backgroundClip: "text",
+              color: "transparent",
+              lineHeight: 1.1,
+              letterSpacing: "-0.03em",
             }}
           >
-            <span
-              style={{
-                fontSize: 60,
-                fontWeight: 800,
-                background: "linear-gradient(135deg, #7B5EFF, #00F5FF)",
-                backgroundClip: "text",
-                color: "transparent",
-                lineHeight: 1.1,
-                letterSpacing: "-0.03em",
-              }}
-            >
-              Sales & IA
-            </span>
-            <span
-              style={{
-                fontSize: 60,
-                fontWeight: 800,
-                color: "rgba(255,255,255,0.35)",
-                lineHeight: 1.1,
-                letterSpacing: "-0.03em",
-              }}
-            >
-              pour les B2B
-            </span>
-          </div>
+            Sales &times; IA
+          </span>
         </div>
 
         {/* Subtitle */}
@@ -130,8 +97,8 @@ export default async function Image() {
             marginTop: 32,
           }}
         >
-          Prospection externalisée &bull; Coaching Challenger Sales &bull;
-          Automatisation IA
+          Guides, articles et outils pour structurer vos ventes B2B avec
+          l&apos;IA
         </p>
       </div>
     ),
