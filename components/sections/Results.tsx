@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { Clock, AlertTriangle, CreditCard } from "lucide-react";
@@ -35,15 +37,27 @@ const painPoints = [
 ];
 
 export function Results() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const orbY = useTransform(scrollYProgress, [0, 1], [80, -80]);
+
   return (
-    <section className="relative py-32 overflow-hidden" id="results">
-      <div
+    <section ref={sectionRef} className="relative py-32 overflow-hidden" id="results">
+      <motion.div
+        style={{ y: orbY }}
         className="absolute right-[5%] top-[20%] h-[400px] w-[400px] rounded-full"
-        style={{
-          background: "radial-gradient(circle, rgba(123,94,255,0.15) 0%, transparent 70%)",
-          filter: "blur(80px)",
-        }}
-      />
+      >
+        <div
+          className="h-full w-full rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(123,94,255,0.15) 0%, transparent 70%)",
+            filter: "blur(80px)",
+          }}
+        />
+      </motion.div>
 
       <div className="relative z-10 mx-auto max-w-[1100px] px-6">
         <ScrollReveal>

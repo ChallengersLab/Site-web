@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TiltCard } from "@/components/ui/TiltCard";
 
@@ -37,16 +39,28 @@ const testimonials = [
 ];
 
 export function Testimonials() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const orbY = useTransform(scrollYProgress, [0, 1], [50, -70]);
+
   return (
-    <section className="relative py-32 overflow-hidden">
-      <div
+    <section ref={sectionRef} className="relative py-32 overflow-hidden">
+      <motion.div
+        style={{ y: orbY }}
         className="absolute left-[10%] bottom-[10%] h-[350px] w-[350px] rounded-full"
-        style={{
-          background: "radial-gradient(circle, rgba(0,245,255,0.1) 0%, transparent 70%)",
-          filter: "blur(80px)",
-          animation: "float-orb-reverse 20s ease-in-out infinite",
-        }}
-      />
+      >
+        <div
+          className="h-full w-full rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(0,245,255,0.1) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-orb-reverse 20s ease-in-out infinite",
+          }}
+        />
+      </motion.div>
 
       <div className="relative z-10 mx-auto max-w-[1100px] px-6">
         <ScrollReveal>

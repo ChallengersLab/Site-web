@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useCountUp } from "@/hooks/use-count-up";
+import { HeroDashboard } from "@/components/ui/HeroDashboard";
 
 const stagger = {
   hidden: {},
@@ -19,6 +21,33 @@ const fadeUp = {
     transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
+
+function CountUpStat({
+  end,
+  prefix,
+  suffix,
+  label,
+}: {
+  end: number;
+  prefix?: string;
+  suffix?: string;
+  label: string;
+}) {
+  const { ref, value } = useCountUp(end, 2200);
+
+  return (
+    <div>
+      <p className="font-display text-4xl tracking-tight text-white md:text-5xl">
+        <span ref={ref}>
+          {prefix}
+          {value}
+          {suffix}
+        </span>
+      </p>
+      <p className="mt-2 text-[13px] text-white/30">{label}</p>
+    </div>
+  );
+}
 
 export function Hero() {
   return (
@@ -48,75 +77,77 @@ export function Hero() {
 
       {/* ---- Content ---- */}
       <div className="relative z-10 mx-auto w-full max-w-[1100px] px-6 pt-36 pb-24 md:pt-44 md:pb-32">
-        <motion.div variants={stagger} initial="hidden" animate="show">
-          {/* Badge */}
-          <motion.div variants={fadeUp}>
-            <span className="badge-glow inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-medium tracking-wider uppercase">
-              <span
-                className="h-1.5 w-1.5 rounded-full bg-accent-end"
-                style={{ boxShadow: "0 0 8px 2px rgba(0,245,255,0.6)" }}
-              />
-              Sales &times; AI &mdash; Paris
-            </span>
+        <div className="grid items-center gap-16 lg:grid-cols-[1fr,420px] lg:gap-12">
+          {/* Left: text content */}
+          <motion.div variants={stagger} initial="hidden" animate="show">
+            {/* Badge */}
+            <motion.div variants={fadeUp}>
+              <span className="badge-glow inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-medium tracking-wider uppercase">
+                <span
+                  className="h-1.5 w-1.5 rounded-full bg-accent-end"
+                  style={{ boxShadow: "0 0 8px 2px rgba(0,245,255,0.6)" }}
+                />
+                Sales &times; AI &mdash; Paris
+              </span>
+            </motion.div>
+
+            {/* Headline */}
+            <motion.h1 variants={fadeUp} className="mt-10">
+              <span className="font-display block text-[clamp(2.8rem,6.5vw,5.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
+                Vos concurrents
+              </span>
+              <span className="font-display block text-[clamp(2.8rem,6.5vw,5.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
+                utilisent déjà l&apos;IA.
+              </span>
+              <span className="font-display block text-[clamp(2.8rem,6.5vw,5.5rem)] leading-[0.92] tracking-[-0.02em] gradient-text mt-2">
+                <em>Et vous ?</em>
+              </span>
+            </motion.h1>
+
+            {/* Sub copy */}
+            <motion.p
+              variants={fadeUp}
+              className="mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
+            >
+              On restructure vos ventes et vos process avec l&apos;IA.
+              Pas de slides, pas de théorie.{" "}
+              <span className="text-white/75">
+                Des résultats mesurables en 90 jours.
+              </span>
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              variants={fadeUp}
+              className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
+            >
+              <a
+                href="#contact"
+                className="btn-glow inline-flex items-center gap-3 rounded-xl px-8 py-4 text-[15px]"
+              >
+                <span>Réserver un appel stratégique</span>
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href="#sales"
+                className="group inline-flex items-center gap-2 rounded-xl border border-white/8 px-7 py-4 text-[15px] font-medium text-white/50 transition-all hover:border-white/15 hover:text-white/80"
+              >
+                Découvrir nos offres
+                <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5" />
+              </a>
+            </motion.div>
+
+            {/* Proof */}
+            <motion.p variants={fadeUp} className="mt-6 text-[13px] text-white/20">
+              30 min &middot; Gratuit &middot; Sans engagement &middot; Max 5 clients / trimestre
+            </motion.p>
           </motion.div>
 
-          {/* Headline — serif display, massive */}
-          <motion.h1 variants={fadeUp} className="mt-10">
-            <span
-              className="font-display block text-[clamp(3rem,7.5vw,6.5rem)] leading-[0.92] tracking-[-0.02em] text-white"
-            >
-              Vos concurrents
-            </span>
-            <span
-              className="font-display block text-[clamp(3rem,7.5vw,6.5rem)] leading-[0.92] tracking-[-0.02em] text-white"
-            >
-              utilisent déjà l&apos;IA.
-            </span>
-            <span
-              className="font-display block text-[clamp(3rem,7.5vw,6.5rem)] leading-[0.92] tracking-[-0.02em] gradient-text mt-2"
-            >
-              <em>Et vous ?</em>
-            </span>
-          </motion.h1>
-
-          {/* Sub copy */}
-          <motion.p
-            variants={fadeUp}
-            className="mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
-          >
-            On restructure vos ventes et vos process avec l&apos;IA.
-            Pas de slides, pas de théorie.{" "}
-            <span className="text-white/75">
-              Des résultats mesurables en 90 jours.
-            </span>
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div
-            variants={fadeUp}
-            className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
-          >
-            <a
-              href="#contact"
-              className="btn-glow inline-flex items-center gap-3 rounded-xl px-8 py-4 text-[15px]"
-            >
-              <span>Réserver un appel stratégique</span>
-              <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="#sales"
-              className="group inline-flex items-center gap-2 rounded-xl border border-white/8 px-7 py-4 text-[15px] font-medium text-white/50 transition-all hover:border-white/15 hover:text-white/80"
-            >
-              Découvrir nos offres
-              <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5" />
-            </a>
-          </motion.div>
-
-          {/* Proof */}
-          <motion.p variants={fadeUp} className="mt-6 text-[13px] text-white/20">
-            30 min &middot; Gratuit &middot; Sans engagement &middot; Max 5 clients / trimestre
-          </motion.p>
-        </motion.div>
+          {/* Right: dashboard visual */}
+          <div className="hidden lg:block">
+            <HeroDashboard />
+          </div>
+        </div>
 
         {/* Stats bar */}
         <motion.div
@@ -125,20 +156,9 @@ export function Hero() {
           transition={{ delay: 1, duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
           className="mt-24 flex flex-col gap-10 border-t border-white/6 pt-10 sm:flex-row sm:gap-16"
         >
-          {[
-            { value: "47+", label: "Entreprises accompagnées" },
-            { value: "+320%", label: "Croissance pipeline" },
-            { value: "<90j", label: "Premiers résultats" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <p className="font-display text-4xl tracking-tight text-white md:text-5xl">
-                {stat.value}
-              </p>
-              <p className="mt-2 text-[13px] text-white/30">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+          <CountUpStat end={47} suffix="+" label="Entreprises accompagnées" />
+          <CountUpStat end={320} prefix="+" suffix="%" label="Croissance pipeline" />
+          <CountUpStat end={90} prefix="<" suffix="j" label="Premiers résultats" />
         </motion.div>
       </div>
     </section>

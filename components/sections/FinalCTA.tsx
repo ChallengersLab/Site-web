@@ -1,28 +1,50 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ArrowRight } from "lucide-react";
 
 export function FinalCTA() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const orbY1 = useTransform(scrollYProgress, [0, 1], [100, -100]);
+  const orbY2 = useTransform(scrollYProgress, [0, 1], [60, -80]);
+  const orbScale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1.2, 0.9]);
+
   return (
-    <section className="relative py-40 overflow-hidden" id="contact">
-      {/* Multiple layered orbs */}
-      <div
+    <section ref={sectionRef} className="relative py-40 overflow-hidden" id="contact">
+      {/* Multiple layered orbs with parallax */}
+      <motion.div
+        style={{ y: orbY1, scale: orbScale }}
         className="absolute left-1/2 top-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full"
-        style={{
-          background: "radial-gradient(circle, rgba(123,94,255,0.25) 0%, transparent 60%)",
-          filter: "blur(100px)",
-          animation: "pulse-soft 8s ease-in-out infinite",
-        }}
-      />
-      <div
+      >
+        <div
+          className="h-full w-full rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(123,94,255,0.25) 0%, transparent 60%)",
+            filter: "blur(100px)",
+            animation: "pulse-soft 8s ease-in-out infinite",
+          }}
+        />
+      </motion.div>
+      <motion.div
+        style={{ y: orbY2 }}
         className="absolute left-[40%] top-[30%] h-[400px] w-[400px] rounded-full"
-        style={{
-          background: "radial-gradient(circle, rgba(0,245,255,0.12) 0%, transparent 65%)",
-          filter: "blur(80px)",
-          animation: "float-orb 15s ease-in-out infinite",
-        }}
-      />
+      >
+        <div
+          className="h-full w-full rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(0,245,255,0.12) 0%, transparent 65%)",
+            filter: "blur(80px)",
+            animation: "float-orb 15s ease-in-out infinite",
+          }}
+        />
+      </motion.div>
 
       <div className="relative z-10 mx-auto max-w-[700px] px-6 text-center">
         <ScrollReveal>

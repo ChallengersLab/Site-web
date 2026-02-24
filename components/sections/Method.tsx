@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TiltCard } from "@/components/ui/TiltCard";
 
@@ -34,19 +36,31 @@ const steps = [
 ];
 
 export function Method() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const orbY = useTransform(scrollYProgress, [0, 1], [60, -60]);
+
   return (
-    <section className="relative py-32 overflow-hidden" id="method">
+    <section ref={sectionRef} className="relative py-32 overflow-hidden" id="method">
       <div className="section-divider mx-auto mb-32 w-full max-w-[1100px]" />
 
-      {/* Ambient orb */}
-      <div
+      {/* Ambient orb with parallax */}
+      <motion.div
+        style={{ y: orbY }}
         className="absolute left-[10%] top-[40%] h-[400px] w-[400px] rounded-full"
-        style={{
-          background: "radial-gradient(circle, rgba(167,139,250,0.12) 0%, transparent 70%)",
-          filter: "blur(80px)",
-          animation: "float-orb 25s ease-in-out infinite",
-        }}
-      />
+      >
+        <div
+          className="h-full w-full rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(167,139,250,0.12) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-orb 25s ease-in-out infinite",
+          }}
+        />
+      </motion.div>
 
       <div className="relative z-10 mx-auto max-w-[1100px] px-6">
         <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:gap-20">
