@@ -12,6 +12,7 @@ function renderMarkdown(content: string) {
   const elements: React.ReactNode[] = [];
   let i = 0;
   let listItems: string[] = [];
+  let listOrdered = false;
   let tableRows: string[][] = [];
   let inTable = false;
   let inCodeBlock = false;
@@ -19,19 +20,24 @@ function renderMarkdown(content: string) {
 
   function flushList() {
     if (listItems.length > 0) {
+      const Tag = listOrdered ? "ol" : "ul";
       elements.push(
-        <ul key={`list-${elements.length}`} className="my-5 space-y-2 pl-5">
+        <Tag
+          key={`list-${elements.length}`}
+          className={`my-5 space-y-2 pl-5 ${listOrdered ? "list-decimal" : "list-disc"}`}
+        >
           {listItems.map((item, j) => (
             <li
               key={j}
-              className="text-[15px] leading-[1.8] text-white/50 list-disc marker:text-white/15"
+              className="text-[15px] leading-[1.8] text-white/50 marker:text-white/15"
             >
               {renderInline(item)}
             </li>
           ))}
-        </ul>
+        </Tag>
       );
       listItems = [];
+      listOrdered = false;
     }
   }
 
@@ -162,6 +168,15 @@ function renderMarkdown(content: string) {
       continue;
     }
 
+    // Horizontal rule
+    if (line.match(/^---+$/)) {
+      flushList();
+      flushTable();
+      elements.push(<div key={`hr-${elements.length}`} className="section-divider my-10" />);
+      i++;
+      continue;
+    }
+
     // Table separator
     if (line.match(/^\|[\s-:|]+\|$/)) {
       i++;
@@ -246,17 +261,21 @@ function renderMarkdown(content: string) {
       continue;
     }
 
-    // List items
+    // List items (unordered)
     if (line.match(/^- /)) {
+      if (listOrdered && listItems.length > 0) flushList();
       flushTable();
+      listOrdered = false;
       listItems.push(line.slice(2));
       i++;
       continue;
     }
 
-    // Numbered list
+    // Numbered list (ordered)
     if (line.match(/^\d+\. /)) {
+      if (!listOrdered && listItems.length > 0) flushList();
       flushTable();
+      listOrdered = true;
       listItems.push(line.replace(/^\d+\. /, ""));
       i++;
       continue;
