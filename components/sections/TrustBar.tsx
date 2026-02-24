@@ -1,6 +1,7 @@
 "use client";
 
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { TiltCard } from "@/components/ui/TiltCard";
 import {
   ArrowRight, Phone, Zap, Bot, BarChart3,
   Users, Settings, Workflow, LayoutDashboard,
@@ -40,7 +41,6 @@ const pillars = [
 export function TrustBar() {
   return (
     <section className="relative py-32 overflow-hidden">
-      {/* Center glow */}
       <div
         className="absolute left-1/2 top-1/2 h-[600px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full"
         style={{
@@ -69,17 +69,18 @@ export function TrustBar() {
         <div className="mt-16 grid gap-5 lg:grid-cols-2">
           {pillars.map((pillar, i) => (
             <ScrollReveal key={pillar.id} delay={0.15 * i}>
-              <div
-                id={pillar.id}
-                className="glass-card group h-full p-10 transition-all duration-500"
+              <TiltCard
+                className="group h-full overflow-hidden p-10 transition-all duration-500"
+                intensity={5}
               >
                 {/* Hover corner glow */}
                 <div
-                  className="absolute -right-16 -top-16 h-32 w-32 rounded-full opacity-0 transition-opacity duration-700 group-hover:opacity-40"
+                  className="absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 transition-opacity duration-700 group-hover:opacity-40"
                   style={{ background: pillar.accent, filter: "blur(50px)" }}
                 />
 
                 <span
+                  id={pillar.id}
                   className="inline-flex rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em]"
                   style={{
                     background: `${pillar.accent}10`,
@@ -115,7 +116,7 @@ export function TrustBar() {
                   Découvrir l&apos;offre
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
                 </a>
-              </div>
+              </TiltCard>
             </ScrollReveal>
           ))}
         </div>
