@@ -1,9 +1,11 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { ArrowRight } from "lucide-react";
 
 const steps = [
   {
@@ -84,6 +86,13 @@ export function Method() {
                 Pas de consulting à rallonge. Un process clair, mesurable, et
                 orienté ROI dès le départ.
               </p>
+              <Link
+                href="/ressources/audit-stack-sales-checklist"
+                className="group/link mt-6 inline-flex items-center gap-2 text-[13px] font-semibold text-accent-start/70 transition-all hover:text-accent-start"
+              >
+                Auditez votre stack sales gratuitement
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
+              </Link>
             </ScrollReveal>
           </div>
 

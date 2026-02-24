@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TiltCard } from "@/components/ui/TiltCard";
 import {
   ArrowRight, Phone, Zap, Bot, BarChart3,
-  Users, Settings, Workflow, LayoutDashboard,
+  Users, Settings, Workflow, LayoutDashboard, BookOpen,
 } from "lucide-react";
 
 const pillars = [
@@ -21,6 +22,8 @@ const pillars = [
       { icon: Settings, text: "Setup CRM & cycle de vente" },
     ],
     accent: "#7B5EFF",
+    articleSlug: "prospection-b2b-ia-guide-complet",
+    articleLabel: "Lire le guide prospection B2B",
   },
   {
     tag: "AI & Auto",
@@ -35,6 +38,8 @@ const pillars = [
       { icon: Workflow, text: "Workflows (Make, n8n, Zapier)" },
     ],
     accent: "#00F5FF",
+    articleSlug: "automatisation-crm-workflows-ia",
+    articleLabel: "Lire le comparatif Make vs n8n vs Zapier",
   },
 ];
 
@@ -108,14 +113,23 @@ export function TrustBar() {
                   ))}
                 </ul>
 
-                <a
-                  href="#contact"
-                  className="group/link mt-8 inline-flex items-center gap-2 text-[13px] font-semibold transition-all"
-                  style={{ color: pillar.accent }}
-                >
-                  Découvrir l&apos;offre
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
-                </a>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <a
+                    href="#contact"
+                    className="group/link inline-flex items-center gap-2 text-[13px] font-semibold transition-all"
+                    style={{ color: pillar.accent }}
+                  >
+                    Découvrir l&apos;offre
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
+                  </a>
+                  <Link
+                    href={`/ressources/${pillar.articleSlug}`}
+                    className="group/link inline-flex items-center gap-2 text-[12px] text-white/25 transition-all hover:text-white/50"
+                  >
+                    <BookOpen className="h-3 w-3" />
+                    {pillar.articleLabel}
+                  </Link>
+                </div>
               </TiltCard>
             </ScrollReveal>
           ))}
