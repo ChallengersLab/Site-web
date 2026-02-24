@@ -11,6 +11,7 @@ const footerLinks = {
     { name: "Guide Prospection B2B", href: "/ressources/prospection-b2b-ia-guide-complet" },
     { name: "Méthode Challenger Sales", href: "/ressources/challenger-sales-methode-b2b" },
     { name: "Make vs n8n vs Zapier", href: "/ressources/automatisation-crm-workflows-ia" },
+    { name: "Agence Sales & IA : le guide", href: "/ressources/agence-sales-ia-b2b-pourquoi" },
   ],
   Entreprise: [
     { name: "Mentions légales", href: "/mentions-legales" },

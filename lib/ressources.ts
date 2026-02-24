@@ -784,7 +784,7 @@ Chez ChallengersLab, on intègre le prompt engineering dans nos formations Chall
       },
     ],
 
-    relatedSlugs: ["crm-b2b-guide-configuration", "automatisation-crm-workflows-ia", "ia-ventes-b2b-roi"],
+    relatedSlugs: ["agence-sales-ia-b2b-pourquoi", "crm-b2b-guide-configuration", "automatisation-crm-workflows-ia"],
     content: `## Comment utiliser cette checklist
 
 Répondez à chaque point par oui ou non. Comptez vos "oui". Votre score indique votre maturité :
@@ -890,7 +890,7 @@ C'est exactement le type de situation où ChallengersLab intervient. On diagnost
       },
     ],
 
-    relatedSlugs: ["automatisation-crm-workflows-ia", "prospection-b2b-ia-guide-complet", "head-of-sales-fractionne-pme"],
+    relatedSlugs: ["agence-sales-ia-b2b-pourquoi", "automatisation-crm-workflows-ia", "prospection-b2b-ia-guide-complet"],
     content: `## L'IA dans les ventes B2B : au-delà du buzz
 
 Tout le monde parle d'IA. Peu mesurent son impact réel sur les ventes. Cet article présente des chiffres concrets, issus du terrain et d'études de référence, pour vous aider à évaluer le retour sur investissement de l'IA dans votre organisation commerciale.
