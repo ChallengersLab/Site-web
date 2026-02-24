@@ -58,6 +58,8 @@ La prospection B2B a radicalement changé. Les acheteurs B2B reçoivent en moyen
 
 L'IA ne remplace pas le commercial. Elle lui donne un avantage structurel.
 
+> Chez ChallengersLab, on construit des machines de prospection B2B depuis plus de 20 ans. L'IA a tout changé — mais les fondamentaux restent les mêmes : cibler juste, personnaliser fort, mesurer tout.
+
 ## Les 4 piliers d'une prospection B2B moderne
 
 ### 1. Sourcing intelligent
@@ -174,6 +176,8 @@ Résultat moyen : triplement du nombre de rendez-vous qualifiés en 8 semaines.`
     content: `## La recherche derrière Challenger Sales
 
 En 2011, Matthew Dixon et Brent Adamson ont publié "The Challenger Sale" après avoir étudié les comportements de 6 000 commerciaux B2B dans 90 entreprises. Leur conclusion a bouleversé le monde de la vente : le profil de commercial qui surperforme n'est pas celui qu'on croit.
+
+> En 20 ans de vente B2B, on a vu passer toutes les méthodologies. Challenger Sales est celle qui produit les résultats les plus consistants sur les ventes complexes. Voici pourquoi.
 
 ## Les 5 profils de commerciaux B2B
 
@@ -448,6 +452,8 @@ Résultat moyen : 15 heures gagnées par personne et par semaine.`,
     content: `## Le problème du recrutement commercial en PME
 
 Vous êtes CEO d'une PME B2B de 20 à 50 collaborateurs. Vos ventes stagnent ou croissent de manière chaotique. La solution évidente semble être de recruter un Head of Sales.
+
+> Après 20 ans à structurer des équipes commerciales B2B, le constat est clair : la majorité des PME n'ont pas besoin d'un Head of Sales à temps plein. Elles ont besoin de la bonne expertise, au bon moment.
 
 Voici pourquoi c'est souvent une erreur :
 
@@ -1062,6 +1068,8 @@ Chaque année, des milliers de PME B2B investissent dans un CRM. 6 mois plus tar
 Le problème n'est jamais l'outil. C'est la configuration.
 
 Un CRM bien configuré est un accélérateur de vente. Un CRM mal configuré est un tableur glorifié que personne ne remplit.
+
+> En 20 ans de commerce B2B, on a configuré des dizaines de CRM. Le pattern est toujours le même : l'outil n'est pas le problème. C'est le process qu'il reflète.
 
 ## Les 5 principes d'un CRM qui marche
 

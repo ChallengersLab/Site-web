@@ -384,8 +384,9 @@ export function ArticleLayout({ ressource }: { ressource: Ressource }) {
               Besoin d&apos;aide pour implémenter ?
             </h3>
             <p className="mt-3 text-[14px] text-white/35">
-              ChallengersLab accompagne les PME B2B dans la mise en place
-              concrète de ces stratégies.
+              20 ans d&apos;expertise commerciale B2B croisée avec
+              l&apos;intelligence artificielle. On implémente, on ne conseille
+              pas.
             </p>
             <a
               href="/#contact"

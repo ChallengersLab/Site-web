@@ -58,7 +58,10 @@ export function Navbar() {
 
             <Sheet>
               <SheetTrigger asChild>
-                <button className="rounded-lg p-2 text-white/40 transition-colors hover:bg-white/[0.04] hover:text-white md:hidden">
+                <button
+                  className="rounded-lg p-2 text-white/40 transition-colors hover:bg-white/[0.04] hover:text-white md:hidden"
+                  aria-label="Ouvrir le menu"
+                >
                   <Menu className="h-5 w-5" />
                 </button>
               </SheetTrigger>
