@@ -1,26 +1,36 @@
 "use client";
 
-const items = [
-  "Cold Calls à +42% de conversion",
-  "DIR CO externalisé",
-  "Sites IA live en 48h",
-  "Apps no-code scalables",
-  "+320% de leads",
-  "Revenue Rocket garanti",
+const tools = [
+  "HubSpot",
+  "Salesforce",
+  "Make",
+  "n8n",
+  "OpenAI",
+  "Claude",
+  "Langchain",
+  "Notion",
+  "Airtable",
+  "Lemlist",
+  "La Growth Machine",
+  "Zapier",
+  "Bubble",
+  "FlutterFlow",
+  "Retool",
+  "Mistral",
 ];
 
-function MarqueeContent() {
+function MarqueeRow() {
   return (
     <>
-      {items.map((text, i) => (
-        <span key={i} className="flex items-center gap-8 whitespace-nowrap">
-          <span
-            className="text-sm font-medium text-white/80"
-            style={{ textShadow: "0 0 20px rgba(123,94,255,0.3)" }}
-          >
-            {text}
+      {tools.map((tool, i) => (
+        <span
+          key={`${tool}-${i}`}
+          className="flex items-center gap-8 whitespace-nowrap"
+        >
+          <span className="font-display text-sm font-semibold uppercase tracking-widest text-white/25 transition-colors hover:text-white/50">
+            {tool}
           </span>
-          <span className="text-accent-start text-xs">&#9670;</span>
+          <span className="h-1 w-1 rounded-full bg-accent-start/40" />
         </span>
       ))}
     </>
@@ -29,18 +39,19 @@ function MarqueeContent() {
 
 export function MarqueeBanner() {
   return (
-    <section className="relative overflow-hidden bg-bg-elevated py-5">
-      {/* Top glow border */}
-      <div className="absolute top-0 h-px w-full bg-gradient-to-r from-transparent via-accent-start to-transparent" />
+    <section className="relative overflow-hidden bg-bg-elevated py-6">
+      <div className="section-divider absolute top-0 w-full" />
 
-      {/* Scrolling content (duplicated for seamless loop) */}
+      <p className="mb-4 text-center text-[10px] font-medium uppercase tracking-[0.2em] text-white/25">
+        Les outils qu&apos;on maîtrise. Vos concurrents les découvrent.
+      </p>
+
       <div className="animate-marquee flex gap-8">
-        <MarqueeContent />
-        <MarqueeContent />
+        <MarqueeRow />
+        <MarqueeRow />
       </div>
 
-      {/* Bottom glow border */}
-      <div className="absolute bottom-0 h-px w-full bg-gradient-to-r from-transparent via-accent-start to-transparent" />
+      <div className="section-divider absolute bottom-0 w-full" />
     </section>
   );
 }

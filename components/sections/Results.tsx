@@ -1,102 +1,92 @@
 "use client";
 
-import { useCountUp } from "@/hooks/use-count-up";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { MagneticButton } from "@/components/ui/MagneticButton";
+import { AlertTriangle, Clock, CreditCard } from "lucide-react";
 
-const stats = [
-  { value: 320, prefix: "+", suffix: "%", label: "de leads générés" },
-  { value: 47, prefix: "", suffix: "", label: "clients accompagnés" },
-  { value: 98, prefix: "", suffix: "%", label: "taux de rétention" },
-  { value: 24, prefix: "", suffix: "h", label: "délai de livraison" },
+const painPoints = [
+  {
+    icon: Clock,
+    title: "Vos commerciaux perdent 60% de leur temps",
+    description:
+      "Recherche de leads manuelle, qualification approximative, relances oubliées. Pendant ce temps, vos concurrents automatisent.",
+    accent: "#7B5EFF",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Vos process sont ceux de 2019",
+    description:
+      "CRM mal configuré, données en silos, reporting approximatif. Vous pilotez à vue dans un marché qui accélère.",
+    accent: "#00F5FF",
+  },
+  {
+    icon: CreditCard,
+    title: "Vous payez des outils que personne n'utilise",
+    description:
+      "3k€/mois de stack SaaS pour 20% d'adoption. L'outil n'est pas le problème. C'est l'implémentation.",
+    accent: "#a78bfa",
+  },
 ];
-
-function StatCard({
-  value,
-  prefix,
-  suffix,
-  label,
-}: {
-  value: number;
-  prefix: string;
-  suffix: string;
-  label: string;
-}) {
-  const { ref, value: displayValue } = useCountUp(value);
-
-  return (
-    <div className="glassmorphism rounded-2xl p-8 text-center">
-      <span ref={ref} className="gradient-text text-4xl font-bold">
-        {prefix}
-        {displayValue}
-        {suffix}
-      </span>
-      <p className="mt-2 text-white/60">{label}</p>
-    </div>
-  );
-}
 
 export function Results() {
   return (
-    <section className="relative py-24">
-      {/* Subtle grid background */}
+    <section className="relative py-28" id="results">
+      {/* Background accent */}
       <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
+        className="absolute right-0 top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full opacity-10 blur-[100px]"
+        style={{ background: "radial-gradient(circle, #7B5EFF 0%, transparent 70%)" }}
       />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <ScrollReveal>
-          <h2 className="text-center text-5xl font-bold">
-            Performance Delivered in 24-48h
+          <span className="badge-glow inline-flex rounded-full px-3 py-1 text-xs font-medium">
+            Le constat
+          </span>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.1}>
+          <h2 className="font-display mt-6 text-4xl font-bold tracking-tight md:text-5xl">
+            <span className="text-white">80% des PME B2B vont se faire</span>
+            <br />
+            <span className="gradient-text">dépasser dans les 2 ans</span>
           </h2>
         </ScrollReveal>
 
-        {/* Video with glow border */}
-        <ScrollReveal delay={0.2}>
-          <div
-            className="mx-auto mt-16 max-w-4xl overflow-hidden rounded-3xl border border-white/10"
-            style={{ boxShadow: "0 0 60px rgba(123,94,255,0.3)" }}
-          >
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full object-contain"
-            >
-              <source src="/videos/results.mp4" type="video/mp4" />
-            </video>
-            {/* Fallback gradient when no video */}
-            <div className="flex aspect-video items-center justify-center bg-gradient-to-br from-accent-start/10 to-accent-end/10">
-              <span className="text-lg text-white/30">
-                Video de résultats
-              </span>
-            </div>
-          </div>
-        </ScrollReveal>
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
+          {painPoints.map((point, i) => (
+            <ScrollReveal key={point.title} delay={0.15 * i}>
+              <div className="group relative h-full rounded-2xl border border-white/6 bg-surface p-8 transition-all duration-300 hover:border-white/12 hover:bg-surface-light">
+                {/* Top accent line */}
+                <div
+                  className="absolute left-8 right-8 top-0 h-px opacity-40"
+                  style={{
+                    background: `linear-gradient(90deg, transparent, ${point.accent}, transparent)`,
+                  }}
+                />
 
-        {/* Stat cards */}
-        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-2 gap-6 lg:grid-cols-4">
-          {stats.map((stat, i) => (
-            <ScrollReveal key={stat.label} delay={0.1 * i}>
-              <StatCard {...stat} />
+                <div
+                  className="flex h-10 w-10 items-center justify-center rounded-xl"
+                  style={{
+                    background: `${point.accent}15`,
+                    border: `1px solid ${point.accent}25`,
+                  }}
+                >
+                  <point.icon
+                    className="h-5 w-5"
+                    style={{ color: point.accent }}
+                  />
+                </div>
+
+                <h3 className="font-display mt-5 text-lg font-bold text-white">
+                  {point.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-relaxed text-white/45">
+                  {point.description}
+                </p>
+              </div>
             </ScrollReveal>
           ))}
         </div>
-
-        {/* CTA */}
-        <ScrollReveal delay={0.4}>
-          <div className="mt-12 text-center">
-            <MagneticButton href="#audit">
-              Commencer maintenant
-            </MagneticButton>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );
