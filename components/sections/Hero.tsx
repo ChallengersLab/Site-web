@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useCountUp } from "@/hooks/use-count-up";
 
-
 const stagger = {
   hidden: {},
   show: {
@@ -91,13 +90,13 @@ export function Hero() {
 
             {/* Headline */}
             <motion.h1 variants={fadeUp} className="mt-10">
-              <span className="font-display block text-[clamp(2.8rem,6.5vw,5.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
+              <span className="font-display block text-[clamp(3rem,7.5vw,6.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
                 Vos concurrents
               </span>
-              <span className="font-display block text-[clamp(2.8rem,6.5vw,5.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
+              <span className="font-display block text-[clamp(3rem,7.5vw,6.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
                 utilisent déjà l&apos;IA.
               </span>
-              <span className="font-display block text-[clamp(2.8rem,6.5vw,5.5rem)] leading-[0.92] tracking-[-0.02em] gradient-text mt-2">
+              <span className="font-display block text-[clamp(3rem,7.5vw,6.5rem)] leading-[0.92] tracking-[-0.02em] gradient-text mt-2">
                 <em>Et vous ?</em>
               </span>
             </motion.h1>
