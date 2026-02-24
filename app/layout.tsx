@@ -10,6 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://challengerslab.com"),
   title: "Challengerslab | L'avenir de la performance commerciale est IA",
   description:
     "ESN spécialisée en performance commerciale et IA. Cold Call, DIR CO externalisé, Sites IA, Apps No-Code. Scale x3 en 30 jours.",
@@ -37,6 +38,23 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Challengerslab",
+  url: "https://challengerslab.com",
+  description:
+    "ESN spécialisée en performance commerciale et IA. Cold Call, DIR CO externalisé, Sites IA, Apps No-Code.",
+  foundingDate: "2024",
+  areaServed: "FR",
+  serviceType: [
+    "Cold Call Outsourcing",
+    "Directeur Commercial Externalisé",
+    "Sites Web IA",
+    "Applications No-Code",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -44,6 +62,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <Navbar />
         {children}
