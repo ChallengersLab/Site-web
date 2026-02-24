@@ -226,6 +226,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="dark">
       <head>
+        <meta name="theme-color" content="#030303" />
         {jsonLd.map((schema, i) => (
           <script
             key={i}
