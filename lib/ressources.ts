@@ -6,6 +6,7 @@ export interface Ressource {
   title: string;
   metaTitle: string;
   metaDescription: string;
+  keywords?: string[];
   description: string;
   readTime: string;
   publishedAt: string;
@@ -27,6 +28,7 @@ export const ressources: Ressource[] = [
       "Prospection B2B et IA : Guide Complet 2026 | Outils, Séquences, KPIs",
     metaDescription:
       "Comment construire une machine de prospection B2B multicanal assistée par l'IA. Séquences email, enrichissement, scoring, outils et KPIs. Guide par ChallengersLab.",
+    keywords: ["prospection B2B", "IA prospection", "séquence email B2B", "enrichissement leads", "scoring prédictif", "multicanal B2B", "Clay prospection", "Apollo.io", "guide prospection 2026"],
     description:
       "Comment construire une machine de prospection multicanal assistée par IA. Séquences, outils, KPIs et erreurs à éviter.",
     readTime: "12 min",
@@ -153,6 +155,7 @@ Résultat moyen : triplement du nombre de rendez-vous qualifiés en 8 semaines.`
       "Méthode Challenger Sales en B2B : Guide Complet | Formation, Profils, Résultats",
     metaDescription:
       "La méthode Challenger Sales expliquée : les 5 profils de commerciaux, pourquoi le Challenger surperforme, et comment former votre équipe B2B. Par ChallengersLab.",
+    keywords: ["Challenger Sales", "méthode vente B2B", "coaching commercial", "formation commerciale", "profils commerciaux", "Teach Tailor Take Control", "vente complexe B2B"],
     description:
       "Les 5 profils de commerciaux, pourquoi le Challenger gagne, et comment former votre équipe à cette approche.",
     readTime: "9 min",
@@ -279,6 +282,7 @@ Résultat moyen : +85% de taux de closing sur les deals complexes.`,
       "Make vs n8n vs Zapier : Quel Outil d'Automatisation CRM pour B2B ? | Comparatif 2026",
     metaDescription:
       "Comparatif détaillé Make, n8n et Zapier pour l'automatisation CRM en B2B. Use cases, prix, intégrations IA. Guide par ChallengersLab, agence Sales & IA.",
+    keywords: ["Make vs n8n vs Zapier", "automatisation CRM", "workflows IA", "automatisation ventes B2B", "intégration CRM IA", "comparatif automatisation 2026"],
     description:
       "Comparatif des 3 plateformes d'automatisation pour les équipes sales B2B. Use cases concrets, prix, limites.",
     readTime: "10 min",
@@ -432,6 +436,7 @@ Résultat moyen : 15 heures gagnées par personne et par semaine.`,
       "Head of Sales Fractionné : Guide pour PME B2B | Avantages, Coûts, Fonctionnement",
     metaDescription:
       "Le Head of Sales fractionné permet aux PME B2B d'accéder à une direction commerciale senior sans le coût d'un CDI. Fonctionnement, avantages, cas d'usage. Par ChallengersLab.",
+    keywords: ["Head of Sales fractionné", "directeur commercial externalisé", "direction commerciale PME", "VP Sales temps partagé", "recrutement commercial PME", "externalisation ventes B2B"],
     description:
       "Pourquoi recruter un directeur commercial à plein temps est souvent une erreur avant 50 collaborateurs. L'alternative.",
     readTime: "7 min",
@@ -546,6 +551,7 @@ ChallengersLab propose un service de Head of Sales fractionné qui combine direc
       "20 Prompts IA pour Commerciaux B2B : Qualifier, Relancer, Closer | Guide 2026",
     metaDescription:
       "20 prompts concrets pour qualifier un lead, rédiger un email de relance, préparer un call et analyser un deal. Guide prompt engineering commercial par ChallengersLab.",
+    keywords: ["prompt engineering commercial", "prompts IA vente", "ChatGPT commercial", "Claude commercial", "IA pour commerciaux", "prompts email prospection", "prompts qualification lead"],
     description:
       "Les prompts concrets pour qualifier un lead, rédiger un email de relance, préparer un call et analyser un deal.",
     readTime: "8 min",
@@ -764,6 +770,7 @@ Chez ChallengersLab, on intègre le prompt engineering dans nos formations Chall
       "Audit Stack Sales B2B : Checklist 30 Points | CRM, Séquences, Reporting",
     metaDescription:
       "Évaluez votre maturité commerciale en 15 minutes avec cette checklist de 30 points. CRM, séquences email, enrichissement, scoring, reporting. Par ChallengersLab.",
+    keywords: ["audit stack sales", "checklist commerciale B2B", "évaluation CRM", "maturité commerciale", "diagnostic ventes", "audit process sales"],
     description:
       "CRM, séquences email, enrichissement, scoring, reporting. Évaluez votre maturité sales en 15 minutes.",
     readTime: "5 min",
@@ -864,6 +871,7 @@ C'est exactement le type de situation où ChallengersLab intervient. On diagnost
       "ROI de l'IA dans les Ventes B2B : Chiffres, Études de Cas, Benchmarks 2026",
     metaDescription:
       "Combien rapporte l'IA aux équipes commerciales B2B ? Données terrain, benchmarks sectoriels et études de cas. Par ChallengersLab, agence Sales & IA.",
+    keywords: ["ROI IA ventes", "retour investissement IA commercial", "IA ventes B2B chiffres", "benchmarks IA vente", "études de cas IA B2B", "impact IA commercial"],
     description:
       "Combien rapporte vraiment l'IA aux équipes commerciales ? Données de terrain et benchmarks sectoriels.",
     readTime: "11 min",
@@ -1046,6 +1054,7 @@ Chez ChallengersLab, on commence toujours par un diagnostic. Pas de promesses en
       "Configurer son CRM B2B : Guide Complet | Pipelines, Automatisation, Adoption",
     metaDescription:
       "Le guide pour passer de 20% à 95% d'adoption CRM. Pipelines, champs custom, automations, reporting. Par ChallengersLab, agence Sales & IA.",
+    keywords: ["configurer CRM B2B", "adoption CRM", "HubSpot configuration", "Pipedrive setup", "Salesforce PME", "CRM pour PME B2B", "pipeline CRM", "optimisation CRM"],
     description:
       "Pipelines, champs custom, automations, reporting. Le guide pour passer de 20% à 95% d'adoption.",
     readTime: "14 min",
