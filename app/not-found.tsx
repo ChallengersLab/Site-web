@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 
 export default function NotFound() {
   return (
-    <main>
+    <main id="main-content">
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div
           className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full"

@@ -185,6 +185,37 @@ const jsonLd = [
       },
     ],
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Comment restructurer ses ventes B2B avec l'IA en 90 jours",
+    description:
+      "La méthode ChallengersLab en 3 phases pour transformer les ventes et les process d'une PME B2B grâce à l'expertise commerciale et l'intelligence artificielle.",
+    totalTime: "P90D",
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "Diagnostic",
+        text: "Audit complet des process de vente, de la stack technique et des données. Identification des quick wins et des chantiers structurants. Livrable : roadmap priorisée.",
+        url: "https://challengerslab.com/#method",
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "Implémentation",
+        text: "Construction et configuration des outils, workflows IA et intégrations. Formation des équipes. Lancement des premières séquences de prospection. Livrable : systèmes opérationnels.",
+        url: "https://challengerslab.com/#method",
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "Optimisation",
+        text: "Mesure des résultats, itération sur les séquences et les workflows, scaling. Chaque action est trackée et optimisée. Livrable : croissance mesurable (+320% pipeline en moyenne).",
+        url: "https://challengerslab.com/#method",
+      },
+    ],
+  },
 ];
 
 export default function RootLayout({

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function RessourcesPage() {
   return (
-    <main>
+    <main id="main-content">
       <RessourcesHub />
       <Footer />
     </main>

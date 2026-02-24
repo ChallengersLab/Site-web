@@ -1,12 +1,14 @@
 import type { MetadataRoute } from "next";
-import { getAllSlugs } from "@/lib/ressources";
+import { getPublishedRessources } from "@/lib/ressources";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://challengerslab.com";
 
-  const articleUrls = getAllSlugs().map((slug) => ({
-    url: `${baseUrl}/ressources/${slug}`,
-    lastModified: new Date(),
+  const articles = getPublishedRessources();
+
+  const articleUrls = articles.map((r) => ({
+    url: `${baseUrl}/ressources/${r.slug}`,
+    lastModified: new Date(r.updatedAt || r.publishedAt),
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));

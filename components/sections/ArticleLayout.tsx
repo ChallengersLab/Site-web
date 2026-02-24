@@ -289,7 +289,7 @@ export function ArticleLayout({ ressource }: { ressource: Ressource }) {
       <div className="relative z-10 mx-auto max-w-[720px] px-6">
         {/* Breadcrumb */}
         <ScrollReveal>
-          <nav className="flex items-center gap-2 text-[12px] text-white/25">
+          <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-[12px] text-white/25">
             <Link
               href="/"
               className="transition-colors hover:text-white/50"
