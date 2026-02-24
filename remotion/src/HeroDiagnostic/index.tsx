@@ -2,6 +2,7 @@ import React from "react";
 import { AbsoluteFill, Sequence } from "remotion";
 import { Act1Mirror } from "./scenes/Act1Mirror";
 import { Act2Rupture } from "./scenes/Act2Rupture";
+import { Act3Response } from "./scenes/Act3Response";
 
 export const HeroDiagnostic: React.FC = () => {
   return (
@@ -11,6 +12,9 @@ export const HeroDiagnostic: React.FC = () => {
       </Sequence>
       <Sequence from={240} durationInFrames={120} name="Act 2 — Rupture">
         <Act2Rupture />
+      </Sequence>
+      <Sequence from={360} durationInFrames={240} name="Act 3 — Response">
+        <Act3Response />
       </Sequence>
     </AbsoluteFill>
   );
