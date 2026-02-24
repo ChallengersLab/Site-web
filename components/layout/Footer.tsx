@@ -20,7 +20,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/6">
+    <footer className="border-t border-white/6" role="contentinfo">
       <div className="mx-auto max-w-[1100px] px-6 py-20">
         <div className="flex flex-col gap-14 lg:flex-row lg:justify-between">
           <div className="max-w-xs">
