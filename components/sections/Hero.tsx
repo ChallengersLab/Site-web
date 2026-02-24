@@ -94,13 +94,10 @@ export function Hero() {
             {/* Headline */}
             <motion.h1 variants={fadeUp} className="mt-10">
               <span className="font-display block text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
-                Vos concurrents
-              </span>
-              <span className="font-display block text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
-                utilisent déjà l&apos;IA.
+                On ne vend pas des missions.
               </span>
               <span className="font-display block text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] tracking-[-0.02em] gradient-text mt-2">
-                <em>Et vous ?</em>
+                <em>On résout vos problèmes.</em>
               </span>
             </motion.h1>
 
@@ -109,10 +106,9 @@ export function Hero() {
               variants={fadeUp}
               className="mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
             >
-              20 ans d&apos;expertise commerciale B2B croisée avec l&apos;IA.
-              On restructure vos ventes et vos process.{" "}
+              Besoin d&apos;un bras droit commercial&nbsp;? D&apos;un technicien IA sur mesure&nbsp;? D&apos;un coup d&apos;accélérateur sur vos process&nbsp;?{" "}
               <span className="text-white/75">
-                Des résultats mesurables en 90 jours.
+                On s&apos;adapte à vous. Un appel, et on avance ensemble.
               </span>
             </motion.p>
 

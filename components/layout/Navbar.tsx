@@ -8,9 +8,11 @@ import {
 } from "@/components/ui/sheet";
 
 const navLinks = [
+  { name: "Accueil", href: "/" },
   { name: "Sales", href: "/#sales" },
   { name: "AI & Auto", href: "/#ai" },
   { name: "Ressources", href: "/ressources" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export function Navbar() {
