@@ -52,8 +52,6 @@ export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden flex items-center">
       {/* ---- Background layers ---- */}
-
-      {/* Purple orb top-left */}
       <div
         className="absolute -left-[20%] -top-[10%] h-[700px] w-[700px] rounded-full"
         style={{
@@ -62,7 +60,6 @@ export function Hero() {
           filter: "blur(80px)",
         }}
       />
-      {/* Cyan orb bottom-right */}
       <div
         className="absolute -bottom-[15%] -right-[15%] h-[600px] w-[600px] rounded-full"
         style={{
@@ -71,12 +68,18 @@ export function Hero() {
           filter: "blur(80px)",
         }}
       />
-      {/* Grid with fade mask */}
       <div className="hero-grid absolute inset-0" />
 
       {/* ---- Content ---- */}
       <div className="relative z-10 mx-auto w-full max-w-[1100px] px-6 pt-36 pb-24 md:pt-44 md:pb-32">
-        <motion.div variants={stagger} initial="hidden" animate="show">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
+          {/* Left column — text */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            animate="show"
+            className="lg:w-[55%] lg:shrink-0"
+          >
             {/* Badge */}
             <motion.div variants={fadeUp}>
               <span className="badge-glow inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-medium tracking-wider uppercase">
@@ -90,11 +93,14 @@ export function Hero() {
 
             {/* Headline */}
             <motion.h1 variants={fadeUp} className="mt-10">
-              <span className="font-display block text-[clamp(2.8rem,7vw,6rem)] leading-[0.92] tracking-[-0.02em] text-white">
-                On ne vend pas des missions.
+              <span className="font-display block text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
+                Vos concurrents
               </span>
-              <span className="font-display block text-[clamp(2.8rem,7vw,6rem)] leading-[0.92] tracking-[-0.02em] gradient-text mt-2">
-                <em>On résout vos problèmes.</em>
+              <span className="font-display block text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
+                utilisent déjà l&apos;IA.
+              </span>
+              <span className="font-display block text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] tracking-[-0.02em] gradient-text mt-2">
+                <em>Et vous ?</em>
               </span>
             </motion.h1>
 
@@ -103,9 +109,10 @@ export function Hero() {
               variants={fadeUp}
               className="mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
             >
-              Besoin d&apos;un bras droit commercial&nbsp;? D&apos;un technicien IA sur mesure&nbsp;? D&apos;un coup d&apos;accélérateur sur vos process&nbsp;?{" "}
+              20 ans d&apos;expertise commerciale B2B croisée avec l&apos;IA.
+              On restructure vos ventes et vos process.{" "}
               <span className="text-white/75">
-                On s&apos;adapte à vous. Un appel, et on avance ensemble.
+                Des résultats mesurables en 90 jours.
               </span>
             </motion.p>
 
@@ -134,9 +141,24 @@ export function Hero() {
             <motion.p variants={fadeUp} className="mt-6 text-[13px] text-white/20">
               30 min &middot; Gratuit &middot; Sans engagement &middot; Max 5 clients / trimestre
             </motion.p>
-        </motion.div>
+          </motion.div>
 
-        {/* Stats bar */}
+          {/* Right column — video placeholder */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6, duration: 1, ease: [0.22, 1, 0.36, 1] as const }}
+            className="hidden lg:block lg:flex-1"
+          >
+            <div className="glass-card aspect-video w-full rounded-2xl overflow-hidden">
+              <div className="flex h-full items-center justify-center">
+                <p className="text-[13px] text-white/15">Vidéo à venir</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Stats bar — full width */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
