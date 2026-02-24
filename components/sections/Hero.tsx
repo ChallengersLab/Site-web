@@ -35,8 +35,8 @@ function CountUpStat({
   const { ref, value } = useCountUp(end, 2200);
 
   return (
-    <div>
-      <p className="font-display text-4xl tracking-tight text-white md:text-5xl">
+    <div className="flex-1 text-center">
+      <p className="font-display text-4xl tracking-tight md:text-5xl gradient-text">
         <span ref={ref}>
           {prefix}
           {value}
@@ -159,11 +159,16 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
-          className="mt-24 flex flex-col gap-10 border-t border-white/6 pt-10 sm:flex-row sm:gap-16"
+          className="glass-card mt-20 flex flex-col items-center gap-8 px-8 py-8 sm:flex-row sm:gap-0 sm:divide-x sm:divide-white/[0.06]"
         >
-          <CountUpStat end={47} suffix="+" label="Entreprises accompagnées" />
-          <CountUpStat end={320} prefix="+" suffix="%" label="Croissance pipeline" />
-          <CountUpStat end={90} prefix="<" suffix="j" label="Premiers résultats" />
+          <CountUpStat end={20} suffix="+" label="Entreprises accompagnées" />
+          <CountUpStat end={30} suffix="-90j" label="Pour des premiers résultats" />
+          <div className="flex-1 text-center">
+            <p className="font-display text-4xl tracking-tight md:text-5xl gradient-text">
+              À la carte
+            </p>
+            <p className="mt-2 text-[13px] text-white/30">Commerce & tech, sur mesure</p>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -3,40 +3,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { TiltCard } from "@/components/ui/TiltCard";
-
-const testimonials = [
-  {
-    quote:
-      "En 3 mois, notre pipeline a triplé. L'équipe ChallengersLab ne vend pas du rêve, ils livrent.",
-    name: "Thomas M.",
-    role: "CEO, SaaS B2B",
-    detail: "45 collaborateurs",
-    metric: "×3",
-    metricLabel: "pipeline",
-    accent: "#7B5EFF",
-  },
-  {
-    quote:
-      "Le coaching Challenger Sales a transformé notre approche commerciale. On ne vend plus pareil. Et ça se voit sur les chiffres.",
-    name: "Sophie L.",
-    role: "Dir. Commerciale",
-    detail: "Scale-up fintech",
-    metric: "+85%",
-    metricLabel: "close rate",
-    accent: "#00F5FF",
-  },
-  {
-    quote:
-      "L'automatisation qu'ils ont mise en place nous fait gagner 15h par semaine. 15 heures. Par personne.",
-    name: "Marc K.",
-    role: "COO, Agence digitale",
-    detail: "30 collaborateurs",
-    metric: "15h",
-    metricLabel: "/ semaine",
-    accent: "#a78bfa",
-  },
-];
 
 export function Testimonials() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -76,39 +42,14 @@ export function Testimonials() {
           </h2>
         </ScrollReveal>
 
-        <div className="mt-16 grid gap-5 md:grid-cols-3">
-          {testimonials.map((t, i) => (
-            <ScrollReveal key={t.name} delay={0.12 * i}>
-              <TiltCard className="group flex h-full flex-col p-8 transition-all duration-500" intensity={5}>
-                {/* Metric badge */}
-                <div className="mb-5 flex items-end gap-2">
-                  <span
-                    className="font-display text-4xl tracking-tight"
-                    style={{ color: t.accent }}
-                  >
-                    {t.metric}
-                  </span>
-                  <span className="mb-1 text-[10px] uppercase tracking-widest text-white/25">
-                    {t.metricLabel}
-                  </span>
-                </div>
-
-                <blockquote className="flex-1 text-[14px] leading-[1.75] text-white/50">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-
-                <div className="mt-8 border-t border-white/6 pt-5">
-                  <p className="text-[14px] font-semibold text-white/80">
-                    {t.name}
-                  </p>
-                  <p className="mt-0.5 text-[12px] text-white/30">
-                    {t.role} &middot; {t.detail}
-                  </p>
-                </div>
-              </TiltCard>
-            </ScrollReveal>
-          ))}
-        </div>
+        <ScrollReveal delay={0.2}>
+          <div className="mt-16 flex items-center justify-center rounded-2xl border border-white/[0.04] bg-white/[0.02] py-20 px-8">
+            <p className="text-center text-[15px] text-white/40 leading-relaxed max-w-md">
+              Leurs retours arrivent bientôt.<br />
+              <span className="text-white/20">En attendant, on bosse.</span>
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

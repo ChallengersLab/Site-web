@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Menu, ArrowRight } from "lucide-react";
@@ -16,6 +17,14 @@ const navLinks = [
 ];
 
 export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <motion.nav
       initial={{ y: -20, opacity: 0 }}
@@ -24,7 +33,13 @@ export function Navbar() {
       className="fixed top-0 z-50 w-full"
     >
       <div className="mx-auto max-w-[1100px] px-6 pt-5">
-        <div className="glass-card flex items-center justify-between px-5 py-3">
+        <div
+          className={`flex items-center justify-between px-5 py-3 rounded-[20px] border transition-all duration-300 ${
+            isScrolled
+              ? "bg-[#080808]/85 backdrop-blur-xl border-white/[0.08] shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              : "glass-card"
+          }`}
+        >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
             <span className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-accent-start to-accent-end text-[10px] font-bold text-white shadow-[0_0_12px_rgba(123,94,255,0.4)]">
