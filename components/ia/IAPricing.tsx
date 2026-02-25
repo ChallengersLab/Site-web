@@ -12,14 +12,36 @@ import {
   Settings,
   BarChart3,
   Layers,
+  BookOpen,
+  Target,
+  Users,
+  Sparkles,
 } from "lucide-react";
 
 const offers = [
   {
+    tag: "Done with you",
+    title: "Ateliers IA",
+    audience: "TPE & indépendants",
+    description:
+      "4 ateliers ciblés autour de vos sujets. On transmet, on aide à faire. On ne travaille pas votre projet — on vous rend autonome.",
+    pricing: [{ amount: "1 000€", detail: "HT", label: "Forfait" }],
+    features: [
+      { icon: BookOpen, text: "4 sessions adaptées à votre contexte" },
+      { icon: Target, text: "Sujets définis avec vous en amont" },
+      { icon: Users, text: "Format pratique : on fait ensemble, pas un cours" },
+      { icon: Sparkles, text: "Objectif autonomie, pas dépendance" },
+    ],
+    accent: "#FFB800",
+    ctaLabel: "Planifier mes ateliers",
+    ctaHref: "#contact-ia",
+  },
+  {
     tag: "Done for you",
     title: "Automatisation",
+    audience: "PME & scale-ups",
     description:
-      "On connecte vos outils et on automatise vos process. Make, n8n, Zapier. Ça tourne tout seul.",
+      "Vous avez déjà vos outils mais rien ne se parle. On connecte, on automatise, ça tourne tout seul.",
     pricing: [{ amount: "2 000€", detail: "HT", label: "À partir de" }],
     features: [
       { icon: Workflow, text: "Workflows automatisés end-to-end" },
@@ -32,11 +54,12 @@ const offers = [
     ctaHref: "#contact-ia",
   },
   {
-    tag: "Build",
+    tag: "Done for you",
     title: "Projet sur mesure",
+    audience: "PME & scale-ups",
     recommended: true,
     description:
-      "Apps métier, sites IA, CRM, dashboards. On développe avec l'IA, on intègre à votre existant, on livre.",
+      "Il vous manque un outil et rien n'existe sur le marché. On le construit, on l'intègre à votre existant, on livre.",
     pricing: [{ amount: "Sur devis", detail: "", label: "Forfait projet" }],
     features: [
       { icon: Code2, text: "Apps métier, sites IA, CRM, dashboards" },
@@ -64,15 +87,15 @@ export function IAPricing() {
 
         <ScrollReveal delay={0.1}>
           <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
-            Deux offres.{" "}
+            Trois formules.{" "}
             <em className="gradient-text">Zéro surprise.</em>
           </h2>
           <p className="mt-5 max-w-lg text-[15px] leading-[1.7] text-white/30">
-            Automatisation clé en main ou projet sur mesure. Périmètre clair, résultats mesurés.
+            De la formation à la réalisation complète. Périmètre clair, zéro bullshit.
           </p>
         </ScrollReveal>
 
-        <div className="mt-16 grid gap-5 lg:grid-cols-2">
+        <div className="mt-16 grid gap-5 lg:grid-cols-3">
           {offers.map((offer, i) => (
             <ScrollReveal key={offer.title} delay={0.15 * i}>
               <TiltCard
@@ -116,6 +139,13 @@ export function IAPricing() {
                 <h3 className="font-display mt-6 text-[clamp(1.5rem,3vw,2rem)] leading-[1.1] text-white">
                   {offer.title}
                 </h3>
+
+                {/* Audience */}
+                {"audience" in offer && offer.audience && (
+                  <p className="mt-2 text-[11px] uppercase tracking-widest text-white/20">
+                    {offer.audience}
+                  </p>
+                )}
 
                 {/* Pricing */}
                 <div className="mt-5 flex flex-wrap items-end gap-5">

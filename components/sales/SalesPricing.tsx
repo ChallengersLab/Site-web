@@ -5,14 +5,36 @@ import { TiltCard } from "@/components/ui/TiltCard";
 import {
   ArrowRight, Phone, BarChart3, Users, Settings,
   Target, UserPlus, FileText, Headphones, BookOpen,
+  Compass,
 } from "lucide-react";
 
 const offers = [
   {
+    tag: "Done with you",
+    title: "Bras droit Founder",
+    audience: "Fondateurs en lancement",
+    description:
+      "Vous lancez votre boîte et tout repose sur vous. On devient votre sparring partner : 1 à 2h par semaine sur tous les sujets. On ne fait pas à votre place — on vous aide à décider et avancer.",
+    pricing: [
+      { amount: "1 000€", detail: "HT / mois", label: "Forfait" },
+    ],
+    timeline: "1 à 2h / semaine — sans engagement",
+    features: [
+      { icon: Compass, text: "Stratégie, positionnement & go-to-market" },
+      { icon: Target, text: "Priorisation : quoi vendre, à qui, comment" },
+      { icon: Users, text: "Premiers recrutements & structuration" },
+      { icon: Phone, text: "Sparring pricing, négo, décisions clés" },
+    ],
+    accent: "#FFB800",
+    ctaLabel: "Réserver un échange",
+    ctaHref: "#contact-sales",
+  },
+  {
     tag: "Done for you",
     title: "Prospection externalisée",
+    audience: "Équipes en croissance",
     description:
-      "On génère les RDV qualifiés sur vos cibles pendant que vous structurez l'équipe en interne.",
+      "Vous avez un produit qui marche, il faut remplir le pipe. On génère les RDV qualifiés sur vos cibles pendant que vous closez.",
     pricing: [
       { amount: "1 500€", detail: "HT / mois", label: "Fixe mensuel" },
       { amount: "200€", detail: "HT / RDV qualifié", label: "Variable" },
@@ -30,9 +52,10 @@ const offers = [
   {
     tag: "Done with you",
     title: "Accompagnement CRO",
+    audience: "Équipes sales existantes",
     recommended: true,
     description:
-      "On structure, on transmet, on s'efface. À la fin, votre équipe tourne sans nous.",
+      "Vous avez une équipe commerciale mais ça manque de structure. On pose les process, on forme, on transmet. À la fin, ça tourne sans nous.",
     pricing: [
       { amount: "1 000€", detail: "HT / jour", label: "TJM" },
     ],
@@ -70,15 +93,15 @@ export function SalesPricing() {
 
         <ScrollReveal delay={0.1}>
           <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
-            Deux offres.{" "}
+            Trois formules.{" "}
             <em className="gradient-text">Zéro surprise.</em>
           </h2>
           <p className="mt-5 max-w-lg text-[15px] leading-[1.7] text-white/30">
-            Pas de devis à rallonge. Tarifs affichés, périmètre clair, résultats mesurés.
+            Du sparring ponctuel à l&apos;exécution complète. Tarifs affichés, périmètre clair.
           </p>
         </ScrollReveal>
 
-        <div className="mt-16 grid gap-5 lg:grid-cols-2">
+        <div className="mt-16 grid gap-5 lg:grid-cols-3">
           {offers.map((offer, i) => (
             <ScrollReveal key={offer.title} delay={0.15 * i}>
               <TiltCard
@@ -114,6 +137,13 @@ export function SalesPricing() {
                 <h3 className="font-display mt-6 text-[clamp(1.5rem,3vw,2rem)] leading-[1.1] text-white">
                   {offer.title}
                 </h3>
+
+                {/* Audience */}
+                {"audience" in offer && offer.audience && (
+                  <p className="mt-2 text-[11px] uppercase tracking-widest text-white/20">
+                    {offer.audience}
+                  </p>
+                )}
 
                 {/* Pricing */}
                 <div className="mt-5 flex flex-wrap items-end gap-5">

@@ -147,7 +147,11 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 1.2, ease: [0.22, 1, 0.36, 1] as const }}
             className="hidden md:block lg:flex-1"
           >
-            <div className="aspect-[4/3] w-full rounded-2xl border border-white/[0.06] bg-white/[0.02]" />
+            <VideoPlayer
+              webmSrc="/videos/circle-animation.webm"
+              mp4Src="/videos/circle-animation.mp4"
+              className="aspect-[16/9] w-full"
+            />
           </motion.div>
         </div>
 

@@ -7,28 +7,28 @@ export const CENTER_X = W / 2;
 export const CENTER_Y = H / 2;
 export const CIRCLE_RADIUS = 280;
 
-// === Timing (30fps, 360 frames = 12s) ===
+// === Timing (30fps, 540 frames = 18s) ===
 export const FPS = 30;
-export const TOTAL_FRAMES = 360;
+export const TOTAL_FRAMES = 540;
 
 export const TIMING = {
-  // Phase 1: Vicious circle
-  fadeIn: { start: 0, end: 10 },
-  circleDraw: { start: 10, end: 25 },
-  nodesAppear: { start: 20, end: 35 },
-  viciousLoop: { start: 30, end: 120 },
+  // Phase 1: Vicious circle (0-6s)
+  fadeIn: { start: 0, end: 15 },
+  circleDraw: { start: 15, end: 38 },
+  nodesAppear: { start: 30, end: 52 },
+  viciousLoop: { start: 45, end: 180 },
 
-  // Phase 2: Transition
-  slowDown: { start: 120, end: 130 },
-  pulse: { start: 130, end: 136 },
-  fragment: { start: 135, end: 142 },
-  flash: { start: 140, end: 144 },
-  blackout: { start: 144, end: 158 },
-  reform: { start: 158, end: 180 },
+  // Phase 2: Transition (6-9s)
+  slowDown: { start: 180, end: 195 },
+  pulse: { start: 195, end: 204 },
+  fragment: { start: 202, end: 213 },
+  flash: { start: 210, end: 216 },
+  blackout: { start: 216, end: 237 },
+  reform: { start: 238, end: 270 },
 
-  // Phase 3: Virtuous circle
-  virtuousLoop: { start: 180, end: 345 },
-  fadeOut: { start: 345, end: 360 },
+  // Phase 3: Virtuous circle (9-18s)
+  virtuousLoop: { start: 270, end: 517 },
+  fadeOut: { start: 517, end: 540 },
 } as const;
 
 // === Colors ===
@@ -75,21 +75,21 @@ export interface FlashWordConfig {
 }
 
 export const VICIOUS_WORDS: FlashWordConfig[] = [
-  { text: "Encore un tableur", startFrame: 35, x: 12, y: 18, size: 52, rotateZ: -2 },
-  { text: "Relance manuelle", startFrame: 52, x: 72, y: 22, size: 44, rotateZ: 1.5 },
-  { text: "Pas de suivi", startFrame: 68, x: 8, y: 75, size: 60, rotateZ: -1 },
-  { text: "Aucune visibilité", startFrame: 82, x: 68, y: 72, size: 48, rotateZ: 2 },
-  { text: "Réunion de plus", startFrame: 96, x: 18, y: 45, size: 42, rotateZ: -1.5 },
-  { text: "Perdu dans le CRM", startFrame: 108, x: 65, y: 48, size: 56, rotateZ: 1 },
+  { text: "Encore un tableur", startFrame: 55, x: 12, y: 18, size: 52, rotateZ: -2 },
+  { text: "Relance manuelle", startFrame: 78, x: 72, y: 22, size: 44, rotateZ: 1.5 },
+  { text: "Pas de suivi", startFrame: 100, x: 8, y: 75, size: 60, rotateZ: -1 },
+  { text: "Aucune visibilité", startFrame: 122, x: 68, y: 72, size: 48, rotateZ: 2 },
+  { text: "Réunion de plus", startFrame: 144, x: 18, y: 45, size: 42, rotateZ: -1.5 },
+  { text: "Perdu dans le CRM", startFrame: 162, x: 65, y: 48, size: 56, rotateZ: 1 },
 ];
 
 export const VIRTUOUS_WORDS: FlashWordConfig[] = [
-  { text: "Automatisé", startFrame: 195, x: 10, y: 20, size: 56, rotateZ: -1.5 },
-  { text: "Pipeline clair", startFrame: 218, x: 74, y: 18, size: 48, rotateZ: 2 },
-  { text: "Données en temps réel", startFrame: 245, x: 6, y: 72, size: 44, rotateZ: -1 },
-  { text: "Relance intelligente", startFrame: 268, x: 70, y: 75, size: 52, rotateZ: 1.5 },
-  { text: "Score prédictif", startFrame: 295, x: 15, y: 48, size: 60, rotateZ: -2 },
-  { text: "Croissance visible", startFrame: 318, x: 68, y: 45, size: 50, rotateZ: 1 },
+  { text: "Automatisé", startFrame: 290, x: 10, y: 20, size: 56, rotateZ: -1.5 },
+  { text: "Pipeline clair", startFrame: 325, x: 74, y: 18, size: 48, rotateZ: 2 },
+  { text: "Données en temps réel", startFrame: 365, x: 6, y: 72, size: 44, rotateZ: -1 },
+  { text: "Relance intelligente", startFrame: 400, x: 70, y: 75, size: 52, rotateZ: 1.5 },
+  { text: "Score prédictif", startFrame: 440, x: 15, y: 48, size: 60, rotateZ: -2 },
+  { text: "Croissance visible", startFrame: 475, x: 68, y: 45, size: 50, rotateZ: 1 },
 ];
 
 // === Utility: convert angle + radius to x/y ===

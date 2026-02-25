@@ -55,12 +55,14 @@ export function Navbar() {
           {/* Links */}
           <div className="hidden items-center gap-1 md:flex">
             {navLinks.map((link) => {
+              const isHash = link.href.includes("#");
               const isActive =
                 link.href === "/"
                   ? pathname === "/"
-                  : pathname.startsWith(link.href.replace("/#", "/"));
+                  : !isHash && pathname.startsWith(link.href);
+              const Tag = isHash ? "a" : Link;
               return (
-                <Link
+                <Tag
                   key={link.name}
                   href={link.href}
                   className={`rounded-lg px-4 py-2 text-[13px] font-medium transition-colors duration-200 hover:bg-white/[0.04] hover:text-white/80 ${
@@ -68,7 +70,7 @@ export function Navbar() {
                   }`}
                 >
                   {link.name}
-                </Link>
+                </Tag>
               );
             })}
           </div>
