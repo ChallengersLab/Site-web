@@ -68,9 +68,9 @@ export function SalesHero() {
             variants={fadeUp}
             className="mx-auto mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
           >
-            La plupart des startups et scale-ups B2B qu&apos;on accompagne ont le même point de départ.{" "}
+            Deux options : on prospecte pour vous, ou on forme votre équipe.{" "}
             <span className="text-white/75">
-              Un bon produit, pas encore de système commercial en place.
+              Dans les deux cas, résultats en 90 jours.
             </span>
           </motion.p>
 
