@@ -17,7 +17,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="CircleAnimation"
         component={CircleAnimation}
-        durationInFrames={600}
+        durationInFrames={660}
         fps={30}
         width={1920}
         height={1080}

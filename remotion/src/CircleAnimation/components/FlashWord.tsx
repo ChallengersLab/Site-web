@@ -14,8 +14,8 @@ interface FlashWordProps {
   glowColor: string;
 }
 
-const VISIBLE_DURATION = 20;
-const FADE_OUT_DURATION = 12;
+const VISIBLE_DURATION = 27;
+const FADE_OUT_DURATION = 16;
 
 export const FlashWord: React.FC<FlashWordProps> = ({
   text,
