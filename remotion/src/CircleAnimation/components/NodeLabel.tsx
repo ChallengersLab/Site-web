@@ -43,6 +43,18 @@ export const NodeLabel: React.FC<NodeLabelProps> = ({
 
   const capsuleHeight = 50;
 
+  // Align capsule AWAY from center to avoid inner-facing collisions
+  // angle 45-135 (right-facing): anchor right edge, text extends left
+  // angle 225-315 (left-facing): anchor left edge, text extends right
+  // angle 0-45, 135-225, 315-360 (top/bottom): centered
+  const a = node.angle % 360;
+  const translateX =
+    a > 45 && a < 135
+      ? "-100%" // right-facing: text goes left
+      : a > 225 && a < 315
+        ? "0%" // left-facing: text goes right
+        : "-50%"; // top/bottom: centered
+
   if (opacity <= 0) return null;
 
   return (
@@ -51,7 +63,7 @@ export const NodeLabel: React.FC<NodeLabelProps> = ({
         position: "absolute",
         left: pos.x,
         top: pos.y,
-        transform: "translate(-50%, -50%)",
+        transform: `translate(${translateX}, -50%)`,
         height: capsuleHeight,
         borderRadius: capsuleHeight / 2,
         background: "rgba(3, 3, 3, 0.85)",

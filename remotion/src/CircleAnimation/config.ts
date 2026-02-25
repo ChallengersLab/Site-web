@@ -89,17 +89,17 @@ export interface NodeConfig {
 }
 
 export const CIRCLE1_NODES: NodeConfig[] = [
-  { angle: 350, label: "Tâches manuelles" },
-  { angle: 300, label: "Prospection au hasard" },
-  { angle: 190, label: "Données en silo" },
-  { angle: 250, label: "Croissance bloquée" },
+  { angle: 0, label: "Tâches manuelles" },
+  { angle: 90, label: "Données en silo" },
+  { angle: 180, label: "Croissance bloquée" },
+  { angle: 270, label: "Prospection au hasard" },
 ];
 
 export const CIRCLE2_NODES: NodeConfig[] = [
-  { angle: 10, label: "Audit Sales & IA" },
-  { angle: 60, label: "Stratégie data-driven" },
-  { angle: 120, label: "Automatisation IA" },
-  { angle: 170, label: "Pilotage performance" },
+  { angle: 0, label: "Audit Sales & IA" },
+  { angle: 90, label: "Stratégie data-driven" },
+  { angle: 180, label: "Pilotage performance" },
+  { angle: 270, label: "Automatisation IA" },
 ];
 
 export const FUSED_NODES: NodeConfig[] = [
