@@ -68,14 +68,11 @@ export function SalesPainPoints() {
 
         <ScrollReveal delay={0.1}>
           <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
-            Vous avez le produit.
-            <br />
-            <span className="gradient-text">
-              <em>Il manque la machine.</em>
-            </span>
+            Ce qui manque.{" "}
+            <em className="gradient-text">Concrètement.</em>
           </h2>
           <p className="mt-5 max-w-xl text-[15px] leading-[1.7] text-white/30">
-            La plupart des startups et scale-ups B2B qu&apos;on accompagne ont le même point de départ. Un bon produit, pas encore de système commercial en place.
+            On le voit à chaque fois. Le produit est bon, mais trois choses bloquent la croissance.
           </p>
         </ScrollReveal>
 

@@ -56,10 +56,10 @@ export function SalesHero() {
           {/* Headline */}
           <motion.h1 variants={fadeUp} className="mt-10">
             <span className="font-display block text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
-              Votre pipeline ne se
+              Vous avez le produit.
             </span>
             <span className="font-display block text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] tracking-[-0.02em] gradient-text mt-2">
-              <em>remplit pas tout seul.</em>
+              <em>Il manque la machine.</em>
             </span>
           </motion.h1>
 
@@ -68,9 +68,9 @@ export function SalesHero() {
             variants={fadeUp}
             className="mx-auto mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
           >
-            On remplit le pipe et on forme l&apos;équipe pour qu&apos;elle tourne sans nous.{" "}
+            La plupart des startups et scale-ups B2B qu&apos;on accompagne ont le même point de départ.{" "}
             <span className="text-white/75">
-              Vous, vous signez.
+              Un bon produit, pas encore de système commercial en place.
             </span>
           </motion.p>
 
