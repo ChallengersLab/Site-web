@@ -68,7 +68,7 @@ export function SalesHero() {
             variants={fadeUp}
             className="mx-auto mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
           >
-            On prospecte pour vous, on structure l&apos;équipe, on forme au closing.{" "}
+            On prospecte pour vous et on forme au closing.{" "}
             <span className="text-white/75">
               Vous, vous signez.
             </span>
