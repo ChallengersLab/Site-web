@@ -5,7 +5,9 @@
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "render": "remotion render src/index.ts HeroDiagnostic --output ../public/videos/hero-diagnostic.mp4",
-    "render:webm": "remotion render src/index.ts HeroDiagnostic --codec vp8 --output ../public/videos/hero-diagnostic.webm"
+    "render:webm": "remotion render src/index.ts HeroDiagnostic --codec vp8 --output ../public/videos/hero-diagnostic.webm",
+    "render:circle": "remotion render src/index.ts CircleAnimation --output ../public/videos/circle-animation.mp4",
+    "render:circle:webm": "remotion render src/index.ts CircleAnimation --codec vp8 --output ../public/videos/circle-animation.webm"
   },
   "dependencies": {
     "@remotion/cli": "4.0.428",
