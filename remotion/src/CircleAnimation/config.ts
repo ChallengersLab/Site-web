@@ -10,11 +10,11 @@ export const CENTER_Y = H / 2; // 540
 export const CIRCLE1_START_X = 620;
 export const CIRCLE2_START_X = 1300;
 export const CIRCLE_RADIUS = 200; // reduced from 280 to fit side-by-side
-export const FUSED_RADIUS = 240;
+export const FUSED_RADIUS = 300;
 
 // === Timing (30fps, 540 frames = 18s) ===
 export const FPS = 30;
-export const TOTAL_FRAMES = 540;
+export const TOTAL_FRAMES = 600;
 
 export const TIMING = {
   // Phase 1: Vicious circle (0-5.5s)
@@ -41,13 +41,20 @@ export const TIMING = {
   fusionFlash: { start: 365, end: 378 },
   fusionMerge: { start: 370, end: 400 },
 
-  // Phase 5: Benefits (13.3-17s)
+  // Phase 5: Benefits (13.3-16s)
   fusedNodes: { start: 400, end: 420 },
-  fusedWords: { start: 420, end: 500 },
-  fusedLoop: { start: 400, end: 510 },
+  fusedWords: { start: 420, end: 480 },
+  fusedLoop: { start: 400, end: 490 },
 
-  // Phase 6: Outro (17-18s)
-  fadeOut: { start: 510, end: 540 },
+  // Phase 6: Fade to black (16.3-17.3s)
+  fadeToBlack: { start: 490, end: 520 },
+
+  // Phase 7: CTA on black (17.3-20s)
+  ctaIn: { start: 525, end: 540 },
+  ctaOut: { start: 580, end: 600 },
+
+  // Global fade (used for particles/grain)
+  fadeOut: { start: 580, end: 600 },
 } as const;
 
 // === Colors (aligned with site theme) ===
@@ -82,22 +89,24 @@ export interface NodeConfig {
 }
 
 export const CIRCLE1_NODES: NodeConfig[] = [
-  { angle: 0, label: "Tâches manuelles" },
-  { angle: 150, label: "Données en silo" },
-  { angle: 210, label: "Croissance bloquée" },
+  { angle: 350, label: "Tâches manuelles" },
+  { angle: 300, label: "Prospection au hasard" },
+  { angle: 190, label: "Données en silo" },
+  { angle: 250, label: "Croissance bloquée" },
 ];
 
 export const CIRCLE2_NODES: NodeConfig[] = [
-  { angle: 0, label: "Audit & Diagnostic" },
-  { angle: 150, label: "Stratégie sur-mesure" },
-  { angle: 210, label: "Automatisation IA" },
+  { angle: 10, label: "Audit Sales & IA" },
+  { angle: 60, label: "Stratégie data-driven" },
+  { angle: 120, label: "Automatisation IA" },
+  { angle: 170, label: "Pilotage performance" },
 ];
 
 export const FUSED_NODES: NodeConfig[] = [
-  { angle: 0, label: "Visibilité totale" },
-  { angle: 90, label: "Équipe alignée" },
-  { angle: 180, label: "Process qui scale" },
-  { angle: 270, label: "Croissance prévisible" },
+  { angle: 0, label: "Temps libéré" },
+  { angle: 90, label: "Zéro tâche manuelle" },
+  { angle: 180, label: "Croissance prévisible" },
+  { angle: 270, label: "Équipe qui scale" },
 ];
 
 // === Flash words — positioned by angle (deg) + distance from center ===
@@ -111,24 +120,30 @@ export interface FlashWordConfig {
 }
 
 export const CIRCLE1_WORDS: FlashWordConfig[] = [
-  { text: "Encore un tableur", startFrame: 55, angle: 30, distance: 340, size: 44, rotateZ: -2 },
-  { text: "Relance manuelle", startFrame: 80, angle: 330, distance: 350, size: 40, rotateZ: 1.5 },
-  { text: "Pas de suivi", startFrame: 105, angle: 120, distance: 330, size: 48, rotateZ: -1 },
-  { text: "Aucune visibilité", startFrame: 130, angle: 240, distance: 345, size: 42, rotateZ: 2 },
+  { text: "Encore un tableur", startFrame: 55, angle: 30, distance: 440, size: 34, rotateZ: -2 },
+  { text: "Relance manuelle", startFrame: 70, angle: 330, distance: 450, size: 32, rotateZ: 1.5 },
+  { text: "Aucune visibilité", startFrame: 85, angle: 150, distance: 445, size: 34, rotateZ: -1 },
+  { text: "Pas de suivi", startFrame: 100, angle: 210, distance: 450, size: 32, rotateZ: 2 },
+  { text: "Reporting à la main", startFrame: 115, angle: 75, distance: 440, size: 30, rotateZ: -1.5 },
+  { text: "Perdu dans le CRM", startFrame: 130, angle: 255, distance: 455, size: 32, rotateZ: 1 },
 ];
 
 export const CIRCLE2_WORDS: FlashWordConfig[] = [
-  { text: "CRM optimisé", startFrame: 200, angle: 30, distance: 330, size: 44, rotateZ: -1.5 },
-  { text: "Playbook sales", startFrame: 220, angle: 330, distance: 340, size: 40, rotateZ: 2 },
-  { text: "Scoring IA", startFrame: 238, angle: 120, distance: 335, size: 48, rotateZ: -1 },
-  { text: "Process scalable", startFrame: 252, angle: 240, distance: 345, size: 42, rotateZ: 1.5 },
+  { text: "Scoring IA", startFrame: 200, angle: 15, distance: 430, size: 34, rotateZ: -1.5 },
+  { text: "Agents IA", startFrame: 212, angle: 50, distance: 420, size: 32, rotateZ: 2 },
+  { text: "Playbook sales", startFrame: 224, angle: 90, distance: 390, size: 34, rotateZ: -1 },
+  { text: "Process automatisé", startFrame: 234, angle: 130, distance: 420, size: 32, rotateZ: 1.5 },
+  { text: "Workflows IA", startFrame: 244, angle: 160, distance: 430, size: 30, rotateZ: -2 },
+  { text: "Formation continue", startFrame: 254, angle: 185, distance: 420, size: 32, rotateZ: 1 },
 ];
 
 export const FUSED_WORDS: FlashWordConfig[] = [
-  { text: "Pipeline structuré", startFrame: 425, angle: 45, distance: 380, size: 44, rotateZ: -1 },
-  { text: "Décisions data-driven", startFrame: 450, angle: 135, distance: 370, size: 38, rotateZ: 1.5 },
-  { text: "Revenue prévisible", startFrame: 472, angle: 225, distance: 375, size: 44, rotateZ: -2 },
-  { text: "Temps retrouvé", startFrame: 492, angle: 315, distance: 365, size: 42, rotateZ: 1 },
+  { text: "Fini les tableurs", startFrame: 415, angle: 45, distance: 560, size: 38, rotateZ: -1 },
+  { text: "Des heures récupérées", startFrame: 428, angle: 100, distance: 580, size: 34, rotateZ: 1.5 },
+  { text: "Revenu prévisible", startFrame: 441, angle: 135, distance: 540, size: 38, rotateZ: -2 },
+  { text: "L'IA bosse pour vous", startFrame: 452, angle: 225, distance: 540, size: 36, rotateZ: 1 },
+  { text: "Pipeline qui roule", startFrame: 462, angle: 260, distance: 580, size: 34, rotateZ: -1.5 },
+  { text: "Équipe focus", startFrame: 472, angle: 315, distance: 560, size: 34, rotateZ: 2 },
 ];
 
 // === Utility: convert angle + radius to x/y from arbitrary center ===

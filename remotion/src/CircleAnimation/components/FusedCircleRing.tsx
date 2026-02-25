@@ -9,7 +9,7 @@ export const FusedCircleRing: React.FC = () => {
   // Appears during fusion merge
   const opacity = interpolate(
     frame,
-    [TIMING.fusionMerge.start, TIMING.fusionMerge.end, TIMING.fadeOut.start, TIMING.fadeOut.end],
+    [TIMING.fusionMerge.start, TIMING.fusionMerge.end, TIMING.fadeToBlack.start, TIMING.fadeToBlack.end],
     [0, 0.8, 0.8, 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );

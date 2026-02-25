@@ -16,6 +16,8 @@ interface NodeLabelProps {
   fadeOutEnd: number;
 }
 
+const NODE_OFFSET = 55; // px beyond circle edge
+
 export const NodeLabel: React.FC<NodeLabelProps> = ({
   node,
   index,
@@ -29,9 +31,9 @@ export const NodeLabel: React.FC<NodeLabelProps> = ({
   fadeOutEnd,
 }) => {
   const frame = useCurrentFrame();
-  const pos = angleToXY(node.angle, radius, cx, cy);
+  const pos = angleToXY(node.angle, radius + NODE_OFFSET, cx, cy);
 
-  const staggerStart = appearStart + index * 4;
+  const staggerStart = appearStart + index * 3;
   const opacity = interpolate(
     frame,
     [staggerStart, staggerStart + 10, fadeOutStart, fadeOutEnd],
@@ -39,8 +41,7 @@ export const NodeLabel: React.FC<NodeLabelProps> = ({
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );
 
-  const capsuleWidth = 220;
-  const capsuleHeight = 48;
+  const capsuleHeight = 50;
 
   if (opacity <= 0) return null;
 
@@ -48,32 +49,32 @@ export const NodeLabel: React.FC<NodeLabelProps> = ({
     <div
       style={{
         position: "absolute",
-        left: pos.x - capsuleWidth / 2,
-        top: pos.y - capsuleHeight / 2,
-        width: capsuleWidth,
+        left: pos.x,
+        top: pos.y,
+        transform: "translate(-50%, -50%)",
         height: capsuleHeight,
         borderRadius: capsuleHeight / 2,
-        background: "rgba(3, 3, 3, 0.8)",
+        background: "rgba(3, 3, 3, 0.85)",
         border: `1px solid ${color}`,
-        boxShadow: `0 0 20px ${glowColor}, 0 0 60px ${glowColor}`,
+        boxShadow: `0 0 15px ${glowColor}, 0 0 40px ${glowColor}`,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        padding: "0 20px",
         opacity,
         pointerEvents: "none",
         backdropFilter: "blur(4px)",
+        whiteSpace: "nowrap",
       }}
     >
       <span
         style={{
           color: "#e8e8e8",
-          fontSize: 18,
+          fontSize: 20,
           fontFamily: "'DM Sans', sans-serif",
           fontWeight: 500,
           textAlign: "center",
           lineHeight: 1.2,
-          padding: "0 14px",
-          whiteSpace: "nowrap",
         }}
       >
         {node.label}

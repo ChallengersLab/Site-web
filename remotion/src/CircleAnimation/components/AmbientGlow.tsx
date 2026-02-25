@@ -5,10 +5,10 @@ import { CIRCLE1_START_X, CIRCLE2_START_X, CENTER_X, CENTER_Y, TIMING } from "..
 export const AmbientGlow: React.FC = () => {
   const frame = useCurrentFrame();
 
-  // Red glow follows circle 1
+  // Red glow follows circle 1 (fadeIn.end and circle1Draw.start are both 15, use draw end instead)
   const redOpacity = interpolate(
     frame,
-    [TIMING.fadeIn.end, TIMING.circle1Draw.start, TIMING.slideStart.start, TIMING.fusionFlash.start],
+    [TIMING.circle1Draw.start, TIMING.circle1Draw.end, TIMING.slideStart.start, TIMING.fusionFlash.start],
     [0, 0.2, 0.2, 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );
@@ -24,7 +24,7 @@ export const AmbientGlow: React.FC = () => {
   // Fused glow (purple-cyan) at center
   const fusedOpacity = interpolate(
     frame,
-    [TIMING.fusionMerge.start, TIMING.fusionMerge.end, TIMING.fadeOut.start, TIMING.fadeOut.end],
+    [TIMING.fusionMerge.start, TIMING.fusionMerge.end, TIMING.fadeToBlack.start, TIMING.fadeToBlack.end],
     [0, 0.25, 0.25, 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );
