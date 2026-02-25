@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, ArrowRight } from "lucide-react";
 import {
@@ -17,6 +18,7 @@ const navLinks = [
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -52,15 +54,23 @@ export function Navbar() {
 
           {/* Links */}
           <div className="hidden items-center gap-1 md:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="rounded-lg px-4 py-2 text-[13px] font-medium text-white/40 transition-colors duration-200 hover:bg-white/[0.04] hover:text-white/80"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(link.href.replace("/#", "/"));
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`rounded-lg px-4 py-2 text-[13px] font-medium transition-colors duration-200 hover:bg-white/[0.04] hover:text-white/80 ${
+                    isActive ? "text-white/90" : "text-white/40"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
 
           {/* CTA + Mobile */}

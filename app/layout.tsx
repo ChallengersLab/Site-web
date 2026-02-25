@@ -3,6 +3,8 @@ import { Instrument_Serif, DM_Sans } from "next/font/google";
 import { GrainTexture } from "@/components/effects/GrainTexture";
 import { CursorGlow } from "@/components/effects/CursorGlow";
 import { Navbar } from "@/components/layout/Navbar";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { BackToTop } from "@/components/ui/BackToTop";
 import "./globals.css";
 
 const instrumentSerif = Instrument_Serif({
@@ -244,9 +246,11 @@ export default function RootLayout({
         >
           Aller au contenu principal
         </a>
+        <ScrollProgress />
         <CursorGlow />
         <Navbar />
         {children}
+        <BackToTop />
         <GrainTexture />
       </body>
     </html>
