@@ -1,58 +1,46 @@
 import React from "react";
 import { useCurrentFrame, interpolate } from "remotion";
-import {
-  CIRCLE_RADIUS,
-  TIMING,
-  VICIOUS,
-  VIRTUOUS,
-  angleToXY,
-} from "../config";
+import { angleToXY } from "../config";
 import type { NodeConfig } from "../config";
 
 interface NodeLabelProps {
   node: NodeConfig;
   index: number;
+  cx: number;
+  cy: number;
+  radius: number;
+  color: string;
+  glowColor: string;
+  appearStart: number;
+  fadeOutStart: number;
+  fadeOutEnd: number;
 }
 
-export const NodeLabel: React.FC<NodeLabelProps> = ({ node, index }) => {
+export const NodeLabel: React.FC<NodeLabelProps> = ({
+  node,
+  index,
+  cx,
+  cy,
+  radius,
+  color,
+  glowColor,
+  appearStart,
+  fadeOutStart,
+  fadeOutEnd,
+}) => {
   const frame = useCurrentFrame();
+  const pos = angleToXY(node.angle, radius, cx, cy);
 
-  const pos = angleToXY(node.angle, CIRCLE_RADIUS);
-
-  const appearStart = TIMING.nodesAppear.start + index * 4;
-  // blackout.end (158) and reform.start (158) share the same frame,
-  // so we merge them into one keyframe to keep inputRange strictly increasing.
+  const staggerStart = appearStart + index * 4;
   const opacity = interpolate(
     frame,
-    [
-      appearStart,
-      appearStart + 10,
-      TIMING.fragment.start,
-      TIMING.flash.start,
-      TIMING.blackout.start,
-      TIMING.blackout.end,
-      TIMING.reform.end,
-      TIMING.fadeOut.start,
-      TIMING.fadeOut.end,
-    ],
-    [0, 1, 1, 0.5, 0, 0, 1, 1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+    [staggerStart, staggerStart + 10, fadeOutStart, fadeOutEnd],
+    [0, 1, 1, 0],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );
-
-  const labelTransition = interpolate(
-    frame,
-    [TIMING.reform.start, TIMING.reform.end],
-    [0, 1],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-  );
-  const isVirtuous = labelTransition >= 0.5;
-  const label = isVirtuous ? node.virtuousLabel : node.viciousLabel;
-
-  const borderColor = isVirtuous ? VIRTUOUS.primary : VICIOUS.primary;
-  const glowColor = isVirtuous ? VIRTUOUS.glow : VICIOUS.glow;
 
   const capsuleWidth = 220;
-  const capsuleHeight = 52;
+  const capsuleHeight = 48;
 
   if (opacity <= 0) return null;
 
@@ -65,8 +53,8 @@ export const NodeLabel: React.FC<NodeLabelProps> = ({ node, index }) => {
         width: capsuleWidth,
         height: capsuleHeight,
         borderRadius: capsuleHeight / 2,
-        background: "rgba(8, 8, 12, 0.75)",
-        border: `1px solid ${borderColor}`,
+        background: "rgba(3, 3, 3, 0.8)",
+        border: `1px solid ${color}`,
         boxShadow: `0 0 20px ${glowColor}, 0 0 60px ${glowColor}`,
         display: "flex",
         alignItems: "center",
@@ -78,17 +66,17 @@ export const NodeLabel: React.FC<NodeLabelProps> = ({ node, index }) => {
     >
       <span
         style={{
-          color: "#FFFFFF",
-          fontSize: 20,
+          color: "#e8e8e8",
+          fontSize: 18,
           fontFamily: "'DM Sans', sans-serif",
           fontWeight: 500,
           textAlign: "center",
           lineHeight: 1.2,
-          padding: "0 16px",
+          padding: "0 14px",
           whiteSpace: "nowrap",
         }}
       >
-        {label}
+        {node.label}
       </span>
     </div>
   );
