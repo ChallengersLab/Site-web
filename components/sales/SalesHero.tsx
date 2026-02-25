@@ -70,7 +70,7 @@ export function SalesHero() {
           >
             Deux options : on prospecte pour vous, ou on forme votre équipe.{" "}
             <span className="text-white/75">
-              Dans les deux cas, résultats en 90 jours.
+              Dans les deux cas, on prouve que ça marche.
             </span>
           </motion.p>
 
