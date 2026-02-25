@@ -20,6 +20,8 @@ export const NodeLabel: React.FC<NodeLabelProps> = ({ node, index }) => {
   const pos = angleToXY(node.angle, CIRCLE_RADIUS);
 
   const appearStart = TIMING.nodesAppear.start + index * 4;
+  // blackout.end (158) and reform.start (158) share the same frame,
+  // so we merge them into one keyframe to keep inputRange strictly increasing.
   const opacity = interpolate(
     frame,
     [
@@ -29,12 +31,11 @@ export const NodeLabel: React.FC<NodeLabelProps> = ({ node, index }) => {
       TIMING.flash.start,
       TIMING.blackout.start,
       TIMING.blackout.end,
-      TIMING.reform.start,
       TIMING.reform.end,
       TIMING.fadeOut.start,
       TIMING.fadeOut.end,
     ],
-    [0, 1, 1, 0.5, 0, 0, 0, 1, 1, 0],
+    [0, 1, 1, 0.5, 0, 0, 1, 1, 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
   );
 
