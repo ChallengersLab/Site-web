@@ -95,10 +95,10 @@ export function Hero() {
             {/* Headline */}
             <motion.h1 variants={fadeUp} className="mt-10">
               <span className="font-display block text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] tracking-[-0.02em] text-white">
-                On ne vend pas des missions.
+                Commerce & IA,
               </span>
               <span className="font-display block text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] tracking-[-0.02em] gradient-text mt-2">
-                <em>On résout vos problèmes.</em>
+                <em>on fait les deux.</em>
               </span>
             </motion.h1>
 
@@ -107,9 +107,9 @@ export function Hero() {
               variants={fadeUp}
               className="mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
             >
-              Besoin d&apos;un bras droit commercial&nbsp;? D&apos;un ingénieur IA&nbsp;? Les deux&nbsp;?{" "}
+              Structurer vos ventes, automatiser vos process, connecter vos outils.{" "}
               <span className="text-white/75">
-                On s&apos;adapte à votre situation. Un appel et on avance.
+                On s&apos;adapte à votre situation et on avance ensemble.
               </span>
             </motion.p>
 
@@ -122,7 +122,7 @@ export function Hero() {
                 href="#contact"
                 className="btn-glow inline-flex items-center gap-3 rounded-xl px-8 py-4 text-[15px]"
               >
-                <span>Réserver un appel stratégique</span>
+                <span>Discuter de votre projet</span>
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a

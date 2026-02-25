@@ -83,7 +83,7 @@ export function Method() {
                 <em className="gradient-text">Des résultats.</em>
               </h2>
               <p className="mt-5 text-[15px] leading-[1.7] text-white/30">
-                Pas de consulting à rallonge. Un process clair avec du ROI dès le départ.
+                Un process clair, des livrables concrets, du ROI dès le départ.
               </p>
               <Link
                 href="/ressources/audit-stack-sales-checklist"

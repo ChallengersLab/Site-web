@@ -49,11 +49,11 @@ export function FinalCTA() {
       <div className="relative z-10 mx-auto max-w-[700px] px-6 text-center">
         <ScrollReveal>
           <h2 className="font-display text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.95] tracking-[-0.02em]">
-            Prêt à passer devant{" "}
-            <em className="gradient-text">vos concurrents ?</em>
+            On en parle{" "}
+            <em className="gradient-text">ensemble ?</em>
           </h2>
           <p className="mx-auto mt-7 max-w-md text-[16px] leading-[1.7] text-white/35">
-            30 minutes. Un appel. On vous dit ce qui peut bouger chez vous, et ce qui n&apos;en vaut pas la peine.
+            30 minutes pour comprendre votre situation et voir comment on peut vous aider.
           </p>
         </ScrollReveal>
 

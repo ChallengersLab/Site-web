@@ -14,7 +14,7 @@ const pillars = [
     id: "sales",
     title: "Restructurez vos ventes",
     description:
-      "On construit des machines à pipeline. Pas de la prospection à l'ancienne.",
+      "Prospection structurée, pipe prévisible, équipe qui monte en compétence.",
     features: [
       { icon: Phone, text: "Prospection externalisée multicanal" },
       { icon: Users, text: "Coaching Challenger Sales" },
@@ -30,9 +30,9 @@ const pillars = [
     id: "ai",
     title: "Automatisez l'essentiel",
     description:
-      "L'IA bien implémentée, c'est ×10 sur votre productivité. Pas un gadget.",
+      "Automatiser ce qui peut l'être pour que vous puissiez vous concentrer sur l'essentiel.",
     features: [
-      { icon: Bot, text: "Prompt engineering & intégration IA" },
+      { icon: Bot, text: "Intégration IA dans vos process" },
       { icon: LayoutDashboard, text: "Interfaces & dashboards sur mesure" },
       { icon: Zap, text: "Applications métier automatisées" },
       { icon: Workflow, text: "Workflows (Make, n8n, Zapier)" },
@@ -64,10 +64,9 @@ export function TrustBar() {
         <ScrollReveal delay={0.1}>
           <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
             Sales <span className="gradient-text">&times;</span> AI{" "}
-            <span className="text-white/30">: la combinaison</span>
+            <span className="text-white/30">: deux expertises,</span>
             <br />
-            <span className="text-white/30">qui </span>
-            <em className="gradient-text">change tout</em>
+            <em className="gradient-text">une seule équipe</em>
           </h2>
         </ScrollReveal>
 

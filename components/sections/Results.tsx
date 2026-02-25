@@ -25,7 +25,7 @@ const painPoints = [
     icon: Settings,
     title: "Personne pour connecter les deux",
     description:
-      "Vous cherchez un commercial qui comprend la tech, ou un tech qui comprend le business. Bonne chance. Généralement, vous finissez avec deux prestataires qui ne se parlent pas.",
+      "Vous cherchez un commercial qui comprend la tech, ou un tech qui comprend le business. Souvent, ça veut dire deux prestataires qui ne se parlent pas.",
     accentColor: "#a78bfa",
   },
 ];
@@ -62,8 +62,8 @@ export function Results() {
 
         <ScrollReveal delay={0.1}>
           <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
-            Bon produit.{" "}
-            <em className="gradient-text">Croissance qui stagne.</em>
+            Vous reconnaissez{" "}
+            <em className="gradient-text">ces situations ?</em>
           </h2>
         </ScrollReveal>
 
