@@ -9,9 +9,9 @@ import { Phone, Workflow, Settings } from "lucide-react";
 const painPoints = [
   {
     icon: Phone,
-    title: "Vos ventes reposent sur le bouche-à-oreille",
+    title: "Le bouche-à-oreille ne suffit plus",
     description:
-      "Pas de prospection structurée, pas de playbook, pas de pipe prévisible. La croissance dépend du réseau et du hasard.",
+      "Le réseau vous a amenés jusque-là. Mais pour passer un cap, il faut une prospection structurée, un pipe prévisible, et un process qui ne dépend pas que des relations.",
     accentColor: "#7B5EFF",
   },
   {
