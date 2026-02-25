@@ -260,7 +260,7 @@ export const Act2Rupture: React.FC = () => {
           }}
         >
           <KineticText
-            text="Le probleme, ce n'est pas eux."
+            text="Le probl\u00e8me, ce n\u2019est pas eux."
             startFrame={60}
             framePersChar={2}
             style={{ fontSize: 60, maxWidth: 1200 }}

@@ -5,7 +5,7 @@ import { KineticText } from "../components/KineticText";
 import { UIBlock3D } from "../components/UIBlock3D";
 import { ParticleField } from "../components/ParticleField";
 import { Orb } from "../components/Orb";
-import { BLOCKS, PURPLE, gridToPixel } from "../config";
+import { BLOCKS, gridToPixel } from "../config";
 import type { CameraState } from "../types";
 
 export const Act1Mirror: React.FC = () => {
@@ -53,7 +53,7 @@ export const Act1Mirror: React.FC = () => {
     <IsometricScene camera={camera}>
       {/* Layer 1: Orb background — purple, large, left-center */}
       <Orb
-        color={PURPLE}
+        color="rgba(123,94,255,0.12)"
         size={800}
         x={400}
         y={540}
@@ -141,7 +141,7 @@ export const Act1Mirror: React.FC = () => {
         }}
       >
         <KineticText
-          text="Vos equipes bossent."
+          text="Vos \u00e9quipes bossent."
           startFrame={90}
           framePersChar={2}
           style={{
@@ -153,7 +153,7 @@ export const Act1Mirror: React.FC = () => {
         <div style={{ height: 40 }} />
 
         <KineticText
-          text="Les deals trainent."
+          text="Les deals tra\u00eenent."
           startFrame={135}
           framePersChar={2}
           style={{

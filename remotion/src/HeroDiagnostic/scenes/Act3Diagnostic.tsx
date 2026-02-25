@@ -99,7 +99,7 @@ export const Act3Diagnostic: React.FC = () => {
         }}
       >
         <KineticText
-          text="C'est le systeme qui n'existe pas encore."
+          text="C\u2019est le syst\u00e8me qui n\u2019existe pas encore."
           startFrame={100}
           framePersChar={2}
           blueprint
