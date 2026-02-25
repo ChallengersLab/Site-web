@@ -49,11 +49,11 @@ export function SalesCTA() {
       <div className="relative z-10 mx-auto max-w-[700px] px-6 text-center">
         <ScrollReveal>
           <h2 className="font-display text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.95] tracking-[-0.02em]">
-            Prêt à construire{" "}
-            <em className="gradient-text">votre machine à pipeline ?</em>
+            On en parle{" "}
+            <em className="gradient-text">de vos ventes ?</em>
           </h2>
           <p className="mx-auto mt-7 max-w-md text-[16px] leading-[1.7] text-white/35">
-            30 minutes. Un appel. On identifie ce qu&apos;on peut faire pour vos ventes — et surtout ce qu&apos;on ne fera pas.
+            30 minutes. Un appel. On vous dit ce qui peut bouger côté ventes, et ce qui n&apos;en vaut pas la peine.
           </p>
         </ScrollReveal>
 
@@ -66,7 +66,7 @@ export function SalesCTA() {
             <ArrowRight className="h-4 w-4" />
           </a>
           <p className="mt-5 text-[12px] text-white/15">
-            Gratuit &middot; Sans engagement &middot; 5 clients max par trimestre pour garantir la qualité
+            Gratuit &middot; Sans engagement
           </p>
         </ScrollReveal>
       </div>

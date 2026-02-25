@@ -10,28 +10,28 @@ const painPoints = [
   {
     icon: Phone,
     stat: "x3",
-    statLabel: "appels possibles",
-    title: "Vos équipes pourraient prospecter 3 fois plus — avec les bons outils",
+    statLabel: "de volume possible",
+    title: "Pas de culture outbound, ou une prospection pleine de trous",
     description:
-      "Power dialer, séquences automatisées, transcription IA en temps réel. Un SDR bien équipé passe 80 appels par jour au lieu de 20. Et chaque call est enregistré, résumé, exploitable pour coacher et progresser.",
+      "Soit vos équipes n'ont jamais prospecté et tout repose sur l'entrant. Soit elles prospectent, mais sur des listes mal ciblées, avec un discours pas testé et sans vraie méthode. Dans les deux cas, le pipeline stagne. On corrige le ciblage, le message et le rythme.",
     accentColor: "#7B5EFF",
   },
   {
     icon: Route,
     stat: "90j",
     statLabel: "pour structurer",
-    title: "Un playbook, des scripts, un onboarding — et vos résultats ne dépendent plus d'une seule personne",
+    title: "Un playbook, des scripts, un onboarding : vos résultats ne dépendent plus d'une seule personne",
     description:
-      "Quand le process est dans la tête du meilleur commercial, tout repart à zéro à chaque départ. On met en place les méthodes, les séquences et la formation pour que la performance soit dans le système — pas dans l'individu.",
+      "Quand le process est dans la tête du meilleur commercial, tout repart à zéro à chaque départ. On pose les méthodes et la formation pour que la perf tienne, même quand quelqu'un s'en va.",
     accentColor: "#a78bfa",
   },
   {
     icon: BarChart3,
     stat: "KPIs",
     statLabel: "clairs dès le mois 1",
-    title: "Piloter par les chiffres, pas par l'instinct — MRR, conversion, coût d'acquisition",
+    title: "Piloter par les chiffres : MRR, conversion, coût d'acquisition",
     description:
-      "Sans tableau de bord fiable, chaque décision est un pari. On installe les KPIs qui comptent, le reporting qui tourne tout seul, et la visibilité dont vous avez besoin pour recruter, investir et scaler en confiance.",
+      "Sans tableau de bord fiable, chaque décision est un pari. On installe les KPIs qui comptent et le reporting qui tourne tout seul. Vous recrutez, investissez et scalez avec les bons chiffres sous les yeux.",
     accentColor: "#00F5FF",
   },
 ];
@@ -68,14 +68,14 @@ export function SalesPainPoints() {
 
         <ScrollReveal delay={0.1}>
           <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
-            Votre offre est bonne.
+            Vous avez le produit.
             <br />
             <span className="gradient-text">
-              <em>On peut en faire beaucoup plus.</em>
+              <em>Il manque la machine.</em>
             </span>
           </h2>
           <p className="mt-5 max-w-xl text-[15px] leading-[1.7] text-white/30">
-            On voit les mêmes leviers inexploités dans 80% des PME B2B. La bonne nouvelle : ça se structure en 90 jours.
+            La plupart des startups et scale-ups B2B qu&apos;on accompagne ont le même point de départ. Un bon produit, pas encore de système commercial en place.
           </p>
         </ScrollReveal>
 

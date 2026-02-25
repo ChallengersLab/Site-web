@@ -7,42 +7,40 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 const steps = [
   {
     number: "01",
-    phase: "Audit",
+    phase: "Cadrage",
     timeline: "Sem. 1-2",
     description:
-      "Pipeline, stack, process, équipe. On repère ce qui peut bouger vite et ce qui demande du travail de fond.",
-    deliverables: ["Diagnostic complet", "Roadmap priorisée", "KPIs cibles"],
+      "On comprend votre métier, vos outils, vos irritants. On identifie les quick wins et on priorise.",
+    deliverables: ["Audit process", "Quick wins identifiés", "Mapping stack"],
     accent: "#7B5EFF",
   },
   {
     number: "02",
-    phase: "Déploiement",
-    timeline: "Sem. 3-10",
+    phase: "Construction",
+    timeline: "Sem. 2+",
     description:
-      "Lancement prospection, setup CRM, coaching équipe, scripts, séquences. On fait.",
-    deliverables: ["Process opérationnels", "Équipe formée", "Pipeline actif"],
+      "On développe les automatisations, les apps, les intégrations. On teste avec votre équipe, on ajuste.",
+    deliverables: ["Développement", "Intégration IA", "Tests terrain"],
     accent: "#a78bfa",
   },
   {
     number: "03",
-    phase: "Optimisation",
-    timeline: "Sem. 10+",
+    phase: "Itération",
+    timeline: "Continu",
     description:
-      "On mesure et on ajuste. Ce qui ne performe pas, on le change. Pas de complaisance.",
-    deliverables: ["Croissance mesurable", "Autonomie équipe", "Playbook finalisé"],
+      "Mise en production, monitoring, optimisation. On reste tant que c'est utile. L'objectif : vous êtes autonome.",
+    deliverables: ["Mise en prod", "Monitoring", "Autonomie"],
     accent: "#00F5FF",
   },
 ];
 
-export function SalesMethod() {
+export function IAMethod() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
   });
   const orbY = useTransform(scrollYProgress, [0, 1], [60, -60]);
-
-  // Vertical line fills as user scrolls
   const lineHeight = useTransform(scrollYProgress, [0.2, 0.7], ["0%", "100%"]);
 
   return (
@@ -53,7 +51,7 @@ export function SalesMethod() {
           y: orbY,
           width: 600,
           height: 600,
-          background: "rgba(123,94,255,0.12)",
+          background: "rgba(0,245,255,0.12)",
           filter: "blur(100px)",
         }}
       />
@@ -69,34 +67,35 @@ export function SalesMethod() {
 
         <ScrollReveal delay={0.1}>
           <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
-            3 étapes. 90 jours.{" "}
-            <em className="gradient-text">Des résultats.</em>
+            On cadre. On construit.{" "}
+            <em className="gradient-text">On itère.</em>
           </h2>
           <p className="mt-5 max-w-lg text-[15px] leading-[1.7] text-white/30">
-            Pas de consulting à rallonge. Un process clair, mesurable, avec du ROI dès le départ.
+            Pas de cahier des charges de 80 pages. Un process agile, des
+            livrables concrets à chaque étape.
           </p>
         </ScrollReveal>
 
         {/* Timeline */}
         <div className="relative mt-16">
-          {/* Vertical line — left side */}
+          {/* Vertical line */}
           <div className="absolute left-[19px] top-0 bottom-0 w-px md:left-[23px]">
-            {/* Track */}
             <div
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(to bottom, #7B5EFF, #a78bfa, #00F5FF)",
+                background:
+                  "linear-gradient(to bottom, #7B5EFF, #a78bfa, #00F5FF)",
                 opacity: 0.08,
               }}
             />
-            {/* Animated fill */}
             <motion.div
               className="absolute top-0 left-0 w-full"
               style={{
                 height: lineHeight,
-                background: "linear-gradient(to bottom, #7B5EFF, #a78bfa, #00F5FF)",
+                background:
+                  "linear-gradient(to bottom, #7B5EFF, #a78bfa, #00F5FF)",
                 opacity: 0.5,
-                boxShadow: "0 0 16px rgba(123,94,255,0.25)",
+                boxShadow: "0 0 16px rgba(0,245,255,0.25)",
               }}
             />
           </div>
@@ -122,7 +121,7 @@ export function SalesMethod() {
                     </span>
                   </div>
 
-                  {/* Content — no card, just text */}
+                  {/* Content */}
                   <div className="flex-1 pb-2">
                     <div className="flex items-baseline gap-3">
                       <h3 className="font-display text-xl text-white md:text-2xl">
@@ -137,7 +136,6 @@ export function SalesMethod() {
                       {step.description}
                     </p>
 
-                    {/* Deliverables as inline tags */}
                     <div className="mt-4 flex flex-wrap gap-2">
                       {step.deliverables.map((d) => (
                         <span

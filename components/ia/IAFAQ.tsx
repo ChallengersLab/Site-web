@@ -7,34 +7,34 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const faqs = [
   {
-    question: "Combien de temps pour livrer un projet no-code ?",
+    question: "Vous travaillez dans quels secteurs ?",
     answer:
-      "Entre 48h et 3 semaines selon la complexité. Une landing page ou un dashboard : quelques jours. Une application métier complète avec authentification, rôles et intégrations : 2 à 3 semaines. On cadre le périmètre ensemble avant de démarrer.",
+      "Immobilier, sport, SaaS, services, SEO, e-commerce. Le secteur importe moins que le problème : si vous avez un process manuel, des données sous-exploitées ou un outil qui manque, on peut vous aider.",
+  },
+  {
+    question: "C'est quoi un site IA-first ?",
+    answer:
+      "Un site qui ne se contente pas d'afficher du contenu. Il qualifie les visiteurs avec un chatbot, personnalise l'expérience, génère du contenu dynamique. Le site travaille pour vous, même quand vous dormez.",
+  },
+  {
+    question: "Combien de temps pour un projet sur mesure ?",
+    answer:
+      "Ça dépend de la complexité. Une automatisation simple : quelques jours. Une app métier complète avec intégration à l'existant : plusieurs mois. On cadre le périmètre ensemble avant de démarrer, avec des jalons clairs.",
   },
   {
     question: "Et si mes outils changent demain ?",
     answer:
-      "Les workflows qu'on construit sont modulaires. Si vous passez de HubSpot à Pipedrive, ou de Make à n8n, on adapte les connecteurs sans tout reconstruire. C'est l'avantage du no-code : la flexibilité est native.",
+      "Les workflows qu'on construit sont modulaires. Si vous passez de HubSpot à Pipedrive, ou de Make à n8n, on adapte les connecteurs sans tout reconstruire.",
   },
   {
-    question: "C'est fiable, le no-code en production ?",
+    question: "Quelle différence avec une agence dev classique ?",
     answer:
-      "Oui, à condition de bien l'architecturer. Bubble, Retool et FlutterFlow font tourner des apps en production pour des milliers d'utilisateurs. Le piège, c'est de bricoler sans structure. C'est pour ça qu'on intervient : on construit propre, documenté, et maintenable.",
-  },
-  {
-    question: "Vous formez mon équipe à maintenir les automatisations ?",
-    answer:
-      "C'est le principe de la formule Ateliers. En mode Done for you, on vous livre clé en main avec une documentation. En mode coaching, on construit ensemble et votre équipe est autonome à la fin.",
-  },
-  {
-    question: "Quelle différence avec un développeur freelance ?",
-    answer:
-      "Un dev code sur mesure en 3-6 mois. On livre en jours avec du no-code et de l'automatisation. Moins cher, plus rapide, plus facile à maintenir. Si votre besoin nécessite du code custom, on vous le dit — mais dans 80% des cas, ce n'est pas nécessaire.",
+      "Une agence dev code pendant 6 mois et vous livre un produit figé. Nous, on intègre l'IA dès le départ, on itère vite, et on construit pour que ça évolue. Si votre besoin change, le produit s'adapte.",
   },
   {
     question: "Quels types de process peut-on automatiser ?",
     answer:
-      "Tout ce qui est répétitif et basé sur des règles : qualification de leads, enrichissement de données, reporting, onboarding client, relances, synchronisation CRM, génération de documents. Si vous le faites plus de 3 fois par semaine à la main, on peut probablement l'automatiser.",
+      "Tout ce qui est répétitif : collecte de données, enrichissement, reporting, relances, synchronisation entre outils, génération de documents. Si vous le faites plus de 3 fois par semaine à la main, on peut probablement l'automatiser.",
   },
 ];
 
@@ -62,9 +62,7 @@ export function IAFAQ() {
         <div className="mt-12 space-y-2">
           {faqs.map((faq, i) => (
             <ScrollReveal key={faq.question} delay={0.05 * i}>
-              <div
-                className="rounded-2xl border border-white/[0.04] bg-white/[0.02] transition-colors duration-300 hover:border-white/[0.08]"
-              >
+              <div className="rounded-2xl border border-white/[0.04] bg-white/[0.02] transition-colors duration-300 hover:border-white/[0.08]">
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
@@ -86,7 +84,10 @@ export function IAFAQ() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] as const }}
+                      transition={{
+                        duration: 0.25,
+                        ease: [0.25, 0.46, 0.45, 0.94] as const,
+                      }}
                       className="overflow-hidden"
                     >
                       <p className="px-6 pb-6 text-[14px] leading-[1.7] text-white/35">

@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "Combien de temps avant les premiers résultats ?",
     answer:
-      "Les premiers RDV qualifiés tombent dès la semaine 3-4 en prospection externalisée. Pour l'accompagnement CRO, les premiers effets structurants (process, KPIs, pipeline propre) sont visibles dès le premier mois. Le vrai shift se mesure à 90 jours.",
+      "Les premiers RDV qualifiés tombent dès la semaine 3-4 en prospection externalisée. Côté accompagnement CRO, le process et les KPIs sont en place dès le premier mois. Le vrai déclic arrive à 90 jours.",
   },
   {
     question: "Et si ça ne marche pas ?",
@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "C'est quoi la méthode Challenger Sale ?",
     answer:
-      "C'est une méthodologie de vente B2B basée sur la recherche de Matthew Dixon. Au lieu de chercher à \"plaire\" au prospect, le commercial challenge sa vision, apporte un éclairage nouveau et pousse à l'action. C'est la méthode la plus efficace en vente complexe — et on forme vos équipes à l'appliquer.",
+      "C'est une méthodologie de vente B2B créée par Matthew Dixon. Au lieu de chercher à \"plaire\" au prospect, le commercial challenge sa vision et pousse à l'action. C'est la méthode qui fonctionne le mieux en vente complexe. On forme vos équipes à l'appliquer.",
   },
   {
     question: "Vous travaillez dans quels secteurs ?",
@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "Quelle différence avec une agence de lead gen classique ?",
     answer:
-      "Une agence vous envoie des leads et c'est fini. Nous, on construit votre machine : process, outils, formation, playbook. L'objectif est que vous soyez autonome. On ne crée pas de dépendance — on transfère les compétences.",
+      "Une agence vous envoie des leads et c'est fini. Nous, on construit le système : le process, les outils, la formation. L'objectif, c'est que vous n'ayez plus besoin de nous.",
   },
 ];
 

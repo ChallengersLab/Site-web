@@ -13,7 +13,7 @@ const steps = [
     phase: "Diagnostic",
     timeline: "Semaines 1–2",
     description:
-      "On audite vos process sales, votre stack, vos données. On identifie les quick wins et les chantiers structurants.",
+      "On audite vos process sales, votre stack et vos données. On repère ce qui peut bouger vite et ce qui demande du travail de fond.",
     deliverable: "Roadmap priorisée",
     accent: "#7B5EFF",
   },
@@ -22,7 +22,7 @@ const steps = [
     phase: "Implémentation",
     timeline: "Semaines 3–10",
     description:
-      "On construit, on configure, on forme. Nouveaux workflows, intégrations IA, machines de prospection. On fait, on ne théorise pas.",
+      "Nouveaux workflows, intégrations IA, machines de prospection. On configure, on forme l'équipe, et ça tourne.",
     deliverable: "Systèmes opérationnels",
     accent: "#a78bfa",
   },
@@ -31,7 +31,7 @@ const steps = [
     phase: "Optimisation",
     timeline: "Semaine 10+",
     description:
-      "On mesure, on itère, on scale. Chaque action est trackée. Si ça ne performe pas, on ajuste. Zéro complaisance.",
+      "Chaque action est trackée. Ce qui marche, on pousse. Ce qui ne marche pas, on change.",
     deliverable: "Croissance mesurable",
     accent: "#00F5FF",
   },
@@ -83,8 +83,7 @@ export function Method() {
                 <em className="gradient-text">Des résultats.</em>
               </h2>
               <p className="mt-5 text-[15px] leading-[1.7] text-white/30">
-                Pas de consulting à rallonge. Un process clair, mesurable, et
-                orienté ROI dès le départ.
+                Pas de consulting à rallonge. Un process clair avec du ROI dès le départ.
               </p>
               <Link
                 href="/ressources/audit-stack-sales-checklist"

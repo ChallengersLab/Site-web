@@ -14,7 +14,7 @@ const pillars = [
     id: "sales",
     title: "Restructurez vos ventes",
     description:
-      "On ne fait pas de la prospection à l'ancienne. On construit des machines à pipeline.",
+      "On construit des machines à pipeline. Pas de la prospection à l'ancienne.",
     features: [
       { icon: Phone, text: "Prospection externalisée multicanal" },
       { icon: Users, text: "Coaching Challenger Sales" },
@@ -30,7 +30,7 @@ const pillars = [
     id: "ai",
     title: "Automatisez l'essentiel",
     description:
-      "L'IA n'est pas un gadget. C'est un levier de productivité ×10 quand c'est bien implémenté.",
+      "L'IA bien implémentée, c'est ×10 sur votre productivité. Pas un gadget.",
     features: [
       { icon: Bot, text: "Prompt engineering & intégration IA" },
       { icon: LayoutDashboard, text: "Interfaces & dashboards sur mesure" },

@@ -53,8 +53,7 @@ export function FinalCTA() {
             <em className="gradient-text">vos concurrents ?</em>
           </h2>
           <p className="mx-auto mt-7 max-w-md text-[16px] leading-[1.7] text-white/35">
-            30 minutes. Un appel. On vous dit ce qu&apos;on peut faire pour
-            vous — et surtout ce qu&apos;on ne fera pas.
+            30 minutes. Un appel. On vous dit ce qui peut bouger chez vous, et ce qui n&apos;en vaut pas la peine.
           </p>
         </ScrollReveal>
 
@@ -67,7 +66,7 @@ export function FinalCTA() {
             <ArrowRight className="h-4 w-4" />
           </a>
           <p className="mt-5 text-[12px] text-white/15">
-            Gratuit &middot; Sans engagement &middot; Max 5 clients / trimestre
+            Gratuit &middot; Sans engagement
           </p>
         </ScrollReveal>
       </div>

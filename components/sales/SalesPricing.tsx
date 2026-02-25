@@ -12,7 +12,7 @@ const offers = [
     tag: "Done for you",
     title: "Prospection externalisée",
     description:
-      "On prend en charge la génération de RDV qualifiés sur vos personas cibles pendant que vous structurez l'équipe en interne.",
+      "On génère les RDV qualifiés sur vos cibles pendant que vous structurez l'équipe en interne.",
     pricing: [
       { amount: "1 500€", detail: "HT / mois", label: "Fixe mensuel" },
       { amount: "200€", detail: "HT / RDV qualifié", label: "Variable" },
@@ -32,7 +32,7 @@ const offers = [
     title: "Accompagnement CRO",
     recommended: true,
     description:
-      "Structurer la machine, transmettre les méthodes, puis s'effacer. Votre équipe est autonome à l'issue de l'intervention.",
+      "On structure, on transmet, on s'efface. À la fin, votre équipe tourne sans nous.",
     pricing: [
       { amount: "1 000€", detail: "HT / jour", label: "TJM" },
     ],
@@ -74,7 +74,7 @@ export function SalesPricing() {
             <em className="gradient-text">Zéro surprise.</em>
           </h2>
           <p className="mt-5 max-w-lg text-[15px] leading-[1.7] text-white/30">
-            Pas de devis à rallonge. Des tarifs clairs, un périmètre défini, des résultats mesurables.
+            Pas de devis à rallonge. Tarifs affichés, périmètre clair, résultats mesurés.
           </p>
         </ScrollReveal>
 

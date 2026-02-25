@@ -68,9 +68,9 @@ export function SalesHero() {
             variants={fadeUp}
             className="mx-auto mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
           >
-            Prospection externalisée, direction commerciale fractionnée, coaching Challenger Sales.{" "}
+            On monte la prospection, on structure l&apos;équipe commerciale, on forme au closing.{" "}
             <span className="text-white/75">
-              On construit votre machine à pipeline.
+              Vous, vous signez.
             </span>
           </motion.p>
 

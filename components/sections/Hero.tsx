@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useCountUp } from "@/hooks/use-count-up";
+import { VideoPlayer } from "@/components/ui/VideoPlayer";
 
 const stagger = {
   hidden: {},
@@ -71,14 +72,14 @@ export function Hero() {
       <div className="hero-grid absolute inset-0" />
 
       {/* ---- Content ---- */}
-      <div className="relative z-10 mx-auto w-full max-w-[1100px] px-6 pt-36 pb-24 md:pt-44 md:pb-32">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
+      <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pt-36 pb-24 md:pt-44 md:pb-32">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
           {/* Left column — text */}
           <motion.div
             variants={stagger}
             initial="hidden"
             animate="show"
-            className="lg:w-[55%] lg:shrink-0"
+            className="lg:w-[42%] lg:shrink-0"
           >
             {/* Badge */}
             <motion.div variants={fadeUp}>
@@ -106,9 +107,9 @@ export function Hero() {
               variants={fadeUp}
               className="mt-8 max-w-lg text-[17px] leading-[1.7] text-white/40"
             >
-              Besoin d&apos;un bras droit commercial&nbsp;? D&apos;un technicien IA sur mesure&nbsp;? D&apos;un coup d&apos;accélérateur sur vos process&nbsp;?{" "}
+              Besoin d&apos;un bras droit commercial&nbsp;? D&apos;un ingénieur IA&nbsp;? Les deux&nbsp;?{" "}
               <span className="text-white/75">
-                On s&apos;adapte à vous. Un appel, et on avance ensemble.
+                On s&apos;adapte à votre situation. Un appel et on avance.
               </span>
             </motion.p>
 
@@ -135,22 +136,22 @@ export function Hero() {
 
             {/* Proof */}
             <motion.p variants={fadeUp} className="mt-6 text-[13px] text-white/20">
-              30 min &middot; Gratuit &middot; Sans engagement &middot; Max 5 clients / trimestre
+              30 min &middot; Gratuit &middot; Sans engagement
             </motion.p>
           </motion.div>
 
-          {/* Right column — video placeholder */}
+          {/* Right column — video */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6, duration: 1, ease: [0.22, 1, 0.36, 1] as const }}
-            className="hidden lg:block lg:flex-1"
+            transition={{ delay: 0.4, duration: 1.2, ease: [0.22, 1, 0.36, 1] as const }}
+            className="hidden md:block lg:flex-1"
           >
-            <div className="glass-card aspect-video w-full rounded-2xl overflow-hidden">
-              <div className="flex h-full items-center justify-center">
-                <p className="text-[13px] text-white/15">Vidéo à venir</p>
-              </div>
-            </div>
+            <VideoPlayer
+              webmSrc="/videos/hero-diagnostic.webm"
+              mp4Src="/videos/hero-diagnostic.mp4"
+              className="aspect-[4/3] w-full"
+            />
           </motion.div>
         </div>
 

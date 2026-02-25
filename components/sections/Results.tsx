@@ -4,34 +4,28 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TiltCard } from "@/components/ui/TiltCard";
-import { Clock, AlertTriangle, CreditCard } from "lucide-react";
+import { Phone, Workflow, Settings } from "lucide-react";
 
 const painPoints = [
   {
-    icon: Clock,
-    stat: "60%",
-    statLabel: "du temps perdu",
-    title: "Vos commerciaux perdent 60% de leur temps",
+    icon: Phone,
+    title: "Vos ventes reposent sur le bouche-à-oreille",
     description:
-      "Recherche de leads manuelle, qualification approximative, relances oubliées. Pendant ce temps, vos concurrents automatisent.",
+      "Pas de prospection structurée, pas de playbook, pas de pipe prévisible. La croissance dépend du réseau et du hasard.",
     accentColor: "#7B5EFF",
   },
   {
-    icon: AlertTriangle,
-    stat: "2019",
-    statLabel: "vos process datent",
-    title: "Vos process sont ceux de 2019",
+    icon: Workflow,
+    title: "Vos opérations tournent à la main",
     description:
-      "CRM mal configuré, données en silos, reporting approximatif. Vous pilotez à vue dans un marché qui accélère.",
+      "Copier-coller entre outils, reporting manuel, données éparpillées. Chaque heure perdue là-dessus, c'est une heure en moins sur le business.",
     accentColor: "#00F5FF",
   },
   {
-    icon: CreditCard,
-    stat: "20%",
-    statLabel: "d'adoption",
-    title: "Vous payez des outils que personne n'utilise",
+    icon: Settings,
+    title: "Personne pour connecter les deux",
     description:
-      "3k€/mois de stack SaaS pour 20% d'adoption. L'outil n'est pas le problème. C'est l'implémentation.",
+      "Vous cherchez un commercial qui comprend la tech, ou un tech qui comprend le business. Bonne chance. Généralement, vous finissez avec deux prestataires qui ne se parlent pas.",
     accentColor: "#a78bfa",
   },
 ];
@@ -68,87 +62,34 @@ export function Results() {
 
         <ScrollReveal delay={0.1}>
           <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
-            80% des PME B2B vont se faire<br />
-            <span className="gradient-text"><em>dépasser dans les 2 ans</em></span>
+            Bon produit.{" "}
+            <em className="gradient-text">Croissance qui stagne.</em>
           </h2>
         </ScrollReveal>
 
-        {/* Asymmetric layout: 1 large featured + 2 stacked */}
-        <div className="mt-16 grid gap-5 lg:grid-cols-5">
-          {/* Featured card — spans 3 cols */}
-          <ScrollReveal delay={0} className="lg:col-span-3">
-            <TiltCard className="h-full p-10 transition-all duration-500">
-              <div className="flex items-end gap-4">
-                <span
-                  className="font-display text-7xl tracking-tight md:text-8xl"
-                  style={{ color: painPoints[0].accentColor }}
-                >
-                  {painPoints[0].stat}
-                </span>
-                <span className="mb-3 text-[11px] uppercase tracking-widest text-white/25">
-                  {painPoints[0].statLabel}
-                </span>
-              </div>
-
-              <div className="mt-8 flex items-start gap-4">
+        <div className="mt-16 grid gap-5 lg:grid-cols-3">
+          {painPoints.map((point, i) => (
+            <ScrollReveal key={point.title} delay={0.12 * i}>
+              <TiltCard className="group h-full p-8 transition-all duration-500" intensity={6}>
                 <div
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl"
                   style={{
-                    background: `${painPoints[0].accentColor}12`,
-                    border: `1px solid ${painPoints[0].accentColor}20`,
+                    background: `${point.accentColor}12`,
+                    border: `1px solid ${point.accentColor}20`,
                   }}
                 >
-                  <Clock className="h-5 w-5" style={{ color: painPoints[0].accentColor }} />
+                  <point.icon className="h-5 w-5" style={{ color: point.accentColor }} />
                 </div>
-                <div>
-                  <h3 className="text-[17px] font-semibold text-white/90">
-                    {painPoints[0].title}
-                  </h3>
-                  <p className="mt-2 max-w-md text-[14px] leading-[1.7] text-white/35">
-                    {painPoints[0].description}
-                  </p>
-                </div>
-              </div>
-            </TiltCard>
-          </ScrollReveal>
 
-          {/* 2 stacked cards — span 2 cols */}
-          <div className="flex flex-col gap-5 lg:col-span-2">
-            {painPoints.slice(1).map((point, i) => (
-              <ScrollReveal key={point.title} delay={0.15 * (i + 1)}>
-                <TiltCard className="h-full p-7 transition-all duration-500" intensity={8}>
-                  <div className="flex items-end gap-3">
-                    <span
-                      className="font-display text-4xl tracking-tight"
-                      style={{ color: point.accentColor }}
-                    >
-                      {point.stat}
-                    </span>
-                    <span className="mb-0.5 text-[10px] uppercase tracking-widest text-white/25">
-                      {point.statLabel}
-                    </span>
-                  </div>
-
-                  <div
-                    className="mt-4 flex h-8 w-8 items-center justify-center rounded-lg"
-                    style={{
-                      background: `${point.accentColor}12`,
-                      border: `1px solid ${point.accentColor}20`,
-                    }}
-                  >
-                    <point.icon className="h-4 w-4" style={{ color: point.accentColor }} />
-                  </div>
-
-                  <h3 className="mt-4 text-[14px] font-semibold leading-snug text-white/90">
-                    {point.title}
-                  </h3>
-                  <p className="mt-2 text-[12px] leading-[1.7] text-white/30">
-                    {point.description}
-                  </p>
-                </TiltCard>
-              </ScrollReveal>
-            ))}
-          </div>
+                <h3 className="mt-5 text-[15px] font-semibold leading-snug text-white/90">
+                  {point.title}
+                </h3>
+                <p className="mt-3 text-[13px] leading-[1.7] text-white/35">
+                  {point.description}
+                </p>
+              </TiltCard>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>

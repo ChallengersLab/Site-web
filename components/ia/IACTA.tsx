@@ -53,7 +53,7 @@ export function IACTA() {
             <em className="gradient-text">automatiser votre business ?</em>
           </h2>
           <p className="mx-auto mt-7 max-w-md text-[16px] leading-[1.7] text-white/35">
-            30 minutes. Un appel. On identifie ce qu&apos;on peut automatiser chez vous — et ce qui ne vaut pas le coup.
+            30 minutes. Un appel. On identifie ce qu&apos;on peut automatiser chez vous, et ce qui n&apos;en vaut pas la peine.
           </p>
         </ScrollReveal>
 

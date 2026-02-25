@@ -5,17 +5,15 @@ export const metadata: Metadata = {
   title:
     "IA & Automatisation — Sites, Apps & Workflows sur mesure | ChallengersLab",
   description:
-    "Sites web IA, applications métier no-code, workflows automatisés (Make, n8n, Zapier). On connecte l'intelligence artificielle à votre business B2B.",
+    "Automatisation, apps sur mesure, sites intelligents. On branche l'IA là où ça compte dans votre business B2B.",
   keywords: [
     "automatisation IA",
     "workflows automatisés",
+    "apps sur mesure IA",
+    "sites web IA",
     "Make",
     "n8n",
-    "Zapier",
-    "applications no-code",
-    "Bubble",
-    "FlutterFlow",
-    "Retool",
+    "développement IA-first",
     "intelligence artificielle B2B",
     "ChallengersLab",
   ],
@@ -24,7 +22,7 @@ export const metadata: Metadata = {
     title:
       "IA & Automatisation — Sites, Apps & Workflows sur mesure | ChallengersLab",
     description:
-      "Sites web IA, applications métier no-code, workflows automatisés. On connecte l'intelligence artificielle à votre business B2B.",
+      "Automatisation, apps sur mesure, sites intelligents. On branche l'IA là où ça compte dans votre business B2B.",
     url: "/ia",
     type: "website",
   },
@@ -36,7 +34,7 @@ const jsonLd = [
     "@type": "Service",
     name: "IA & Automatisation",
     description:
-      "Sites web IA, applications métier no-code, workflows automatisés pour PME et scale-ups B2B.",
+      "Automatisation, apps sur mesure, sites intelligents pour PME et scale-ups B2B.",
     provider: {
       "@type": "Organization",
       name: "ChallengersLab",
@@ -79,18 +77,18 @@ const jsonLd = [
     mainEntity: [
       {
         "@type": "Question",
-        name: "Combien de temps pour livrer un projet no-code ?",
+        name: "Vous travaillez dans quels secteurs ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Entre 48h et 3 semaines selon la complexité. Une landing page ou un dashboard : quelques jours. Une application métier complète : 2 à 3 semaines.",
+          text: "Immobilier, sport, SaaS, services, SEO, e-commerce. Le secteur importe moins que le problème : si vous avez un process manuel, des données sous-exploitées ou un outil qui manque, on peut vous aider.",
         },
       },
       {
         "@type": "Question",
-        name: "C'est fiable, le no-code en production ?",
+        name: "Combien de temps pour un projet sur mesure ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Oui, à condition de bien l'architecturer. Bubble, Retool et FlutterFlow font tourner des apps en production pour des milliers d'utilisateurs.",
+          text: "Ça dépend de la complexité. Une automatisation simple : quelques jours. Une app métier complète avec intégration à l'existant : plusieurs mois. On cadre le périmètre ensemble avant de démarrer.",
         },
       },
       {
@@ -98,7 +96,7 @@ const jsonLd = [
         name: "Quels types de process peut-on automatiser ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Tout ce qui est répétitif et basé sur des règles : qualification de leads, enrichissement de données, reporting, onboarding client, relances, synchronisation CRM, génération de documents.",
+          text: "Tout ce qui est répétitif : collecte de données, enrichissement, reporting, relances, synchronisation entre outils, génération de documents. Si vous le faites plus de 3 fois par semaine à la main, on peut probablement l'automatiser.",
         },
       },
     ],
