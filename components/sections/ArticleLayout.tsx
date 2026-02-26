@@ -86,10 +86,13 @@ function renderMarkdown(content: string) {
       const boldMatch = remaining.match(/\*\*(.+?)\*\*/);
       // Inline code
       const codeMatch = remaining.match(/`(.+?)`/);
+      // Link [text](url)
+      const linkMatch = remaining.match(/\[([^\]]+)\]\(([^)]+)\)/);
 
       const matches = [
         boldMatch ? { index: boldMatch.index!, match: boldMatch, type: "bold" } : null,
         codeMatch ? { index: codeMatch.index!, match: codeMatch, type: "code" } : null,
+        linkMatch ? { index: linkMatch.index!, match: linkMatch, type: "link" } : null,
       ]
         .filter(Boolean)
         .sort((a, b) => a!.index - b!.index);
@@ -118,6 +121,18 @@ function renderMarkdown(content: string) {
           >
             {first.match![1]}
           </code>
+        );
+      } else if (first.type === "link") {
+        parts.push(
+          <a
+            key={key++}
+            href={first.match![2]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent-start/80 underline underline-offset-2 transition-colors hover:text-accent-start"
+          >
+            {first.match![1]}
+          </a>
         );
       }
 
@@ -195,6 +210,31 @@ function renderMarkdown(content: string) {
       continue;
     }
 
+    // Images ![alt](url)
+    const imgMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)/);
+    if (imgMatch) {
+      flushList();
+      flushTable();
+      elements.push(
+        <figure key={`img-${elements.length}`} className="my-8">
+          <img
+            src={imgMatch[2]}
+            alt={imgMatch[1]}
+            className="w-full rounded-xl border border-white/[0.06] object-cover"
+            style={{ maxHeight: "400px" }}
+            loading="lazy"
+          />
+          {imgMatch[1] && (
+            <figcaption className="mt-2 text-center text-[12px] text-white/25">
+              {imgMatch[1]}
+            </figcaption>
+          )}
+        </figure>
+      );
+      i++;
+      continue;
+    }
+
     // Headings
     if (line.startsWith("### ")) {
       flushList();
@@ -235,16 +275,26 @@ function renderMarkdown(content: string) {
       continue;
     }
 
-    // Blockquote
+    // Blockquote (multi-line)
     if (line.startsWith("> ")) {
       flushList();
       flushTable();
+      const bqLines: string[] = [line.slice(2)];
+      while (i + 1 < lines.length && lines[i + 1].startsWith("> ")) {
+        i++;
+        bqLines.push(lines[i].slice(2));
+      }
       elements.push(
         <blockquote
           key={`bq-${elements.length}`}
           className="my-6 border-l-2 border-accent-start/40 pl-5 text-[15px] italic leading-[1.8] text-white/45"
         >
-          {renderInline(line.slice(2))}
+          {bqLines.map((bqLine, j) => (
+            <span key={j}>
+              {renderInline(bqLine)}
+              {j < bqLines.length - 1 && <br />}
+            </span>
+          ))}
         </blockquote>
       );
       i++;
