@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     const companyLabel = company || "Non renseigné";
 
     const { error } = await resend.emails.send({
-      from: "ChallengersLab <a.bekkali@challengerslab.com>",
+      from: "ChallengersLab <onboarding@resend.dev>",
       to: RECIPIENTS,
       replyTo: email,
       subject: `Nouveau lead : ${name}${company ? ` — ${company}` : ""}`,

@@ -172,8 +172,24 @@ export function FinalCTA() {
                 )}
               </button>
 
+              <div className="flex items-center gap-4 pt-2">
+                <div className="h-px flex-1 bg-white/[0.06]" />
+                <span className="text-[12px] text-white/20">ou</span>
+                <div className="h-px flex-1 bg-white/[0.06]" />
+              </div>
+
+              <a
+                href="https://calendly.com/a-brakha-challengerslab/echange-decouverte-challengerslab"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-3 rounded-xl border border-white/[0.06] bg-white/[0.03] px-10 py-5 text-[16px] text-white/60 transition-all hover:border-white/[0.12] hover:bg-white/[0.05] hover:text-white/80"
+              >
+                <span>Réserver un appel de 30 min</span>
+                <ArrowRight className="h-4 w-4" />
+              </a>
+
               <p className="text-center text-[12px] text-white/15">
-                Gratuit &middot; Sans engagement &middot; Réponse sous 48h
+                Gratuit &middot; Sans engagement
               </p>
             </form>
           ) : (
