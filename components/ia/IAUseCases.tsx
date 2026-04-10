@@ -22,7 +22,7 @@ const useCases = [
       "On automatise l'extraction, le traitement et l'enrichissement. Les données arrivent propres, à jour, prêtes à exploiter.",
     example: "Ex : extraction et analyse DVF automatisée pour l'immobilier",
     tools: ["Make", "n8n", "Claude", "API"],
-    accent: "#7B5EFF",
+    accent: "#7C9EFF",
   },
   {
     icon: Smartphone,
@@ -33,7 +33,7 @@ const useCases = [
       "On construit des applications fonctionnelles en no-code, avec de l'IA intégrée pour automatiser la logique métier.",
     example: "Ex : app de suivi sportif avec programmes personnalisés par IA",
     tools: ["Bubble", "FlutterFlow", "OpenAI"],
-    accent: "#00F5FF",
+    accent: "#4ECBA0",
   },
   {
     icon: BarChart3,
@@ -44,7 +44,7 @@ const useCases = [
       "On connecte vos sources de données et on génère des dashboards live. Fini le copier-coller et les fichiers Excel.",
     example: "Ex : dashboards SEO générés depuis la Search Console",
     tools: ["n8n", "Airtable", "Looker Studio"],
-    accent: "#a78bfa",
+    accent: "#7C9EFF",
   },
   {
     icon: Users,
@@ -55,7 +55,7 @@ const useCases = [
       "On enrichit vos données, on score vos leads et on automatise le matching entre offre et demande via IA.",
     example: "Ex : CRM intercab avec enrichissement et matching IA",
     tools: ["Claude", "Make", "HubSpot", "API"],
-    accent: "#7B5EFF",
+    accent: "#7C9EFF",
   },
   {
     icon: Globe,
@@ -66,7 +66,7 @@ const useCases = [
       "On construit des sites intelligents avec chatbots, personnalisation du contenu et qualification automatique.",
     example: "Ex : site B2B avec chatbot et qualification intelligente",
     tools: ["Next.js", "Claude", "Vercel"],
-    accent: "#00F5FF",
+    accent: "#4ECBA0",
   },
 ];
 

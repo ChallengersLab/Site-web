@@ -12,7 +12,7 @@ const steps = [
     description:
       "On comprend votre métier, vos outils, vos irritants. On identifie les quick wins et on priorise.",
     deliverables: ["Audit process", "Quick wins identifiés", "Mapping stack"],
-    accent: "#7B5EFF",
+    accent: "#7C9EFF",
   },
   {
     number: "02",
@@ -21,7 +21,7 @@ const steps = [
     description:
       "On développe les automatisations, les apps, les intégrations. On teste avec votre équipe, on ajuste.",
     deliverables: ["Développement", "Intégration IA", "Tests terrain"],
-    accent: "#a78bfa",
+    accent: "#7C9EFF",
   },
   {
     number: "03",
@@ -30,7 +30,7 @@ const steps = [
     description:
       "Mise en production, monitoring, optimisation. On reste tant que c'est utile. L'objectif : vous êtes autonome.",
     deliverables: ["Mise en prod", "Monitoring", "Autonomie"],
-    accent: "#00F5FF",
+    accent: "#4ECBA0",
   },
 ];
 
@@ -51,7 +51,7 @@ export function IAMethod() {
           y: orbY,
           width: 600,
           height: 600,
-          background: "rgba(0,245,255,0.12)",
+          background: "rgba(78,203,160,0.12)",
           filter: "blur(100px)",
         }}
       />
@@ -84,7 +84,7 @@ export function IAMethod() {
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(to bottom, #7B5EFF, #a78bfa, #00F5FF)",
+                  "linear-gradient(to bottom, #7C9EFF, #7C9EFF, #4ECBA0)",
                 opacity: 0.08,
               }}
             />
@@ -93,9 +93,9 @@ export function IAMethod() {
               style={{
                 height: lineHeight,
                 background:
-                  "linear-gradient(to bottom, #7B5EFF, #a78bfa, #00F5FF)",
+                  "linear-gradient(to bottom, #7C9EFF, #7C9EFF, #4ECBA0)",
                 opacity: 0.5,
-                boxShadow: "0 0 16px rgba(0,245,255,0.25)",
+                boxShadow: "0 0 16px rgba(78,203,160,0.25)",
               }}
             />
           </div>

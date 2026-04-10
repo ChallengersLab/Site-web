@@ -177,12 +177,12 @@ export function VideoPlayer({ webmSrc, mp4Src, className = "" }: VideoPlayerProp
                 className="absolute left-0 top-0 h-full rounded-full transition-[width] duration-100"
                 style={{
                   width: `${progress}%`,
-                  background: "linear-gradient(90deg, #7B5EFF, #00F5FF)",
+                  background: "linear-gradient(90deg, #EEFF66, #4ECBA0)",
                 }}
               />
               {/* Thumb — visible on hover */}
               <div
-                className="absolute top-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-white opacity-0 group-hover/scrubber:opacity-100 transition-opacity duration-200 shadow-[0_0_8px_rgba(123,94,255,0.5)]"
+                className="absolute top-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-white opacity-0 group-hover/scrubber:opacity-100 transition-opacity duration-200 shadow-[0_0_8px_rgba(238,255,102,0.4)]"
                 style={{ left: `calc(${progress}% - 6px)` }}
               />
             </div>

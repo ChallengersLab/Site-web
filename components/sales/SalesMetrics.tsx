@@ -83,7 +83,7 @@ export function SalesMetrics() {
         className="pointer-events-none absolute -right-40 top-1/2 h-[520px] w-[520px] rounded-full opacity-20 blur-[120px]"
         style={{
           background:
-            "radial-gradient(circle, rgba(123,94,255,0.5) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(124,158,255,0.5) 0%, transparent 70%)",
           y: orbY,
         }}
       />
@@ -118,7 +118,7 @@ export function SalesMetrics() {
                 prefix="+"
                 suffix="%"
                 label="Pipeline g&eacute;n&eacute;r&eacute;"
-                accent="#7B5EFF"
+                accent="#7C9EFF"
               />
             </TiltCard>
           </ScrollReveal>
@@ -129,7 +129,7 @@ export function SalesMetrics() {
               <StaticStat
                 text="\u00d73"
                 label="RDV qualifi&eacute;s"
-                accent="#a78bfa"
+                accent="#7C9EFF"
               />
             </TiltCard>
           </ScrollReveal>
@@ -142,7 +142,7 @@ export function SalesMetrics() {
                 prefix="<"
                 suffix="j"
                 label="Pour des r&eacute;sultats"
-                accent="#7B5EFF"
+                accent="#7C9EFF"
               />
             </TiltCard>
           </ScrollReveal>
@@ -153,7 +153,7 @@ export function SalesMetrics() {
               <StaticStat
                 text="0"
                 label="Recrutement n&eacute;cessaire"
-                accent="#00F5FF"
+                accent="#4ECBA0"
               />
             </TiltCard>
           </ScrollReveal>

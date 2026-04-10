@@ -14,7 +14,7 @@ const painPoints = [
     title: "Pas de culture outbound, ou une prospection pleine de trous",
     description:
       "Soit vos équipes n'ont jamais prospecté et tout repose sur l'entrant. Soit elles prospectent, mais sur des listes mal ciblées, avec un discours pas testé et sans vraie méthode. Dans les deux cas, le pipeline stagne. On corrige le ciblage, le message et le rythme.",
-    accentColor: "#7B5EFF",
+    accentColor: "#7C9EFF",
   },
   {
     icon: Route,
@@ -23,7 +23,7 @@ const painPoints = [
     title: "Un playbook, des scripts, un onboarding : vos résultats ne dépendent plus d'une seule personne",
     description:
       "Quand le process est dans la tête du meilleur commercial, tout repart à zéro à chaque départ. On pose les méthodes et la formation pour que la perf tienne, même quand quelqu'un s'en va.",
-    accentColor: "#a78bfa",
+    accentColor: "#7C9EFF",
   },
   {
     icon: BarChart3,
@@ -32,7 +32,7 @@ const painPoints = [
     title: "Piloter par les chiffres : MRR, conversion, coût d'acquisition",
     description:
       "Sans tableau de bord fiable, chaque décision est un pari. On installe les KPIs qui comptent et le reporting qui tourne tout seul. Vous recrutez, investissez et scalez avec les bons chiffres sous les yeux.",
-    accentColor: "#00F5FF",
+    accentColor: "#4ECBA0",
   },
 ];
 
@@ -53,7 +53,7 @@ export function SalesPainPoints() {
         <div
           className="h-full w-full rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(123,94,255,0.15) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(124,158,255,0.15) 0%, transparent 70%)",
             filter: "blur(80px)",
           }}
         />

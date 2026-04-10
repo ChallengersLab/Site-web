@@ -8,27 +8,27 @@ interface Tool {
 const toolsRow1: Tool[] = [
   { name: "HubSpot", color: "#FF7A59" },
   { name: "Vercel", color: "#FFFFFF" },
-  { name: "Make", color: "#6D00CC" },
+  { name: "Make", color: "#A855F7" },
   { name: "n8n", color: "#EA4B71" },
   { name: "OpenAI", color: "#10A37F" },
   { name: "Claude", color: "#D4A574" },
-  { name: "Lemlist", color: "#4B5DFF" },
-  { name: "La Growth Machine", color: "#00C49A" },
+  { name: "Lemlist", color: "#7C9EFF" },
+  { name: "La Growth Machine", color: "#4ECBA0" },
   { name: "Zapier", color: "#FF4F00" },
-  { name: "Notion", color: "#EFEFEF" },
+  { name: "Notion", color: "#E8E8E2" },
 ];
 
 const toolsRow2: Tool[] = [
-  { name: "Pipedrive", color: "#017737" },
-  { name: "Apollo.io", color: "#4C6EF5" },
-  { name: "Clay", color: "#6C5CE7" },
+  { name: "Pipedrive", color: "#4ECBA0" },
+  { name: "Apollo.io", color: "#7C9EFF" },
+  { name: "Clay", color: "#A78BFA" },
   { name: "Mistral", color: "#F7931E" },
   { name: "Airtable", color: "#18BFFF" },
   { name: "Retool", color: "#F76808" },
   { name: "Supabase", color: "#3ECF8E" },
-  { name: "FlutterFlow", color: "#6E35D4" },
+  { name: "FlutterFlow", color: "#A855F7" },
   { name: "Dropcontact", color: "#FF5733" },
-  { name: "Modjo", color: "#7B68EE" },
+  { name: "Modjo", color: "#7C9EFF" },
 ];
 
 function Row({ tools, reverse = false }: { tools: Tool[]; reverse?: boolean }) {
@@ -40,25 +40,25 @@ function Row({ tools, reverse = false }: { tools: Tool[]; reverse?: boolean }) {
       }}
     >
       {[...tools, ...tools].map((tool, i) => (
-        <span key={`${tool.name}-${i}`} className="flex items-center gap-10 whitespace-nowrap group/tool">
+        <span key={`${tool.name}-${i}`} className="flex items-center gap-10 whitespace-nowrap">
           <span
-            className="text-[13px] font-semibold uppercase tracking-[0.15em] transition-all duration-300"
+            className="text-[12px] font-semibold uppercase tracking-[0.15em] transition-all duration-300"
             style={{
               color: tool.color,
-              opacity: 0.3,
+              opacity: 0.55,
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.opacity = "1";
-              e.currentTarget.style.textShadow = `0 0 20px ${tool.color}40`;
+              e.currentTarget.style.textShadow = `0 0 16px ${tool.color}60`;
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.opacity = "0.3";
+              e.currentTarget.style.opacity = "0.55";
               e.currentTarget.style.textShadow = "none";
             }}
           >
             {tool.name}
           </span>
-          <span className="h-[3px] w-[3px] rounded-full bg-accent-start/30" />
+          <span className="h-[3px] w-[3px] rounded-full" style={{ background: "rgba(238,255,102,0.25)" }} />
         </span>
       ))}
     </div>
@@ -67,11 +67,26 @@ function Row({ tools, reverse = false }: { tools: Tool[]; reverse?: boolean }) {
 
 export function MarqueeBanner() {
   return (
-    <section className="relative overflow-hidden bg-bg-elevated py-8">
-      <div className="section-divider absolute top-0 w-full" />
-      <p className="mb-5 text-center text-sm font-semibold uppercase tracking-[0.2em] text-white">
+    <section
+      className="relative overflow-hidden py-10"
+      style={{
+        background: "#0B1628",
+        borderTop: "0.5px solid #1D2E55",
+        borderBottom: "0.5px solid #1D2E55",
+      }}
+    >
+      {/* Subtle navy glow overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse 60% 100% at 50% 50%, rgba(124,158,255,0.06) 0%, transparent 70%)",
+        }}
+      />
+
+      <p className="mb-6 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-[#7C9EFF]/60">
         Les outils qu&apos;on maîtrise
       </p>
+
       <div className="space-y-4 overflow-hidden">
         <div className="overflow-hidden">
           <Row tools={toolsRow1} />
@@ -80,7 +95,6 @@ export function MarqueeBanner() {
           <Row tools={toolsRow2} reverse />
         </div>
       </div>
-      <div className="section-divider absolute bottom-0 w-full" />
     </section>
   );
 }

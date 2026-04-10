@@ -26,7 +26,7 @@ export function IACTA() {
         <div
           className="h-full w-full rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(0,245,255,0.2) 0%, transparent 60%)",
+            background: "radial-gradient(circle, rgba(78,203,160,0.2) 0%, transparent 60%)",
             filter: "blur(100px)",
             animation: "pulse-soft 8s ease-in-out infinite",
           }}
@@ -39,7 +39,7 @@ export function IACTA() {
         <div
           className="h-full w-full rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(123,94,255,0.1) 0%, transparent 65%)",
+            background: "radial-gradient(circle, rgba(124,158,255,0.1) 0%, transparent 65%)",
             filter: "blur(80px)",
             animation: "float-orb 15s ease-in-out infinite",
           }}

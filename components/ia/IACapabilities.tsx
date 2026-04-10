@@ -14,7 +14,7 @@ const capabilities = [
     after: "Vos outils se parlent. Tout seuls.",
     description:
       "Make, n8n, Zapier. On connecte votre stack et on automatise ce qui vous bouffe du temps.",
-    accent: "#7B5EFF",
+    accent: "#7C9EFF",
   },
   {
     icon: Code2,
@@ -23,7 +23,7 @@ const capabilities = [
     after: "Une app qui colle à vos process, pas l'inverse.",
     description:
       "Développement sur mesure avec l'IA. Intégration à l'existant, logique métier complexe, CRM, dashboards.",
-    accent: "#00F5FF",
+    accent: "#4ECBA0",
   },
   {
     icon: Globe,
@@ -32,7 +32,7 @@ const capabilities = [
     after: "Un site qui qualifie, répond et convertit.",
     description:
       "Sites avec chatbots, personnalisation, génération de contenu IA.",
-    accent: "#a78bfa",
+    accent: "#7C9EFF",
   },
   {
     icon: Brain,
@@ -41,7 +41,7 @@ const capabilities = [
     after: "Chaque donnée enrichie, scorée, exploitable.",
     description:
       "OpenAI, Claude, Mistral. Scoring, matching, enrichissement automatique sur vos données.",
-    accent: "#00F5FF",
+    accent: "#4ECBA0",
   },
 ];
 
@@ -63,7 +63,7 @@ export function IACapabilities() {
           className="h-full w-full rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(0,245,255,0.15) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(78,203,160,0.15) 0%, transparent 70%)",
             filter: "blur(80px)",
           }}
         />

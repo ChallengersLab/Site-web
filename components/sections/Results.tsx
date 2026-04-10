@@ -9,24 +9,24 @@ import { Phone, Workflow, Settings } from "lucide-react";
 const painPoints = [
   {
     icon: Phone,
-    title: "Le bouche-à-oreille ne suffit plus",
+    title: "Le bouche-à-oreille a ses limites",
     description:
-      "Le réseau vous a amenés jusque-là. Mais pour passer un cap, il faut une prospection structurée, un pipe prévisible, et un process qui ne dépend pas que des relations.",
-    accentColor: "#7B5EFF",
+      "Le réseau vous a amenés jusque-là. Pour passer un cap, il faut un pipe structuré et une prospection prévisible — pas juste des introductions.",
+    accentColor: "#7C9EFF",
   },
   {
     icon: Workflow,
-    title: "Vos opérations tournent à la main",
+    title: "Vous perdez des heures sur des tâches évitables",
     description:
-      "Copier-coller entre outils, reporting manuel, données éparpillées. Chaque heure perdue là-dessus, c'est une heure en moins sur le business.",
-    accentColor: "#00F5FF",
+      "Copier-coller, reporting manuel, relances oubliées. Chaque heure passée là-dessus, c'est une heure de moins sur ce qui fait vraiment avancer le business.",
+    accentColor: "#EEFF66",
   },
   {
     icon: Settings,
-    title: "Personne pour connecter les deux",
+    title: "Sales et tech ne parlent pas le même langage",
     description:
-      "Vous cherchez un commercial qui comprend la tech, ou un tech qui comprend le business. Souvent, ça veut dire deux prestataires qui ne se parlent pas.",
-    accentColor: "#a78bfa",
+      "Vous cherchez quelqu'un qui comprend le business ET les outils. Souvent, ça veut dire deux prestataires — qui ne se coordonnent jamais vraiment.",
+    accentColor: "#4ECBA0",
   },
 ];
 
@@ -42,12 +42,12 @@ export function Results() {
     <section ref={sectionRef} className="relative py-32 overflow-hidden" id="results">
       <motion.div
         style={{ y: orbY }}
-        className="absolute right-[5%] top-[20%] h-[400px] w-[400px] rounded-full"
+        className="absolute right-[5%] top-[20%] h-[380px] w-[380px] rounded-full"
       >
         <div
           className="h-full w-full rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(123,94,255,0.15) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(124,158,255,0.1) 0%, transparent 70%)",
             filter: "blur(80px)",
           }}
         />
@@ -55,33 +55,33 @@ export function Results() {
 
       <div className="relative z-10 mx-auto max-w-[1100px] px-6">
         <ScrollReveal>
-          <span className="badge-glow inline-flex rounded-full px-3 py-1 text-[11px] font-medium tracking-wider uppercase">
+          <span className="badge-iris inline-flex items-center rounded-full px-3 py-1 text-[10px] font-semibold tracking-[0.08em] uppercase">
             Le constat
           </span>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h2 className="font-display mt-8 text-[clamp(2.2rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
-            Vous reconnaissez{" "}
-            <em className="gradient-text">ces situations ?</em>
+          <h2 className="mt-6 text-[clamp(2.2rem,5vw,3.8rem)] font-medium leading-[1.05] tracking-[-0.04em]">
+            Vous êtes dans{" "}
+            <em className="gradient-text not-italic">l&apos;une de ces situations ?</em>
           </h2>
         </ScrollReveal>
 
-        <div className="mt-16 grid gap-5 lg:grid-cols-3">
+        <div className="mt-14 grid gap-4 lg:grid-cols-3">
           {painPoints.map((point, i) => (
-            <ScrollReveal key={point.title} delay={0.12 * i}>
-              <TiltCard className="group h-full p-8 transition-all duration-500" intensity={6}>
+            <ScrollReveal key={point.title} delay={0.1 * i}>
+              <TiltCard className="group h-full p-7 transition-all duration-500" intensity={6}>
                 <div
-                  className="flex h-10 w-10 items-center justify-center rounded-xl"
+                  className="flex h-9 w-9 items-center justify-center rounded-xl"
                   style={{
-                    background: `${point.accentColor}12`,
-                    border: `1px solid ${point.accentColor}20`,
+                    background: `${point.accentColor}10`,
+                    border: `0.5px solid ${point.accentColor}22`,
                   }}
                 >
-                  <point.icon className="h-5 w-5" style={{ color: point.accentColor }} />
+                  <point.icon className="h-4 w-4" style={{ color: point.accentColor }} />
                 </div>
 
-                <h3 className="mt-5 text-[15px] font-semibold leading-snug text-white/90">
+                <h3 className="mt-5 text-[14px] font-medium leading-snug text-[#E8E8E2]">
                   {point.title}
                 </h3>
                 <p className="mt-3 text-[13px] leading-[1.7] text-white/35">

@@ -88,7 +88,7 @@ export function SalesServices() {
               <ScrollReveal key={service.title} delay={index * 0.1}>
                 <div
                   className={`glass-card transition-colors duration-200 ${
-                    isExpanded ? "border-l-2 border-[#7B5EFF]" : "border-l-2 border-transparent"
+                    isExpanded ? "border-l-2 border-[#7C9EFF]" : "border-l-2 border-transparent"
                   }`}
                 >
                   {/* collapsed row */}
@@ -101,11 +101,11 @@ export function SalesServices() {
                     <div
                       className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl"
                       style={{
-                        background: "#7B5EFF12",
-                        border: "1px solid #7B5EFF20",
+                        background: "#7C9EFF12",
+                        border: "1px solid #7C9EFF20",
                       }}
                     >
-                      <Icon className="h-5 w-5 text-[#7B5EFF]" />
+                      <Icon className="h-5 w-5 text-[#7C9EFF]" />
                     </div>
 
                     <div className="flex-1 min-w-0">
@@ -146,7 +146,7 @@ export function SalesServices() {
                                 key={item}
                                 className="flex items-start gap-2 text-[14px] text-white/55"
                               >
-                                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7B5EFF]/60" />
+                                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7C9EFF]/60" />
                                 {item}
                               </li>
                             ))}
@@ -172,11 +172,11 @@ export function SalesServices() {
                   <div
                     className="flex h-10 w-10 items-center justify-center rounded-xl"
                     style={{
-                      background: "#7B5EFF12",
-                      border: "1px solid #7B5EFF20",
+                      background: "#7C9EFF12",
+                      border: "1px solid #7C9EFF20",
                     }}
                   >
-                    <Icon className="h-5 w-5 text-[#7B5EFF]" />
+                    <Icon className="h-5 w-5 text-[#7C9EFF]" />
                   </div>
 
                   <p className="mt-4 text-[17px] font-semibold text-white/90">

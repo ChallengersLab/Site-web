@@ -26,7 +26,7 @@ export function SalesCTA() {
         <div
           className="h-full w-full rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(123,94,255,0.25) 0%, transparent 60%)",
+            background: "radial-gradient(circle, rgba(124,158,255,0.25) 0%, transparent 60%)",
             filter: "blur(100px)",
             animation: "pulse-soft 8s ease-in-out infinite",
           }}

@@ -34,7 +34,7 @@ export function SalesProof() {
         <div
           className="h-full w-full rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(123,94,255,0.1) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(124,158,255,0.1) 0%, transparent 70%)",
             filter: "blur(80px)",
             animation: "float-orb-reverse 20s ease-in-out infinite",
           }}

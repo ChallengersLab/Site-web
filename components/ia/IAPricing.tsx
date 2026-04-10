@@ -49,7 +49,7 @@ const offers = [
       { icon: Brain, text: "Enrichissement & scoring IA" },
       { icon: Settings, text: "Monitoring et maintenance" },
     ],
-    accent: "#7B5EFF",
+    accent: "#7C9EFF",
     ctaLabel: "Automatiser mes process",
     ctaHref: "#contact-ia",
   },
@@ -67,7 +67,7 @@ const offers = [
       { icon: Brain, text: "Développement IA-first" },
       { icon: BarChart3, text: "Accompagnement de A à Z" },
     ],
-    accent: "#00F5FF",
+    accent: "#4ECBA0",
     ctaLabel: "Discuter de mon projet",
     ctaHref: "#contact-ia",
   },
@@ -101,7 +101,7 @@ export function IAPricing() {
               <TiltCard
                 className={`group relative h-full overflow-hidden p-10 transition-all duration-500 ${
                   "recommended" in offer && offer.recommended
-                    ? "border border-[#00F5FF]/15"
+                    ? "border border-[#4ECBA0]/15"
                     : ""
                 }`}
                 intensity={5}
@@ -129,7 +129,7 @@ export function IAPricing() {
                     {offer.tag}
                   </span>
                   {"recommended" in offer && offer.recommended && (
-                    <span className="inline-flex rounded-full bg-[#00F5FF]/10 border border-[#00F5FF]/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-[#00F5FF]">
+                    <span className="inline-flex rounded-full bg-[#4ECBA0]/10 border border-[#4ECBA0]/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-[#4ECBA0]">
                       Recommandé
                     </span>
                   )}

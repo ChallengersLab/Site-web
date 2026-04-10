@@ -12,7 +12,7 @@ const steps = [
     description:
       "Pipeline, stack, process, équipe. On repère ce qui peut bouger vite et ce qui demande du travail de fond.",
     deliverables: ["Diagnostic complet", "Roadmap priorisée", "KPIs cibles"],
-    accent: "#7B5EFF",
+    accent: "#7C9EFF",
   },
   {
     number: "02",
@@ -21,7 +21,7 @@ const steps = [
     description:
       "Lancement prospection, setup CRM, coaching équipe, scripts, séquences. On fait.",
     deliverables: ["Process opérationnels", "Équipe formée", "Pipeline actif"],
-    accent: "#a78bfa",
+    accent: "#7C9EFF",
   },
   {
     number: "03",
@@ -30,7 +30,7 @@ const steps = [
     description:
       "On mesure et on ajuste. Ce qui ne performe pas, on le change. Pas de complaisance.",
     deliverables: ["Croissance mesurable", "Autonomie équipe", "Playbook finalisé"],
-    accent: "#00F5FF",
+    accent: "#4ECBA0",
   },
 ];
 
@@ -53,7 +53,7 @@ export function SalesMethod() {
           y: orbY,
           width: 600,
           height: 600,
-          background: "rgba(123,94,255,0.12)",
+          background: "rgba(124,158,255,0.12)",
           filter: "blur(100px)",
         }}
       />
@@ -85,7 +85,7 @@ export function SalesMethod() {
             <div
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(to bottom, #7B5EFF, #a78bfa, #00F5FF)",
+                background: "linear-gradient(to bottom, #7C9EFF, #7C9EFF, #4ECBA0)",
                 opacity: 0.08,
               }}
             />
@@ -94,9 +94,9 @@ export function SalesMethod() {
               className="absolute top-0 left-0 w-full"
               style={{
                 height: lineHeight,
-                background: "linear-gradient(to bottom, #7B5EFF, #a78bfa, #00F5FF)",
+                background: "linear-gradient(to bottom, #7C9EFF, #7C9EFF, #4ECBA0)",
                 opacity: 0.5,
-                boxShadow: "0 0 16px rgba(123,94,255,0.25)",
+                boxShadow: "0 0 16px rgba(124,158,255,0.25)",
               }}
             />
           </div>

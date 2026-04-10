@@ -13,27 +13,27 @@ const steps = [
     phase: "Diagnostic",
     timeline: "Semaines 1–2",
     description:
-      "On audite vos process sales, votre stack et vos données. On repère ce qui peut bouger vite et ce qui demande du travail de fond.",
+      "On audite vos process sales, votre stack et vos données. On identifie ce qui peut bouger vite — et ce qui demande un vrai chantier de fond.",
     deliverable: "Roadmap priorisée",
-    accent: "#7B5EFF",
+    accent: "#EEFF66",
   },
   {
     number: "02",
     phase: "Implémentation",
     timeline: "Semaines 3–10",
     description:
-      "Nouveaux workflows, intégrations IA, machines de prospection. On configure, on forme l'équipe, et ça tourne.",
+      "Nouveaux workflows, intégrations IA, séquences de prospection. On configure, on forme vos équipes, et ça tourne — sans que vous ayez à tout gérer.",
     deliverable: "Systèmes opérationnels",
-    accent: "#a78bfa",
+    accent: "#7C9EFF",
   },
   {
     number: "03",
     phase: "Optimisation",
     timeline: "Semaine 10+",
     description:
-      "Chaque action est trackée. Ce qui marche, on pousse. Ce qui ne marche pas, on change.",
+      "Chaque action est trackée. Ce qui marche, on pousse. Ce qui ne marche pas, on change. Le ROI se mesure, pas se promet.",
     deliverable: "Croissance mesurable",
-    accent: "#00F5FF",
+    accent: "#4ECBA0",
   },
 ];
 
@@ -49,15 +49,15 @@ export function Method() {
     <section ref={sectionRef} className="relative py-32 overflow-hidden" id="method">
       <div className="section-divider mx-auto mb-32 w-full max-w-[1100px]" />
 
-      {/* Ambient orb with parallax */}
+      {/* Ambient orb */}
       <motion.div
         style={{ y: orbY }}
-        className="absolute left-[10%] top-[40%] h-[400px] w-[400px] rounded-full"
+        className="absolute left-[10%] top-[40%] h-[380px] w-[380px] rounded-full"
       >
         <div
           className="h-full w-full rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(167,139,250,0.12) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(238,255,102,0.07) 0%, transparent 70%)",
             filter: "blur(80px)",
             animation: "float-orb 25s ease-in-out infinite",
           }}
@@ -69,25 +69,23 @@ export function Method() {
           {/* Left: sticky heading */}
           <div className="lg:sticky lg:top-32 lg:w-[360px] lg:shrink-0">
             <ScrollReveal>
-              <span className="badge-glow inline-flex rounded-full px-3 py-1 text-[11px] font-medium tracking-wider uppercase">
+              <span className="badge-glow inline-flex rounded-full px-3 py-1 text-[10px] font-semibold tracking-[0.08em] uppercase">
                 Notre méthode
               </span>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <h2 className="font-display mt-8 text-[clamp(2.2rem,4vw,3.5rem)] leading-[1] tracking-[-0.02em]">
-                3 étapes.
-                <br />
-                90 jours.
-                <br />
-                <em className="gradient-text">Des résultats.</em>
+              <h2 className="mt-7 text-[clamp(2.2rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.04em]">
+                3 étapes.<br />
+                90 jours.<br />
+                <em className="gradient-text not-italic">Des résultats.</em>
               </h2>
-              <p className="mt-5 text-[15px] leading-[1.7] text-white/30">
+              <p className="mt-5 text-[14px] leading-[1.7] text-white/30">
                 Un process clair, des livrables concrets, du ROI dès le départ.
               </p>
               <Link
                 href="/ressources/audit-stack-sales-checklist"
-                className="group/link mt-6 inline-flex items-center gap-2 text-[13px] font-semibold text-accent-start/70 transition-all hover:text-accent-start"
+                className="group/link mt-6 inline-flex items-center gap-2 text-[13px] font-medium text-[#EEFF66]/60 transition-all hover:text-[#EEFF66]"
               >
                 Auditez votre stack sales gratuitement
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
@@ -96,16 +94,16 @@ export function Method() {
           </div>
 
           {/* Right: step cards */}
-          <div className="flex-1 space-y-5">
+          <div className="flex-1 space-y-4">
             {steps.map((step, i) => (
-              <ScrollReveal key={step.number} delay={0.12 * i}>
+              <ScrollReveal key={step.number} delay={0.1 * i}>
                 <TiltCard
-                  className="group p-8 transition-all duration-500"
+                  className="group p-7 transition-all duration-500"
                   intensity={4}
                 >
                   <div className="flex items-start gap-6">
                     <span
-                      className="font-display text-6xl leading-none tracking-tight opacity-25 transition-opacity duration-500 group-hover:opacity-70"
+                      className="text-6xl font-medium leading-none tracking-[-0.04em] opacity-20 transition-opacity duration-500 group-hover:opacity-60"
                       style={{ color: step.accent }}
                     >
                       {step.number}
@@ -113,23 +111,23 @@ export function Method() {
 
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center gap-3">
-                        <h3 className="font-display text-xl text-white">
+                        <h3 className="text-[15px] font-medium text-[#E8E8E2]">
                           {step.phase}
                         </h3>
-                        <span className="rounded-full bg-white/[0.04] px-3 py-0.5 text-[11px] text-white/25">
+                        <span className="rounded-full bg-white/[0.04] px-3 py-0.5 text-[10px] text-white/25 tracking-[0.04em]">
                           {step.timeline}
                         </span>
                       </div>
-                      <p className="mt-3 text-[14px] leading-[1.7] text-white/35">
+                      <p className="mt-3 text-[13px] leading-[1.7] text-white/35">
                         {step.description}
                       </p>
                     </div>
 
                     <span
-                      className="hidden shrink-0 self-center rounded-lg px-4 py-2 text-[12px] font-semibold md:inline-flex"
+                      className="hidden shrink-0 self-center rounded-lg px-3.5 py-2 text-[11px] font-medium md:inline-flex"
                       style={{
-                        background: `${step.accent}10`,
-                        border: `1px solid ${step.accent}20`,
+                        background: `${step.accent}0D`,
+                        border: `0.5px solid ${step.accent}22`,
                         color: step.accent,
                       }}
                     >

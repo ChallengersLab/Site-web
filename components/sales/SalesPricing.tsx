@@ -45,7 +45,7 @@ const offers = [
       { icon: BarChart3, text: "Alimentation directe du pipeline CRM avec les RDV pris" },
       { icon: FileText, text: "Reporting hebdomadaire (appels, RDV, temps d'appel effectif)" },
     ],
-    accent: "#7B5EFF",
+    accent: "#7C9EFF",
     ctaLabel: "Lancer ma prospection",
     ctaHref: "#contact-sales",
   },
@@ -73,7 +73,7 @@ const offers = [
       { phase: "Mois 2-3", intensity: "1j / semaine", label: "Transmission" },
       { phase: "Après", intensity: "À la carte", label: "Ponctuel" },
     ],
-    accent: "#00F5FF",
+    accent: "#4ECBA0",
     ctaLabel: "Structurer mes ventes",
     ctaHref: "#contact-sales",
   },
@@ -105,7 +105,7 @@ export function SalesPricing() {
           {offers.map((offer, i) => (
             <ScrollReveal key={offer.title} delay={0.15 * i}>
               <TiltCard
-                className={`group relative h-full overflow-hidden p-10 transition-all duration-500 ${"recommended" in offer && offer.recommended ? "border border-[#00F5FF]/15" : ""}`}
+                className={`group relative h-full overflow-hidden p-10 transition-all duration-500 ${"recommended" in offer && offer.recommended ? "border border-[#4ECBA0]/15" : ""}`}
                 intensity={5}
               >
                 {/* Hover corner glow */}
@@ -127,7 +127,7 @@ export function SalesPricing() {
                     {offer.tag}
                   </span>
                   {"recommended" in offer && offer.recommended && (
-                    <span className="inline-flex rounded-full bg-[#00F5FF]/10 border border-[#00F5FF]/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-[#00F5FF]">
+                    <span className="inline-flex rounded-full bg-[#4ECBA0]/10 border border-[#4ECBA0]/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-[#4ECBA0]">
                       Recommandé
                     </span>
                   )}

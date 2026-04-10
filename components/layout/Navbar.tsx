@@ -44,11 +44,14 @@ export function Navbar() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <span className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-accent-start to-accent-end text-[10px] font-bold text-white shadow-[0_0_12px_rgba(123,94,255,0.4)]">
-              CL
-            </span>
-            <span className="font-display text-[15px] text-white">
-              ChallengersLab
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28" aria-hidden="true">
+              <rect width="48" height="48" rx="11" fill="#1A1A1A"/>
+              <path d="M15 11L10 11L10 37L15 37" stroke="#EEFF66" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M33 11L38 11L38 37L33 37" stroke="#4ECBA0" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M26.5 12L20 25L24.5 25L21.5 36L29 23L24.5 23Z" fill="#EEFF66"/>
+            </svg>
+            <span className="text-[15px] font-medium tracking-[-0.03em] text-[#E8E8E2]">
+              <span style={{ color: "#EEFF66" }}>C</span>hallengers<span style={{ color: "#4ECBA0" }}>L</span>ab
             </span>
           </Link>
 

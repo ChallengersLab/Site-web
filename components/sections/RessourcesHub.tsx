@@ -32,7 +32,7 @@ export function RessourcesHub() {
         className="absolute -left-[15%] top-[10%] h-[600px] w-[600px] rounded-full"
         style={{
           background:
-            "radial-gradient(circle, rgba(123,94,255,0.2) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(124,158,255,0.2) 0%, transparent 65%)",
           filter: "blur(80px)",
           animation: "float-orb 20s ease-in-out infinite",
         }}
@@ -41,7 +41,7 @@ export function RessourcesHub() {
         className="absolute -right-[10%] bottom-[20%] h-[500px] w-[500px] rounded-full"
         style={{
           background:
-            "radial-gradient(circle, rgba(0,245,255,0.12) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(78,203,160,0.12) 0%, transparent 65%)",
           filter: "blur(80px)",
           animation: "float-orb-reverse 25s ease-in-out infinite",
         }}

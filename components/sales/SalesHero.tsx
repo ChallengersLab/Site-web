@@ -25,7 +25,7 @@ export function SalesHero() {
       <div
         className="absolute -left-[20%] -top-[10%] h-[700px] w-[700px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(123,94,255,0.35) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(124,158,255,0.35) 0%, transparent 65%)",
           animation: "float-orb 18s ease-in-out infinite",
           filter: "blur(80px)",
         }}
@@ -33,7 +33,7 @@ export function SalesHero() {
       <div
         className="absolute -bottom-[15%] -right-[15%] h-[600px] w-[600px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(123,94,255,0.2) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(124,158,255,0.2) 0%, transparent 65%)",
           animation: "float-orb-reverse 22s ease-in-out infinite",
           filter: "blur(80px)",
         }}
@@ -46,8 +46,8 @@ export function SalesHero() {
           <motion.div variants={fadeUp}>
             <span className="badge-glow inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-medium tracking-wider uppercase">
               <span
-                className="h-1.5 w-1.5 rounded-full bg-[#7B5EFF]"
-                style={{ boxShadow: "0 0 8px 2px rgba(123,94,255,0.6)" }}
+                className="h-1.5 w-1.5 rounded-full bg-[#7C9EFF]"
+                style={{ boxShadow: "0 0 8px 2px rgba(124,158,255,0.6)" }}
               />
               Sales
             </span>

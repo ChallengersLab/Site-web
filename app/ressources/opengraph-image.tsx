@@ -17,7 +17,7 @@ export default async function Image() {
           width: "100%",
           height: "100%",
           padding: "80px",
-          background: "#030303",
+          background: "#0D0D0D",
           position: "relative",
         }}
       >
@@ -31,7 +31,7 @@ export default async function Image() {
             height: 500,
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(123,94,255,0.25) 0%, transparent 65%)",
+              "radial-gradient(circle, rgba(238,255,102,0.25) 0%, transparent 65%)",
             filter: "blur(80px)",
           }}
         />
@@ -46,7 +46,7 @@ export default async function Image() {
               width: "40px",
               height: "40px",
               borderRadius: "10px",
-              background: "linear-gradient(135deg, #7B5EFF, #00F5FF)",
+              background: "linear-gradient(135deg, #EEFF66, #4ECBA0)",
               fontSize: "14px",
               fontWeight: 800,
               color: "white",
@@ -78,7 +78,7 @@ export default async function Image() {
             style={{
               fontSize: 56,
               fontWeight: 800,
-              background: "linear-gradient(135deg, #7B5EFF, #00F5FF)",
+              background: "linear-gradient(135deg, #EEFF66, #4ECBA0)",
               backgroundClip: "text",
               color: "transparent",
               lineHeight: 1.1,

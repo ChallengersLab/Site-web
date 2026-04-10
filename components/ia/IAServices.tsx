@@ -30,18 +30,18 @@ export function IAServices() {
               {/* Corner glow on hover */}
               <div
                 className="absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 transition-opacity duration-700 group-hover:opacity-40"
-                style={{ background: "#00F5FF", filter: "blur(50px)" }}
+                style={{ background: "#4ECBA0", filter: "blur(50px)" }}
               />
 
               <div className="relative z-10">
                 <div
                   className="inline-flex h-10 w-10 items-center justify-center rounded-xl"
                   style={{
-                    background: "rgba(0,245,255,0.07)",
-                    border: "1px solid rgba(0,245,255,0.125)",
+                    background: "rgba(78,203,160,0.07)",
+                    border: "1px solid rgba(78,203,160,0.125)",
                   }}
                 >
-                  <LayoutDashboard className="h-5 w-5 text-[#00F5FF]" />
+                  <LayoutDashboard className="h-5 w-5 text-[#4ECBA0]" />
                 </div>
 
                 <h3 className="font-display text-xl text-white mt-5">
@@ -59,7 +59,7 @@ export function IAServices() {
                     "Intégration IA (chatbots, génération)",
                   ].map((d) => (
                     <div key={d} className="flex items-center gap-2 text-[13px] text-white/40">
-                      <span className="h-1 w-1 rounded-full bg-[#00F5FF]/50 shrink-0" />
+                      <span className="h-1 w-1 rounded-full bg-[#4ECBA0]/50 shrink-0" />
                       {d}
                     </div>
                   ))}
@@ -75,11 +75,11 @@ export function IAServices() {
                 <div
                   className="inline-flex h-10 w-10 items-center justify-center rounded-xl"
                   style={{
-                    background: "rgba(0,245,255,0.07)",
-                    border: "1px solid rgba(0,245,255,0.125)",
+                    background: "rgba(78,203,160,0.07)",
+                    border: "1px solid rgba(78,203,160,0.125)",
                   }}
                 >
-                  <Workflow className="h-5 w-5 text-[#00F5FF]" />
+                  <Workflow className="h-5 w-5 text-[#4ECBA0]" />
                 </div>
 
                 <h3 className="font-display text-xl text-white mt-5">
@@ -100,11 +100,11 @@ export function IAServices() {
                 <div
                   className="inline-flex h-10 w-10 items-center justify-center rounded-xl"
                   style={{
-                    background: "rgba(0,245,255,0.07)",
-                    border: "1px solid rgba(0,245,255,0.125)",
+                    background: "rgba(78,203,160,0.07)",
+                    border: "1px solid rgba(78,203,160,0.125)",
                   }}
                 >
-                  <Bot className="h-5 w-5 text-[#00F5FF]" />
+                  <Bot className="h-5 w-5 text-[#4ECBA0]" />
                 </div>
 
                 <h3 className="font-display text-xl text-white mt-5">
@@ -124,18 +124,18 @@ export function IAServices() {
               {/* Corner glow on hover */}
               <div
                 className="absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 transition-opacity duration-700 group-hover:opacity-40"
-                style={{ background: "#00F5FF", filter: "blur(50px)" }}
+                style={{ background: "#4ECBA0", filter: "blur(50px)" }}
               />
 
               <div className="relative z-10">
                 <div
                   className="inline-flex h-10 w-10 items-center justify-center rounded-xl"
                   style={{
-                    background: "rgba(0,245,255,0.07)",
-                    border: "1px solid rgba(0,245,255,0.125)",
+                    background: "rgba(78,203,160,0.07)",
+                    border: "1px solid rgba(78,203,160,0.125)",
                   }}
                 >
-                  <Zap className="h-5 w-5 text-[#00F5FF]" />
+                  <Zap className="h-5 w-5 text-[#4ECBA0]" />
                 </div>
 
                 <h3 className="font-display text-xl text-white mt-5">
@@ -154,7 +154,7 @@ export function IAServices() {
                     "Automatisation end-to-end",
                   ].map((d) => (
                     <div key={d} className="flex items-center gap-2 text-[13px] text-white/40">
-                      <span className="h-1 w-1 rounded-full bg-[#00F5FF]/50 shrink-0" />
+                      <span className="h-1 w-1 rounded-full bg-[#4ECBA0]/50 shrink-0" />
                       {d}
                     </div>
                   ))}

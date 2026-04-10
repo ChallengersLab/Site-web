@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, DM_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import { GrainTexture } from "@/components/effects/GrainTexture";
 import { CursorGlow } from "@/components/effects/CursorGlow";
 import { Navbar } from "@/components/layout/Navbar";
@@ -7,17 +7,10 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { BackToTop } from "@/components/ui/BackToTop";
 import "./globals.css";
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-});
-
-const dmSans = DM_Sans({
+const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -228,7 +221,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="dark">
       <head>
-        <meta name="theme-color" content="#030303" />
+        <meta name="theme-color" content="#0D0D0D" />
         {jsonLd.map((schema, i) => (
           <script
             key={i}
@@ -238,7 +231,7 @@ export default function RootLayout({
         ))}
       </head>
       <body
-        className={`${instrumentSerif.variable} ${dmSans.variable} font-body antialiased`}
+        className={`${inter.variable} font-body antialiased`}
       >
         <a
           href="#main-content"

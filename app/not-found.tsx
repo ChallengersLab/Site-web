@@ -10,7 +10,7 @@ export default function NotFound() {
           className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(123,94,255,0.2) 0%, transparent 65%)",
+              "radial-gradient(circle, rgba(238,255,102,0.2) 0%, transparent 65%)",
             filter: "blur(80px)",
           }}
         />

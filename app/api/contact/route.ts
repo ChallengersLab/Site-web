@@ -38,7 +38,7 @@ export async function POST(request: Request) {
       subject: `Nouveau lead : ${name}${company ? ` — ${company}` : ""}`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px 24px; background: #0a0a0a; color: #e8e8e8;">
-          <div style="border-bottom: 2px solid #7B5EFF; padding-bottom: 16px; margin-bottom: 24px;">
+          <div style="border-bottom: 2px solid #EEFF66; padding-bottom: 16px; margin-bottom: 24px;">
             <h1 style="margin: 0; font-size: 22px; color: #ffffff;">Nouveau contact depuis le site</h1>
           </div>
 
@@ -49,7 +49,7 @@ export async function POST(request: Request) {
             </tr>
             <tr style="background: #111;">
               <td style="padding: 10px 12px; color: #888; font-size: 13px; vertical-align: top;">Email</td>
-              <td style="padding: 10px 12px;"><a href="mailto:${email}" style="color: #7B5EFF; text-decoration: none; font-size: 15px;">${email}</a></td>
+              <td style="padding: 10px 12px;"><a href="mailto:${email}" style="color: #EEFF66; text-decoration: none; font-size: 15px;">${email}</a></td>
             </tr>
             <tr>
               <td style="padding: 10px 12px; color: #888; font-size: 13px; vertical-align: top;">Entreprise</td>
@@ -57,13 +57,13 @@ export async function POST(request: Request) {
             </tr>
           </table>
 
-          <div style="background: #111; border-left: 3px solid #7B5EFF; padding: 16px 20px; margin-bottom: 24px;">
+          <div style="background: #111; border-left: 3px solid #EEFF66; padding: 16px 20px; margin-bottom: 24px;">
             <p style="margin: 0 0 8px; color: #888; font-size: 13px;">Message</p>
             <p style="margin: 0; color: #fff; font-size: 15px; line-height: 1.6; white-space: pre-wrap;">${message}</p>
           </div>
 
           <div style="text-align: center; padding-top: 16px; border-top: 1px solid #222;">
-            <a href="mailto:${email}" style="display: inline-block; padding: 12px 28px; background: #7B5EFF; color: #fff; text-decoration: none; font-weight: 600; font-size: 14px; border-radius: 6px;">Repondre a ${name}</a>
+            <a href="mailto:${email}" style="display: inline-block; padding: 12px 28px; background: #EEFF66; color: #0D0D0D; text-decoration: none; font-weight: 600; font-size: 14px; border-radius: 6px;">Repondre a ${name}</a>
           </div>
 
           <p style="text-align: center; color: #555; font-size: 12px; margin-top: 24px;">
