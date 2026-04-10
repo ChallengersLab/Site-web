@@ -8,12 +8,14 @@ interface TiltCardProps {
   children: React.ReactNode;
   className?: string;
   intensity?: number;
+  style?: React.CSSProperties;
 }
 
 export function TiltCard({
   children,
   className = "",
   intensity = 6,
+  style: externalStyle,
 }: TiltCardProps) {
   const { ref, style, onMouseMove: tiltMove, onMouseLeave: tiltLeave } = useTilt(intensity);
   const glowRef = useRef<HTMLDivElement>(null);
@@ -43,7 +45,7 @@ export function TiltCard({
   return (
     <motion.div
       ref={ref}
-      style={style}
+      style={{ ...style, ...externalStyle }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={`glass-card ${className}`}
