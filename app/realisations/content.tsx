@@ -101,7 +101,7 @@ const projects = [
     video: null,
   },
   {
-    name: "SportAB",
+    name: "PushQuest",
     what: "App fitness gamifiée avec combats RPG",
     how: "App React avec système de progression et boss fights",
     tags: ["React", "Gamification", "IA"],
