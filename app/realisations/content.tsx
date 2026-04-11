@@ -88,7 +88,7 @@ const projects = [
     url: null,
     category: "app" as const,
     image: null,
-    video: null,
+    video: "/realisations/immomatch-app.mp4",
   },
   {
     name: "EstimeIA",
