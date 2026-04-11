@@ -181,7 +181,7 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
               loop
               muted
               playsInline
-              className="h-full w-full object-cover object-top"
+              className="h-full w-full object-contain"
             />
           ) : project.image ? (
             <Image
