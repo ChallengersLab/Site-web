@@ -136,7 +136,7 @@ function SectionHeader({
         style={{
           background: `rgba(${hexToRgb(color)},0.08)`,
           border: `1px solid rgba(${hexToRgb(color)},0.2)`,
-          color,
+          color: "rgba(255,255,255,0.7)",
         }}
       >
         {pillar}
