@@ -260,7 +260,7 @@ export function RealisationsContent() {
 
           <ScrollReveal delay={0.2}>
             <p className="mx-auto mt-8 max-w-[560px] text-[16px] leading-[1.7] text-white/40">
-              Sites web, applications, automatisations. Chaque projet est un problème résolu.
+              Quelques projets récents, du site vitrine au MVP complet.
             </p>
           </ScrollReveal>
         </div>
@@ -271,7 +271,7 @@ export function RealisationsContent() {
         <div className="mx-auto max-w-[1100px] px-6">
           <SectionHeader
             pillar="Sites web"
-            subtext="Des sites qui convertissent, pas juste qui existent."
+            subtext="Sites vitrines, landing pages, sites produit."
             color={SITES_COLOR}
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -287,7 +287,7 @@ export function RealisationsContent() {
         <div className="mx-auto max-w-[1100px] px-6">
           <SectionHeader
             pillar="Applications"
-            subtext="Des apps qui règlent de vrais problèmes."
+            subtext="MVP, outils métier, apps grand public."
             color={APPS_COLOR}
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
