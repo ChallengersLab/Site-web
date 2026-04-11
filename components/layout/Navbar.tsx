@@ -12,6 +12,7 @@ import {
 const navLinks = [
   { name: "Accueil", href: "/" },
   { name: "Offre", href: "/offre" },
+  { name: "Réalisations", href: "/realisations" },
   { name: "Ressources", href: "/ressources" },
   { name: "Contact", href: "/#contact" },
 ];
