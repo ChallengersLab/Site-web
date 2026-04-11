@@ -123,8 +123,8 @@ export function Hero() {
               variants={fadeUp}
               className="mt-6 max-w-lg text-[16px] leading-[1.7] text-white/45"
             >
-              On accompagne les fondateurs qui lancent leur SaaS à l'ère de l'IA :<br />
-              <span className="text-white/65">on construit votre MVP complet, on automatise vos process, et on vous accompagne jusqu'aux premiers clients payants.</span>
+              On construit votre MVP, on automatise ce qui doit l&apos;être,{" "}
+              <span className="text-white/65">et on reste jusqu&apos;aux premiers clients payants.</span>
             </motion.p>
 
             {/* Offer tags */}

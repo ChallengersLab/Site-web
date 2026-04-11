@@ -11,21 +11,21 @@ const painPoints = [
     icon: Phone,
     title: "Vous avez l'idée, mais pas le CTO",
     description:
-      "Votre concept est solide, mais entre le prototype et un vrai produit, il y a un gouffre. Recruter un CTO coûte cher et prend du temps. Vous avez besoin de quelqu'un qui build — maintenant.",
+      "Entre le prototype et un vrai produit, il y a un gouffre. Recruter un CTO prend 6 mois et coûte un bras. Vous avez besoin de quelqu'un qui build — maintenant.",
     accentColor: "#7C9EFF",
   },
   {
     icon: Workflow,
     title: "Vos process sont manuels et ne scalent pas",
     description:
-      "Onboarding à la main, relances oubliées, données éparpillées. Vous passez plus de temps à gérer qu'à construire. Ce qui marchait à 10 utilisateurs explose à 100.",
+      "Onboarding à la main, relances oubliées, données dans 4 outils différents. Ce qui marchait à 10 utilisateurs explose à 100.",
     accentColor: "#EEFF66",
   },
   {
     icon: Settings,
     title: "Un site en ligne ne suffit pas — il faut des clients",
     description:
-      "Votre app est live, votre landing page est jolie, mais personne ne vient. Le SEO prend des mois, les ads coûtent cher, et vous ne savez pas par où commencer pour signer vos premiers payants.",
+      "L'app est live, la landing est jolie, mais personne ne vient. Le SEO prend des mois, les ads coûtent cher. Vous ne savez pas par où commencer.",
     accentColor: "#4ECBA0",
   },
 ];

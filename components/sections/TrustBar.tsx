@@ -14,7 +14,7 @@ const pillars = [
     id: "build",
     title: "On construit votre MVP",
     description:
-      "Application sur mesure, site web optimisé, propulsé par l'IA. Du prototype au produit prêt à vendre.",
+      "App sur mesure, site optimisé, propulsé par l'IA. Du prototype au produit qui tourne.",
     features: [
       { icon: Bot, text: "Application web / SaaS" },
       { icon: LayoutDashboard, text: "Site vitrine haute conversion" },
@@ -32,7 +32,7 @@ const pillars = [
     id: "automate",
     title: "On automatise vos process",
     description:
-      "Workflows intelligents, intégrations, CRM. Vos tâches répétitives tournent toutes seules.",
+      "Workflows, intégrations, CRM. Ce qui est répétitif tourne tout seul.",
     features: [
       { icon: Workflow, text: "Workflows (Make, n8n, Zapier)" },
       { icon: Settings, text: "CRM & outils internes" },
@@ -50,7 +50,7 @@ const pillars = [
     id: "grow",
     title: "On vous amène vos premiers clients",
     description:
-      "SEO/GEO, stratégie d'acquisition, accompagnement hands-on jusqu'aux premières ventes.",
+      "SEO/GEO, acquisition, et on vous accompagne sur les premières ventes.",
     features: [
       { icon: BarChart3, text: "SEO & GEO (IA search)" },
       { icon: Users, text: "Stratégie d'acquisition" },
@@ -86,7 +86,7 @@ export function TrustBar() {
         <ScrollReveal delay={0.1}>
           <h2 className="mt-7 text-[clamp(2.2rem,5vw,3.8rem)] font-medium leading-[1.05] tracking-[-0.04em]">
             De l&apos;idée aux premiers revenus.{" "}
-            <strong className="text-white">Tout compris.</strong>
+            <strong className="gradient-text">Tout compris.</strong>
           </h2>
         </ScrollReveal>
 
@@ -112,7 +112,7 @@ export function TrustBar() {
                   style={{
                     background: `${pillar.accent}10`,
                     border: `0.5px solid ${pillar.accent}25`,
-                    color: pillar.accent,
+                    color: "rgba(255,255,255,0.7)",
                   }}
                 >
                   {pillar.tag}
@@ -135,7 +135,7 @@ export function TrustBar() {
                   ))}
                 </ul>
 
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <div className="mt-8 flex flex-col gap-3">
                   <Link
                     href={`/offre#${pillar.id}`}
                     className="group/link inline-flex items-center gap-2 text-[13px] font-medium transition-all"

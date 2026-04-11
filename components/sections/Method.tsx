@@ -13,7 +13,7 @@ const steps = [
     phase: "Cadrage",
     timeline: "Semaines 1–2",
     description:
-      "On valide votre idée, on définit le MVP juste — pas plus, pas moins. On mappe vos process et on identifie ce qu'on peut automatiser dès le départ.",
+      "On challenge votre idée, on cadre le MVP — pas plus, pas moins. On identifie ce qu'on peut automatiser dès le départ.",
     deliverable: "Scope MVP + roadmap",
     accent: "#EEFF66",
   },
@@ -22,7 +22,7 @@ const steps = [
     phase: "Construction",
     timeline: "Semaines 3–10",
     description:
-      "On build votre app, votre site optimisé SEO/GEO, et vos workflows automatisés. Propulsé par l'IA, testé avec de vrais utilisateurs.",
+      "On code l'app, le site, les automatisations. Tout est testé avec de vrais utilisateurs avant livraison.",
     deliverable: "MVP + site + automatisations",
     accent: "#7C9EFF",
   },
