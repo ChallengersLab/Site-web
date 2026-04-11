@@ -67,7 +67,7 @@ const projects = [
     url: null,
     category: "site" as const,
     image: "/realisations/setting.png",
-    video: null,
+    video: "/realisations/setting.mp4",
   },
   {
     name: "EstimeIA",
