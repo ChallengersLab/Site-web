@@ -37,33 +37,37 @@ const projects = [
     url: null,
     category: "site" as const,
     image: "/realisations/immomatch.png",
+    video: null,
   },
   {
     name: "IzaIA",
     what: "Formation IA de 2 jours pour non-techniques",
     how: "Landing page haute conversion + formulaire d'inscription",
     tags: ["Next.js", "Tailwind", "SEO"],
-    url: "https://iza-ia.vercel.app/",
+    url: null,
     category: "site" as const,
     image: "/realisations/izaia.png",
+    video: null,
   },
   {
     name: "GTM DeepTech",
     what: "Go-to-market pour startups deeptech",
     how: "Site premium dark theme + copywriting B2B",
     tags: ["Next.js", "Tailwind", "Copywriting"],
-    url: "https://www.gtm-deeptech.io/",
+    url: null,
     category: "site" as const,
     image: "/realisations/gtm-deeptech.png",
+    video: null,
   },
   {
     name: "Setting",
     what: "Prospection LinkedIn B2B automatisée",
     how: "Site produit avec pricing, démo et onboarding",
     tags: ["Next.js", "Tailwind", "SaaS"],
-    url: "https://setting.live/",
+    url: null,
     category: "site" as const,
     image: "/realisations/setting.png",
+    video: null,
   },
   // Apps
   {
@@ -71,27 +75,30 @@ const projects = [
     what: "App de matching immobilier IA",
     how: "MVP complet : app Next.js + Supabase + auth",
     tags: ["Next.js", "Supabase", "IA", "Auth"],
-    url: "https://immov2.vercel.app/",
+    url: null,
     category: "app" as const,
-    image: "/realisations/immov2.png",
+    image: null,
+    video: null,
   },
   {
     name: "EstimeIA",
     what: "Estimation immobilière en 15 secondes",
     how: "App avec données DVF + géolocalisation + IA",
     tags: ["Next.js", "API DVF", "IA", "Maps"],
-    url: "https://estime-i-aapp.vercel.app/",
+    url: null,
     category: "app" as const,
-    image: "/realisations/estimeia.png",
+    image: null,
+    video: null,
   },
   {
     name: "SportAB",
     what: "App fitness gamifiée avec combats RPG",
     how: "App React avec système de progression et boss fights",
     tags: ["React", "Gamification", "IA"],
-    url: "https://sport-ab-three.vercel.app/",
+    url: null,
     category: "app" as const,
-    image: "/realisations/sportab.png",
+    image: null,
+    video: null,
   },
   {
     name: "Clone IA",
@@ -101,6 +108,7 @@ const projects = [
     url: null,
     category: "app" as const,
     image: null,
+    video: null,
   },
 ];
 
@@ -147,15 +155,25 @@ interface Project {
   url: string | null;
   category: "site" | "app";
   image: string | null;
+  video: string | null;
 }
 
 function ProjectCard({ project, delay }: { project: Project; delay: number }) {
   return (
     <ScrollReveal delay={delay}>
       <TiltCard className="group overflow-hidden" intensity={5}>
-        {/* Screenshot area */}
+        {/* Media area */}
         <div className="relative aspect-[16/9] overflow-hidden bg-white/[0.02]">
-          {project.image ? (
+          {project.video ? (
+            <video
+              src={project.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover object-top"
+            />
+          ) : project.image ? (
             <Image
               src={project.image}
               alt={project.name}
@@ -164,7 +182,7 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
             />
           ) : (
             <div className="flex h-full items-center justify-center text-white/10 text-sm">
-              Bientôt
+              Vidéo à venir
             </div>
           )}
         </div>
