@@ -81,7 +81,7 @@ const projects = [
   },
   // Apps
   {
-    name: "ImmoV2",
+    name: "ImmoMatch",
     what: "App de matching immobilier IA",
     how: "MVP complet : app Next.js + Supabase + auth",
     tags: ["Next.js", "Supabase", "IA", "Auth"],
