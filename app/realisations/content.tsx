@@ -37,7 +37,7 @@ const projects = [
     url: null,
     category: "site" as const,
     image: "/realisations/immomatch.png",
-    video: null,
+    video: "/realisations/immomatch.mp4",
   },
   {
     name: "IzaIA",
