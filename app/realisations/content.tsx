@@ -69,6 +69,16 @@ const projects = [
     image: "/realisations/setting.png",
     video: null,
   },
+  {
+    name: "EstimeIA",
+    what: "Site vitrine pour outil d'estimation immobilière IA",
+    how: "Landing page + démo produit + SEO",
+    tags: ["Next.js", "Tailwind", "SEO", "IA"],
+    url: null,
+    category: "site" as const,
+    image: "/realisations/estimeia-site.png",
+    video: null,
+  },
   // Apps
   {
     name: "ImmoV2",
