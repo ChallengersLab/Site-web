@@ -14,13 +14,6 @@ const featured = [
     readTime: "12 min",
   },
   {
-    slug: "challenger-sales-methode-b2b",
-    tag: "Sales",
-    tagColor: "#7C9EFF",
-    title: "Challenger Sales : pourquoi cette méthode écrase les autres en B2B",
-    readTime: "9 min",
-  },
-  {
     slug: "automatisation-crm-workflows-ia",
     tag: "IA & Auto",
     tagColor: "#4ECBA0",
