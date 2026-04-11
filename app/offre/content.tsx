@@ -171,8 +171,8 @@ export function OffreContent() {
 
           <ScrollReveal delay={0.2}>
             <p className="mx-auto mt-8 max-w-[560px] text-[16px] leading-[1.7] text-white/40">
-              On construit votre MVP, on automatise vos process, et on vous accompagne
-              jusqu&apos;aux premiers clients payants.
+              On construit votre MVP, on automatise ce qui doit l&apos;être,
+              et on vous accompagne jusqu&apos;aux premiers clients payants.
             </p>
           </ScrollReveal>
         </div>
@@ -191,7 +191,7 @@ export function OffreContent() {
               color={BUILD_COLOR}
               icon={<Bot className="h-5 w-5" />}
               title="Applications & MVP SaaS"
-              description="Application web sur mesure, SaaS complet, interfaces métier, intégration IA native."
+              description="Votre app, de zéro au produit qui tourne. SaaS, interfaces métier, IA intégrée dès le départ."
               items={[
                 "Next.js, SvelteKit, React",
                 "Supabase, Stripe, Auth",
@@ -204,21 +204,21 @@ export function OffreContent() {
               color={BUILD_COLOR}
               icon={<LayoutDashboard className="h-5 w-5" />}
               title="Sites haute conversion"
-              description="Landing pages, sites vitrine optimisés SEO/GEO. Design premium, performance maximale."
+              description="Landing pages et sites vitrine qui convertissent. Optimisés pour Google et les moteurs IA."
               delay={0.1}
             />
             <SmallCard
               color={BUILD_COLOR}
               icon={<Settings className="h-5 w-5" />}
               title="Dashboards & Interfaces"
-              description="Tableaux de bord interactifs, portails clients, outils internes sur mesure."
+              description="Dashboards, portails clients, outils internes. Tout ce dont votre équipe a besoin au quotidien."
               delay={0.2}
             />
             <LargeCard
               color={BUILD_COLOR}
               icon={<Zap className="h-5 w-5" />}
               title="Intégration IA"
-              description="Chatbots, génération de contenu, analyse automatisée. L'IA au service de votre produit, pas comme gadget."
+              description="Chatbots, génération de contenu, analyse auto. L'IA dans votre produit, pas en déco."
               items={[
                 "Chatbots & assistants IA",
                 "Génération de contenu",
@@ -244,7 +244,7 @@ export function OffreContent() {
               color={AUTOMATE_COLOR}
               icon={<Workflow className="h-5 w-5" />}
               title="Workflows automatisés"
-              description="Make, n8n, Zapier. De la lead capture au reporting, vos process tournent tout seuls."
+              description="Make, n8n, Zapier. Du premier contact au reporting, ça tourne tout seul."
               items={[
                 "Make, n8n, Zapier",
                 "Intégrations API",
@@ -257,21 +257,21 @@ export function OffreContent() {
               color={AUTOMATE_COLOR}
               icon={<Settings className="h-5 w-5" />}
               title="CRM & outils internes"
-              description="Setup, configuration et automatisation de votre CRM. Intégration avec votre stack existante."
+              description="On branche votre CRM à votre stack et on automatise ce qui peut l'être."
               delay={0.1}
             />
             <SmallCard
               color={AUTOMATE_COLOR}
               icon={<Bot className="h-5 w-5" />}
               title="Prompt engineering & IA"
-              description="On intègre l'IA là où elle a un vrai impact. Pas de gadget, du ROI."
+              description="L'IA là où ça compte. Pas de gadget, du concret."
               delay={0.2}
             />
             <LargeCard
               color={AUTOMATE_COLOR}
               icon={<Zap className="h-5 w-5" />}
               title="Automatisation end-to-end"
-              description="Onboarding, facturation, relances, reporting. Tout ce qui peut tourner seul, tourne seul."
+              description="Onboarding, facturation, relances, reporting. Si c'est répétitif, ça tourne sans vous."
               items={[
                 "Onboarding automatisé",
                 "Facturation & relances",
@@ -297,7 +297,7 @@ export function OffreContent() {
               color={GROW_COLOR}
               icon={<BarChart3 className="h-5 w-5" />}
               title="SEO & GEO"
-              description="Optimisation pour Google et les moteurs IA (ChatGPT, Perplexity, Claude). Votre site visible là où vos clients cherchent."
+              description="Google, ChatGPT, Perplexity — on vous rend visible là où vos clients cherchent vraiment."
               items={[
                 "SEO technique & on-page",
                 "GEO (Generative Engine Optimization)",
@@ -310,21 +310,21 @@ export function OffreContent() {
               color={GROW_COLOR}
               icon={<Users className="h-5 w-5" />}
               title="Stratégie d'acquisition"
-              description="Canaux, messaging, ciblage. On construit votre machine à prospects."
+              description="Les bons canaux, le bon message, les bonnes cibles. On construit le pipe avec vous."
               delay={0.1}
             />
             <SmallCard
               color={GROW_COLOR}
               icon={<Phone className="h-5 w-5" />}
               title="Coaching premières ventes"
-              description="Accompagnement hands-on : scripts, objections, closing. On ne part pas tant que ça ne rapporte pas."
+              description="Scripts, objections, closing. On bosse avec vous jusqu'à ce que ça signe."
               delay={0.2}
             />
             <LargeCard
               color={GROW_COLOR}
               icon={<ArrowRight className="h-5 w-5" />}
               title="Outreach & conversion"
-              description="Cold email, LinkedIn, partnerships. On teste, on mesure, on scale ce qui marche."
+              description="Cold email, LinkedIn, partenariats. On teste, on mesure, on pousse ce qui marche."
               items={[
                 "Cold email & séquences",
                 "LinkedIn outbound",

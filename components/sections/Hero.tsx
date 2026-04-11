@@ -124,7 +124,7 @@ export function Hero() {
               className="mt-6 max-w-lg text-[16px] leading-[1.7] text-white/45"
             >
               On construit votre MVP, on automatise ce qui doit l&apos;être,{" "}
-              <span className="text-white/65">et on reste jusqu&apos;aux premiers clients payants.</span>
+              <span className="text-white/65">et on vous accompagne jusqu&apos;aux premiers clients payants.</span>
             </motion.p>
 
             {/* Offer tags */}
