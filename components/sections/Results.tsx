@@ -9,23 +9,23 @@ import { Phone, Workflow, Settings } from "lucide-react";
 const painPoints = [
   {
     icon: Phone,
-    title: "Le bouche-à-oreille a ses limites",
+    title: "Vous avez l'idée, mais pas le CTO",
     description:
-      "Le réseau vous a amenés jusque-là. Pour passer un cap, il faut un pipe structuré et une prospection prévisible — pas juste des introductions.",
+      "Votre concept est solide, mais entre le prototype et un vrai produit, il y a un gouffre. Recruter un CTO coûte cher et prend du temps. Vous avez besoin de quelqu'un qui build — maintenant.",
     accentColor: "#7C9EFF",
   },
   {
     icon: Workflow,
-    title: "Vous perdez des heures sur des tâches évitables",
+    title: "Vos process sont manuels et ne scalent pas",
     description:
-      "Copier-coller, reporting manuel, relances oubliées. Chaque heure passée là-dessus, c'est une heure de moins sur ce qui fait vraiment avancer le business.",
+      "Onboarding à la main, relances oubliées, données éparpillées. Vous passez plus de temps à gérer qu'à construire. Ce qui marchait à 10 utilisateurs explose à 100.",
     accentColor: "#EEFF66",
   },
   {
     icon: Settings,
-    title: "Sales et tech ne parlent pas le même langage",
+    title: "Un site en ligne ne suffit pas — il faut des clients",
     description:
-      "Vous cherchez quelqu'un qui comprend le business ET les outils. Souvent, ça veut dire deux prestataires — qui ne se coordonnent jamais vraiment.",
+      "Votre app est live, votre landing page est jolie, mais personne ne vient. Le SEO prend des mois, les ads coûtent cher, et vous ne savez pas par où commencer pour signer vos premiers payants.",
     accentColor: "#4ECBA0",
   },
 ];
