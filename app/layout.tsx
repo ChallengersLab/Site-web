@@ -16,28 +16,28 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://challengerslab.com"),
   title:
-    "ChallengersLab — Agence Sales & IA pour PME B2B | Prospection, CRM, Automatisation",
+    "ChallengersLab — MVP SaaS, Automatisations & Premiers Clients",
   description:
-    "ChallengersLab est l'agence B2B qui croise 20 ans d'expertise commerciale et intelligence artificielle. Prospection externalisée, coaching Challenger Sales, automatisation CRM et workflows IA. +320% de pipeline en 90 jours pour les PME et scale-ups en France.",
+    "On accompagne les fondateurs qui lancent leur SaaS à l'ère de l'IA : MVP complet, automatisations, et accompagnement jusqu'aux premiers clients payants.",
   keywords: [
-    "agence sales B2B",
-    "agence IA B2B",
-    "consulting commercial IA",
-    "prospection externalisée B2B",
-    "automatisation ventes B2B",
-    "coaching Challenger Sales",
-    "CRM IA PME",
-    "agence growth B2B France",
-    "externalisation commerciale",
-    "head of sales fractionné",
-    "automatisation workflows IA",
-    "agence prospection B2B Paris",
-    "intégration IA entreprise",
+    "MVP SaaS",
+    "construire un SaaS",
+    "automatisation process",
+    "premiers clients SaaS",
+    "SEO GEO",
+    "agence MVP",
+    "développement SaaS",
+    "automatisation IA",
+    "site web optimisé",
+    "acquisition clients",
+    "workflow automatisé",
+    "fondateur SaaS",
+    "lancer un SaaS",
   ],
   openGraph: {
-    title: "ChallengersLab — L'agence qui croise Sales & IA pour les B2B",
+    title: "ChallengersLab — MVP SaaS, Automatisations & Premiers Clients",
     description:
-      "20 ans d'expertise commerciale croisée avec l'IA. Prospection externalisée, coaching Challenger Sales, automatisation CRM et workflows IA pour les PME et scale-ups B2B en France.",
+      "On accompagne les fondateurs qui lancent leur SaaS à l'ère de l'IA : MVP complet, automatisations, et accompagnement jusqu'aux premiers clients payants.",
     url: "https://challengerslab.com",
     siteName: "ChallengersLab",
     locale: "fr_FR",
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ChallengersLab — Agence Sales & IA pour B2B",
+    title: "ChallengersLab — MVP SaaS, Automatisations & Premiers Clients",
     description:
-      "L'agence qui croise expertise commerciale et IA pour les PME B2B. +320% pipeline en 90 jours.",
+      "On accompagne les fondateurs qui lancent leur SaaS à l'ère de l'IA : MVP complet, automatisations, et accompagnement jusqu'aux premiers clients payants.",
   },
   robots: { index: true, follow: true },
   alternates: {
@@ -68,7 +68,7 @@ const jsonLd = [
     url: "https://challengerslab.com",
     logo: "https://challengerslab.com/logo.png",
     description:
-      "ChallengersLab est une agence B2B spécialisée dans l'intersection entre Sales et Intelligence Artificielle, avec 20 ans d'expertise cumulée en commerce B2B. Elle accompagne les PME et scale-ups B2B en France (10 à 200 collaborateurs) dans la restructuration de leurs ventes et l'automatisation de leurs process grâce à l'IA.",
+      "ChallengersLab accompagne les fondateurs qui lancent leur SaaS à l'ère de l'IA. On construit votre MVP complet (app + site web optimisé SEO/GEO), on automatise vos process, et on vous accompagne jusqu'aux premiers clients payants.",
     foundingDate: "2024",
     areaServed: {
       "@type": "Country",
@@ -81,15 +81,15 @@ const jsonLd = [
       addressCountry: "FR",
     },
     knowsAbout: [
-      "Prospection B2B",
-      "Challenger Sales",
-      "Intelligence Artificielle appliquée aux ventes",
-      "Automatisation CRM",
+      "Développement MVP SaaS",
+      "Automatisation de process",
+      "Intelligence Artificielle",
+      "SEO & GEO",
       "Workflows IA (Make, n8n, Zapier)",
-      "Head of Sales fractionné",
-      "Coaching commercial B2B",
+      "Acquisition premiers clients",
+      "Next.js, SvelteKit, Supabase",
       "Prompt engineering",
-      "No-code & low-code",
+      "Stratégie d'acquisition SaaS",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -99,36 +99,27 @@ const jsonLd = [
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Prospection externalisée multicanal",
+            name: "Build — MVP SaaS",
             description:
-              "Génération de pipeline B2B via prospection multicanal (email, LinkedIn, téléphone) assistée par IA.",
+              "Construction de MVP complets : applications web, sites optimisés SEO/GEO, dashboards et intégrations IA.",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Coaching Challenger Sales",
+            name: "Automate — Automatisations",
             description:
-              "Formation et coaching des équipes commerciales à la méthodologie Challenger Sales.",
+              "Workflows automatisés (Make, n8n, Zapier), CRM, automatisation end-to-end et intégration IA dans vos process.",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Head of Sales fractionné",
+            name: "Grow — Premiers clients",
             description:
-              "Direction commerciale externalisée à temps partagé pour PME et scale-ups B2B.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Automatisation IA & Workflows",
-            description:
-              "Intégration d'IA et automatisation de process métier via Make, n8n, Zapier et applications sur mesure.",
+              "SEO/GEO, stratégie d'acquisition, coaching premières ventes et accompagnement jusqu'aux premiers clients payants.",
           },
         },
       ],
@@ -151,15 +142,15 @@ const jsonLd = [
         name: "Qu'est-ce que ChallengersLab ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ChallengersLab est une agence B2B basée à Paris qui combine 20 ans d'expertise commerciale cumulée (prospection, coaching Challenger Sales, direction commerciale fractionnée) et intelligence artificielle (automatisation, workflows IA, prompt engineering) pour aider les PME et scale-ups B2B de 10 à 200 collaborateurs à générer plus de pipeline et accélérer leur croissance.",
+          text: "ChallengersLab accompagne les fondateurs qui lancent leur SaaS à l'ère de l'IA. On construit votre MVP complet (app + site web optimisé SEO/GEO), on automatise vos process, et on vous accompagne jusqu'aux premiers clients payants.",
         },
       },
       {
         "@type": "Question",
-        name: "Quels résultats obtiennent les clients de ChallengersLab ?",
+        name: "Que comprend l'offre ChallengersLab ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Les clients de ChallengersLab constatent en moyenne +320% de croissance pipeline, un triplement du nombre de rendez-vous qualifiés, et un gain de 15h par semaine par personne grâce à l'automatisation. Les premiers résultats sont visibles en moins de 90 jours.",
+          text: "L'offre couvre 3 piliers : Build (MVP app, site web optimisé, intégration IA), Automate (workflows Make/n8n/Zapier, CRM, automatisation end-to-end), et Grow (SEO/GEO, stratégie d'acquisition, coaching premières ventes).",
         },
       },
       {
@@ -167,15 +158,15 @@ const jsonLd = [
         name: "À qui s'adresse ChallengersLab ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ChallengersLab s'adresse aux PME et scale-ups B2B de 10 à 200 collaborateurs en France qui veulent structurer leurs ventes, adopter l'IA et automatiser leurs process pour ne pas se faire dépasser par la concurrence.",
+          text: "ChallengersLab s'adresse aux fondateurs qui ont une idée de SaaS et veulent la concrétiser rapidement avec l'IA, sans recruter un CTO. Du MVP aux premiers clients payants en moins de 90 jours.",
         },
       },
       {
         "@type": "Question",
-        name: "Quelle est la différence entre ChallengersLab et un cabinet de conseil classique ?",
+        name: "En combien de temps obtient-on des résultats ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ChallengersLab ne vend pas du conseil à rallonge. L'agence implémente directement : configuration CRM, séquences de prospection, workflows d'automatisation, intégrations IA. Le modèle repose sur un diagnostic de 2 semaines, une implémentation de 8 semaines, puis une optimisation continue avec des résultats mesurables.",
+          text: "Notre méthode en 3 étapes (Cadrage, Construction, Premiers clients) est conçue pour livrer un MVP fonctionnel et atteindre les premiers clients payants en moins de 90 jours.",
         },
       },
     ],
@@ -183,30 +174,30 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "Comment restructurer ses ventes B2B avec l'IA en 90 jours",
+    name: "Comment lancer son SaaS avec l'IA en 90 jours",
     description:
-      "La méthode ChallengersLab en 3 phases pour transformer les ventes et les process d'une PME B2B grâce à l'expertise commerciale et l'intelligence artificielle.",
+      "La méthode ChallengersLab en 3 étapes pour passer de l'idée au premier euro : cadrage, construction, premiers clients.",
     totalTime: "P90D",
     step: [
       {
         "@type": "HowToStep",
         position: 1,
-        name: "Diagnostic",
-        text: "Audit complet des process de vente, de la stack technique et des données. Identification des quick wins et des chantiers structurants. Livrable : roadmap priorisée.",
+        name: "Cadrage",
+        text: "Validation de l'idée, définition du MVP juste, mapping des process à automatiser. Livrable : scope MVP + roadmap.",
         url: "https://challengerslab.com/#method",
       },
       {
         "@type": "HowToStep",
         position: 2,
-        name: "Implémentation",
-        text: "Construction et configuration des outils, workflows IA et intégrations. Formation des équipes. Lancement des premières séquences de prospection. Livrable : systèmes opérationnels.",
+        name: "Construction",
+        text: "Build de l'app, du site optimisé SEO/GEO, et des workflows automatisés. Propulsé par l'IA, testé avec de vrais utilisateurs. Livrable : MVP + site + automatisations.",
         url: "https://challengerslab.com/#method",
       },
       {
         "@type": "HowToStep",
         position: 3,
-        name: "Optimisation",
-        text: "Mesure des résultats, itération sur les séquences et les workflows, scaling. Chaque action est trackée et optimisée. Livrable : croissance mesurable (+320% pipeline en moyenne).",
+        name: "Premiers clients",
+        text: "SEO/GEO en place, stratégie d'acquisition lancée, accompagnement hands-on sur les premières ventes. Livrable : revenue + clients payants.",
         url: "https://challengerslab.com/#method",
       },
     ],

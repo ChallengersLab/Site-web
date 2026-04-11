@@ -2,16 +2,13 @@ import Link from "next/link";
 
 const footerLinks = {
   Offres: [
-    { name: "Sales", href: "/sales" },
-    { name: "AI & Automation", href: "/ia" },
+    { name: "Offre", href: "/offre" },
     { name: "Contact", href: "/#contact" },
   ],
   Ressources: [
     { name: "Tous les articles", href: "/ressources" },
-    { name: "Guide Prospection B2B", href: "/ressources/prospection-b2b-ia-guide-complet" },
-    { name: "Méthode Challenger Sales", href: "/ressources/challenger-sales-methode-b2b" },
+    { name: "Prospection B2B + IA", href: "/ressources/prospection-b2b-ia-guide-complet" },
     { name: "Make vs n8n vs Zapier", href: "/ressources/automatisation-crm-workflows-ia" },
-    { name: "Agence Sales & IA : le guide", href: "/ressources/agence-sales-ia-b2b-pourquoi" },
   ],
   Entreprise: [
     { name: "Mentions légales", href: "/mentions-legales" },
@@ -37,7 +34,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 text-[12px] leading-[1.7] text-white/30">
-              Sales × IA pour les PME B2B.<br />Paris, France.
+              De l'idée aux premiers revenus.<br />Paris, France.
             </p>
           </div>
 

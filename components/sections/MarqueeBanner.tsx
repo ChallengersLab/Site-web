@@ -12,23 +12,20 @@ const toolsRow1: Tool[] = [
   { name: "n8n", color: "#EA4B71" },
   { name: "OpenAI", color: "#10A37F" },
   { name: "Claude", color: "#D4A574" },
-  { name: "Lemlist", color: "#7C9EFF" },
-  { name: "La Growth Machine", color: "#4ECBA0" },
+  { name: "Next.js", color: "#FFFFFF" },
+  { name: "Supabase", color: "#3ECF8E" },
   { name: "Zapier", color: "#FF4F00" },
   { name: "Notion", color: "#E8E8E2" },
 ];
 
 const toolsRow2: Tool[] = [
-  { name: "Pipedrive", color: "#4ECBA0" },
-  { name: "Apollo.io", color: "#7C9EFF" },
-  { name: "Clay", color: "#A78BFA" },
+  { name: "Stripe", color: "#635BFF" },
+  { name: "SvelteKit", color: "#FF3E00" },
   { name: "Mistral", color: "#F7931E" },
   { name: "Airtable", color: "#18BFFF" },
   { name: "Retool", color: "#F76808" },
-  { name: "Supabase", color: "#3ECF8E" },
-  { name: "FlutterFlow", color: "#A855F7" },
-  { name: "Dropcontact", color: "#FF5733" },
-  { name: "Modjo", color: "#7C9EFF" },
+  { name: "Tailwind", color: "#38BDF8" },
+  { name: "Framer", color: "#0055FF" },
 ];
 
 function Row({ tools, reverse = false }: { tools: Tool[]; reverse?: boolean }) {

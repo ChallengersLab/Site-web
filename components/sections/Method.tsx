@@ -10,29 +10,29 @@ import { ArrowRight } from "lucide-react";
 const steps = [
   {
     number: "01",
-    phase: "Diagnostic",
+    phase: "Cadrage",
     timeline: "Semaines 1–2",
     description:
-      "On audite vos process sales, votre stack et vos données. On identifie ce qui peut bouger vite — et ce qui demande un vrai chantier de fond.",
-    deliverable: "Roadmap priorisée",
+      "On challenge votre idée, on cadre le MVP — pas plus, pas moins. On identifie ce qu'on peut automatiser dès le départ.",
+    deliverable: "Scope MVP + roadmap",
     accent: "#EEFF66",
   },
   {
     number: "02",
-    phase: "Implémentation",
+    phase: "Construction",
     timeline: "Semaines 3–10",
     description:
-      "Nouveaux workflows, intégrations IA, séquences de prospection. On configure, on forme vos équipes, et ça tourne — sans que vous ayez à tout gérer.",
-    deliverable: "Systèmes opérationnels",
+      "On code l'app, le site, les automatisations. Tout est testé avec de vrais utilisateurs avant livraison.",
+    deliverable: "MVP + site + automatisations",
     accent: "#7C9EFF",
   },
   {
     number: "03",
-    phase: "Optimisation",
+    phase: "Premiers clients",
     timeline: "Semaine 10+",
     description:
-      "Chaque action est trackée. Ce qui marche, on pousse. Ce qui ne marche pas, on change. Le ROI se mesure, pas se promet.",
-    deliverable: "Croissance mesurable",
+      "SEO/GEO en place, stratégie d'acquisition lancée, accompagnement hands-on sur vos premières ventes. On ne part pas tant que ça ne rapporte pas.",
+    deliverable: "Revenue + clients payants",
     accent: "#4ECBA0",
   },
 ];
@@ -81,13 +81,13 @@ export function Method() {
                 <em className="gradient-text not-italic">Des résultats.</em>
               </h2>
               <p className="mt-5 text-[14px] leading-[1.7] text-white/30">
-                Un process clair, des livrables concrets, du ROI dès le départ.
+                De l'idée au premier euro. Un process clair, des livrables concrets.
               </p>
               <Link
-                href="/ressources/audit-stack-sales-checklist"
+                href="/offre"
                 className="group/link mt-6 inline-flex items-center gap-2 text-[13px] font-medium text-[#EEFF66]/60 transition-all hover:text-[#EEFF66]"
               >
-                Auditez votre stack sales gratuitement
+                Voir l'offre complète
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
               </Link>
             </ScrollReveal>
