@@ -57,7 +57,7 @@ const projects = [
     url: null,
     category: "site" as const,
     image: "/realisations/gtm-deeptech.png",
-    video: null,
+    video: "/realisations/gtm-deeptech.mp4",
   },
   {
     name: "Setting",
