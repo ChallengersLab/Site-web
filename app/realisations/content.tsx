@@ -34,7 +34,7 @@ const projects = [
     what: "Agent IA pour le matching immobilier",
     how: "Site vitrine Next.js avec animations Framer Motion",
     tags: ["Next.js", "Framer Motion", "IA"],
-    url: "https://immomatchsiteweb.vercel.app/",
+    url: null,
     category: "site" as const,
     image: "/realisations/immomatch.png",
   },
