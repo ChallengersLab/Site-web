@@ -86,7 +86,7 @@ export function Hero() {
                   className="h-1.5 w-1.5 rounded-full"
                   style={{ background: "#4ECBA0", boxShadow: "0 0 6px 2px rgba(78,203,160,0.5)" }}
                 />
-                Sales &times; IA &mdash; Paris
+                MVP &times; Automatisation &times; Premiers clients &mdash; Paris
               </span>
             </motion.div>
 
@@ -102,7 +102,7 @@ export function Hero() {
                     backgroundClip: "text",
                   }}
                 >
-                  Mieux vendre.
+                  Votre meilleure idée
                 </span>
                 {" "}
                 <span
@@ -113,7 +113,7 @@ export function Hero() {
                     backgroundClip: "text",
                   }}
                 >
-                  Builder plus vite.
+                  mérite d'exister.
                 </span>
               </span>
             </motion.h1>
@@ -123,8 +123,8 @@ export function Hero() {
               variants={fadeUp}
               className="mt-6 max-w-lg text-[16px] leading-[1.7] text-white/45"
             >
-              On structure vos ventes et on automatise vos process,<br />
-              <span className="text-white/65">on implémente et mesure, vous avancez.</span>
+              On accompagne les fondateurs qui lancent leur SaaS à l'ère de l'IA :<br />
+              <span className="text-white/65">on construit votre MVP complet, on automatise vos process, et on vous accompagne jusqu'aux premiers clients payants.</span>
             </motion.p>
 
             {/* Offer tags */}
@@ -135,7 +135,7 @@ export function Hero() {
                   className="h-1.5 w-1.5 rounded-full shrink-0"
                   style={{ background: "#4ECBA0" }}
                 />
-                {["MVP", "Process métier", "Automatisation", "CRM sur mesure"].map((tag) => (
+                {["MVP App", "Site SEO/GEO", "Automatisations"].map((tag) => (
                   <span
                     key={tag}
                     className="text-[12px] font-medium"
@@ -152,7 +152,7 @@ export function Hero() {
                   className="h-1.5 w-1.5 rounded-full shrink-0"
                   style={{ background: "#EEFF66" }}
                 />
-                {["Coaching commercial B2B", "Stratégie GTM", "Playbook scaling"].map((tag) => (
+                {["Acquisition", "Premiers clients", "SEO/GEO"].map((tag) => (
                   <span
                     key={tag}
                     className="text-[12px] font-medium"
@@ -174,14 +174,14 @@ export function Hero() {
                 href="#contact"
                 className="btn-glow inline-flex items-center justify-center gap-2.5 rounded-lg px-7 py-3.5 text-[14px] font-semibold"
               >
-                Parlons de votre projet
+                Concrétiser mon idée
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="#method"
+                href="/offre"
                 className="group inline-flex items-center justify-center gap-2 rounded-lg border border-white/[0.08] bg-white/[0.03] px-7 py-3.5 text-[14px] font-medium text-white/45 transition-all hover:border-white/[0.14] hover:text-white/70"
               >
-                Voir la méthode
+                Voir l'offre
                 <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5" />
               </a>
             </motion.div>
@@ -213,13 +213,13 @@ export function Hero() {
           transition={{ delay: 0.95, duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
           className="glass-card mt-16 flex flex-col items-center gap-8 px-8 py-7 sm:flex-row sm:gap-0 sm:divide-x sm:divide-white/[0.05]"
         >
-          <CountUpStat end={20} suffix="+" label="Entreprises accompagnées" />
-          <CountUpStat end={90} prefix="<" suffix="j" label="Pour les premiers résultats" />
+          <CountUpStat end={20} suffix="+" label="Projets livrés" />
+          <CountUpStat end={90} prefix="<" suffix="j" label="Pour les premiers clients" />
           <div className="flex-1 text-center">
             <p className="text-4xl font-medium tracking-[-0.04em] md:text-5xl gradient-text">
-              À la carte
+              Sur mesure
             </p>
-            <p className="mt-2 text-[12px] text-white/30">Sales &amp; IA, sur mesure</p>
+            <p className="mt-2 text-[12px] text-white/30">Build + Automate + Grow</p>
           </div>
         </motion.div>
       </div>
