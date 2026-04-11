@@ -83,7 +83,7 @@ export function Navbar() {
               href="/#contact"
               className="btn-glow hidden items-center gap-2 rounded-lg px-5 py-2 text-[13px] md:inline-flex"
             >
-              Parlons-en
+              On en parle
               <ArrowRight className="h-3.5 w-3.5" />
             </a>
 
@@ -116,7 +116,7 @@ export function Navbar() {
                       href="/#contact"
                       className="btn-glow flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-[14px]"
                     >
-                      Parlons-en <ArrowRight className="h-3.5 w-3.5" />
+                      On en parle <ArrowRight className="h-3.5 w-3.5" />
                     </a>
                   </div>
                 </div>

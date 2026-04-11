@@ -138,8 +138,7 @@ export function TrustBar() {
                 <div className="mt-8 flex flex-col gap-3">
                   <Link
                     href={`/offre#${pillar.id}`}
-                    className="group/link inline-flex items-center gap-2 text-[13px] font-medium transition-all"
-                    style={{ color: pillar.accent }}
+                    className="group/link inline-flex items-center gap-2 text-[13px] font-medium text-white/60 transition-all hover:text-white/90"
                   >
                     En savoir plus
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />

@@ -129,13 +129,13 @@ export function Hero() {
 
             {/* Offer tags */}
             <motion.div variants={fadeUp} className="mt-7 flex flex-col gap-2.5">
-              {/* IA — vert */}
+              {/* Build — vert */}
               <div className="flex flex-wrap items-center gap-2">
                 <span
                   className="h-1.5 w-1.5 rounded-full shrink-0"
                   style={{ background: "#4ECBA0" }}
                 />
-                {["MVP App", "Site SEO/GEO", "Automatisations"].map((tag) => (
+                {["MVP App", "Site web", "Automatisations"].map((tag) => (
                   <span
                     key={tag}
                     className="text-[12px] font-medium"
@@ -146,13 +146,13 @@ export function Hero() {
                   </span>
                 ))}
               </div>
-              {/* Sales — jaune */}
+              {/* Grow — jaune */}
               <div className="flex flex-wrap items-center gap-2">
                 <span
                   className="h-1.5 w-1.5 rounded-full shrink-0"
                   style={{ background: "#EEFF66" }}
                 />
-                {["Acquisition", "Premiers clients", "SEO/GEO"].map((tag) => (
+                {["SEO/GEO", "Acquisition", "Premiers clients"].map((tag) => (
                   <span
                     key={tag}
                     className="text-[12px] font-medium"
