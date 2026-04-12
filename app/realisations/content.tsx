@@ -170,7 +170,7 @@ const projects = [
     category: "app" as const,
     image: null,
     video: "/realisations/immomatch-app.mp4",
-    status: "2 lettres d'engagement agence · Levée 300K–1M€ en cours · 3 mois",
+    status: "2 lettres d'engagement agence · Levée 300K–1M€ en cours · 3 mois d'accompagnement",
   },
   {
     name: "EstimeIA",
@@ -181,7 +181,7 @@ const projects = [
     category: "app" as const,
     image: null,
     video: "/realisations/estimeia-app.mp4",
-    status: "Validation marché par une agence immobilière · 2 semaines",
+    status: "Validation marché par une agence immobilière · 2 semaines d'accompagnement",
   },
   {
     name: "PushQuest",
@@ -192,7 +192,7 @@ const projects = [
     category: "app" as const,
     image: null,
     video: "/realisations/pushquest.mp4",
-    status: "En test utilisateurs · 1 semaine",
+    status: "En test utilisateurs · 1 semaine d'accompagnement",
   },
   {
     name: "Clone IA",
@@ -203,7 +203,7 @@ const projects = [
     category: "app" as const,
     image: null,
     video: null,
-    status: "En test sur 3 profils solopreneurs/infopreneurs · 3 jours",
+    status: "En test sur 3 profils solopreneurs/infopreneurs · 3 jours d'accompagnement",
   },
 ];
 
