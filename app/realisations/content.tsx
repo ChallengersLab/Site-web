@@ -176,13 +176,13 @@ const projects = [
   },
   {
     name: "PushQuest",
-    what: "App fitness où chaque séance est un combat de boss RPG",
-    how: "Système de progression, exercices en temps réel, niveaux de difficulté",
-    tags: ["React", "Gamification", "IA"],
+    what: "App fitness gamifiée avec détection de mouvement par caméra",
+    how: "Détection pose en temps réel, système de progression RPG, combats de boss",
+    tags: ["React", "Computer Vision", "Gamification"],
     url: null,
     category: "app" as const,
     image: null,
-    video: null,
+    video: "/realisations/pushquest.mp4",
   },
   {
     name: "Clone IA",
