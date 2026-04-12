@@ -1,11 +1,85 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { ArrowUpRight, X, Maximize2 } from "lucide-react";
 import Image from "next/image";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/layout/Footer";
+
+/* ─────────────────────────────────────────────
+   Lightbox modal
+───────────────────────────────────────────── */
+function Lightbox({
+  project,
+  onClose,
+}: {
+  project: Project;
+  onClose: () => void;
+}) {
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    },
+    [onClose]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [handleKeyDown]);
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <button
+        onClick={onClose}
+        className="absolute right-6 top-6 rounded-full p-2 text-white/40 transition-colors hover:bg-white/10 hover:text-white"
+      >
+        <X className="h-6 w-6" />
+      </button>
+
+      <div
+        className="relative w-[90vw] max-w-[1200px]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/10">
+          <div className="relative aspect-[16/9]">
+            {project.video ? (
+              <video
+                src={project.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                className="h-full w-full object-contain"
+              />
+            ) : project.image ? (
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill
+                className="object-contain"
+              />
+            ) : null}
+          </div>
+          <div className="px-6 py-4 border-t border-white/5">
+            <h3 className="text-lg font-medium text-white">{project.name}</h3>
+            <p className="mt-1 text-[13px] text-white/50">{project.what}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 /* ─────────────────────────────────────────────
    Section accent colors
@@ -168,12 +242,16 @@ interface Project {
   video: string | null;
 }
 
-function ProjectCard({ project, delay }: { project: Project; delay: number }) {
+function ProjectCard({ project, delay, onExpand }: { project: Project; delay: number; onExpand: (p: Project) => void }) {
+  const hasMedia = project.video || project.image;
   return (
     <ScrollReveal delay={delay}>
       <TiltCard className="group overflow-hidden" intensity={5}>
         {/* Media area */}
-        <div className="relative aspect-[16/9] overflow-hidden bg-white/[0.02]">
+        <div
+          className={`relative aspect-[16/9] overflow-hidden bg-white/[0.02]${hasMedia ? " cursor-pointer" : ""}`}
+          onClick={() => hasMedia && onExpand(project)}
+        >
           {project.video ? (
             <video
               src={project.video}
@@ -193,6 +271,11 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
           ) : (
             <div className="flex h-full items-center justify-center text-white/10 text-sm">
               Vidéo à venir
+            </div>
+          )}
+          {hasMedia && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/30">
+              <Maximize2 className="h-6 w-6 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
             </div>
           )}
         </div>
@@ -239,8 +322,13 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
    Main content component
 ───────────────────────────────────────────── */
 export function RealisationsContent() {
+  const [expanded, setExpanded] = useState<Project | null>(null);
+
   return (
     <main id="main-content">
+      {expanded && (
+        <Lightbox project={expanded} onClose={() => setExpanded(null)} />
+      )}
       {/* ── Hero ── */}
       <section className="relative pt-40 pb-24 overflow-hidden">
         <div className="mx-auto max-w-[1100px] px-6 text-center">
@@ -276,7 +364,7 @@ export function RealisationsContent() {
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {siteProjects.map((project, i) => (
-              <ProjectCard key={project.name} project={project} delay={i * 0.1} />
+              <ProjectCard key={project.name} project={project} delay={i * 0.1} onExpand={setExpanded} />
             ))}
           </div>
         </div>
@@ -292,7 +380,7 @@ export function RealisationsContent() {
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {appProjects.map((project, i) => (
-              <ProjectCard key={project.name} project={project} delay={i * 0.1} />
+              <ProjectCard key={project.name} project={project} delay={i * 0.1} onExpand={setExpanded} />
             ))}
           </div>
         </div>
