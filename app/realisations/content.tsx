@@ -124,7 +124,7 @@ const projects = [
     category: "site" as const,
     image: "/realisations/setting.png",
     video: "/realisations/setting.mp4",
-    status: "#1 sur \"setting linkedin b2b\" · Top 10 sur \"prospection linkedin b2b\"",
+    status: "#1 sur \"setting linkedin b2b\"",
     featured: true,
   },
   {
