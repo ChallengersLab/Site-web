@@ -102,7 +102,29 @@ function hexToRgb(hex: string): string {
    Projects data
 ───────────────────────────────────────────── */
 const projects = [
-  // Sites web
+  // Sites web — GTM DeepTech et Setting en premier (meilleurs résultats SEO)
+  {
+    name: "GTM DeepTech",
+    what: "Cabinet de conseil go-to-market pour fondateurs deeptech B2B",
+    how: "Site corporate premium avec positionnement, blog et SEO",
+    tags: ["Next.js", "Tailwind", "SEO", "Copywriting"],
+    url: null,
+    category: "site" as const,
+    image: "/realisations/gtm-deeptech.png",
+    video: "/realisations/gtm-deeptech.mp4",
+    status: "Top 1 Google sur \"deeptech vente\" · 47+ startups accompagnées",
+  },
+  {
+    name: "Setting",
+    what: "Service de prospection LinkedIn clé en main pour solopreneurs B2B",
+    how: "Site produit avec pricing, social proof et onboarding",
+    tags: ["Next.js", "Tailwind", "SaaS"],
+    url: null,
+    category: "site" as const,
+    image: "/realisations/setting.png",
+    video: "/realisations/setting.mp4",
+    status: null,
+  },
   {
     name: "ImmoMatch",
     what: "Matching IA entre lifestyle client et biens immobiliers intercabinet",
@@ -123,28 +145,6 @@ const projects = [
     category: "site" as const,
     image: "/realisations/izaia.png",
     video: "/realisations/izaia.mp4",
-    status: null,
-  },
-  {
-    name: "GTM DeepTech",
-    what: "Cabinet de conseil go-to-market pour fondateurs deeptech B2B",
-    how: "Site corporate premium avec positionnement et offres",
-    tags: ["Next.js", "Tailwind", "Copywriting"],
-    url: null,
-    category: "site" as const,
-    image: "/realisations/gtm-deeptech.png",
-    video: "/realisations/gtm-deeptech.mp4",
-    status: null,
-  },
-  {
-    name: "Setting",
-    what: "Service de prospection LinkedIn clé en main pour solopreneurs B2B",
-    how: "Site produit avec pricing, social proof et onboarding",
-    tags: ["Next.js", "Tailwind", "SaaS"],
-    url: null,
-    category: "site" as const,
-    image: "/realisations/setting.png",
-    video: "/realisations/setting.mp4",
     status: null,
   },
   {
@@ -201,7 +201,7 @@ const projects = [
     category: "app" as const,
     image: null,
     video: null,
-    status: "En test sur 3 profils solopreneurs/infopreneurs · 2 semaines",
+    status: "En test sur 3 profils solopreneurs/infopreneurs · 3 jours",
   },
 ];
 
