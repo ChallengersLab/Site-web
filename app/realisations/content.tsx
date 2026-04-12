@@ -112,6 +112,7 @@ const projects = [
     category: "site" as const,
     image: "/realisations/immomatch.png",
     video: "/realisations/immomatch.mp4",
+    status: null,
   },
   {
     name: "IzaIA",
@@ -122,6 +123,7 @@ const projects = [
     category: "site" as const,
     image: "/realisations/izaia.png",
     video: "/realisations/izaia.mp4",
+    status: null,
   },
   {
     name: "GTM DeepTech",
@@ -132,6 +134,7 @@ const projects = [
     category: "site" as const,
     image: "/realisations/gtm-deeptech.png",
     video: "/realisations/gtm-deeptech.mp4",
+    status: null,
   },
   {
     name: "Setting",
@@ -142,6 +145,7 @@ const projects = [
     category: "site" as const,
     image: "/realisations/setting.png",
     video: "/realisations/setting.mp4",
+    status: null,
   },
   {
     name: "EstimeIA",
@@ -152,6 +156,7 @@ const projects = [
     category: "site" as const,
     image: "/realisations/estimeia-site.png",
     video: null,
+    status: null,
   },
   // Apps
   {
@@ -163,6 +168,7 @@ const projects = [
     category: "app" as const,
     image: null,
     video: "/realisations/immomatch-app.mp4",
+    status: "2 lettres d'engagement agence · Levée 300K–1M€ en cours · 3 mois",
   },
   {
     name: "EstimeIA",
@@ -173,6 +179,7 @@ const projects = [
     category: "app" as const,
     image: null,
     video: "/realisations/estimeia-app.mp4",
+    status: "Validation marché par une agence immobilière · 2 semaines",
   },
   {
     name: "PushQuest",
@@ -183,6 +190,7 @@ const projects = [
     category: "app" as const,
     image: null,
     video: "/realisations/pushquest.mp4",
+    status: "En test utilisateurs · 1 semaine",
   },
   {
     name: "Clone IA",
@@ -193,6 +201,7 @@ const projects = [
     category: "app" as const,
     image: null,
     video: null,
+    status: "En test sur 3 profils solopreneurs/infopreneurs · 2 semaines",
   },
 ];
 
@@ -240,6 +249,7 @@ interface Project {
   category: "site" | "app";
   image: string | null;
   video: string | null;
+  status: string | null;
 }
 
 function ProjectCard({ project, delay, onExpand }: { project: Project; delay: number; onExpand: (p: Project) => void }) {
@@ -298,6 +308,11 @@ function ProjectCard({ project, delay, onExpand }: { project: Project; delay: nu
             )}
           </div>
           <p className="mt-2 text-[12px] text-white/30">{project.how}</p>
+          {project.status && (
+            <p className="mt-3 text-[11px] font-medium text-[#4ECBA0]/80">
+              {project.status}
+            </p>
+          )}
           <div className="mt-4 flex flex-wrap gap-1.5">
             {project.tags.map((tag) => (
               <span
