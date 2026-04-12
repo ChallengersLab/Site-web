@@ -112,7 +112,8 @@ const projects = [
     category: "site" as const,
     image: "/realisations/gtm-deeptech.png",
     video: "/realisations/gtm-deeptech.mp4",
-    status: "#1 Google sur \"consultant deeptech b2b\" · Top 3 sur \"vente deeptech b2b\"",
+    status: "#1 Google sur \"vente deeptech b2b\" · #1 sur \"consultant deeptech b2b\"",
+    featured: true,
   },
   {
     name: "Setting",
@@ -124,6 +125,7 @@ const projects = [
     image: "/realisations/setting.png",
     video: "/realisations/setting.mp4",
     status: "#1 sur \"setting linkedin b2b\" · Top 10 sur \"prospection linkedin b2b\"",
+    featured: true,
   },
   {
     name: "ImmoMatch",
@@ -250,6 +252,7 @@ interface Project {
   image: string | null;
   video: string | null;
   status: string | null;
+  featured?: boolean;
 }
 
 function ProjectCard({ project, delay, onExpand }: { project: Project; delay: number; onExpand: (p: Project) => void }) {
@@ -334,6 +337,78 @@ function ProjectCard({ project, delay, onExpand }: { project: Project; delay: nu
 }
 
 /* ─────────────────────────────────────────────
+   Featured project card (full-width, bigger)
+───────────────────────────────────────────── */
+function FeaturedProjectCard({ project, delay, onExpand }: { project: Project; delay: number; onExpand: (p: Project) => void }) {
+  const hasMedia = project.video || project.image;
+  return (
+    <ScrollReveal delay={delay}>
+      <TiltCard className="group overflow-hidden" intensity={3}>
+        <div className="flex flex-col lg:flex-row">
+          {/* Media area — larger */}
+          <div
+            className={`relative aspect-[16/9] lg:aspect-auto lg:w-[60%] overflow-hidden bg-white/[0.02]${hasMedia ? " cursor-pointer" : ""}`}
+            onClick={() => hasMedia && onExpand(project)}
+          >
+            {project.video ? (
+              <video
+                src={project.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-full w-full object-contain"
+              />
+            ) : project.image ? (
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+              />
+            ) : (
+              <div className="flex h-full items-center justify-center text-white/10 text-sm">
+                Vidéo à venir
+              </div>
+            )}
+            {hasMedia && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/30">
+                <Maximize2 className="h-8 w-8 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+              </div>
+            )}
+          </div>
+          {/* Content — side panel */}
+          <div className="p-8 lg:w-[40%] flex flex-col justify-center">
+            <h3 className="text-xl font-medium text-white">{project.name}</h3>
+            <p className="mt-2 text-[14px] text-white/50 leading-[1.6]">{project.what}</p>
+            <p className="mt-2 text-[13px] text-white/30">{project.how}</p>
+            {project.status && (
+              <p className="mt-4 text-[12px] font-medium text-[#4ECBA0]">
+                {project.status}
+              </p>
+            )}
+            <div className="mt-5 flex flex-wrap gap-1.5">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full px-2.5 py-0.5 text-[10px] font-medium text-white/40"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "0.5px solid rgba(255,255,255,0.08)",
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </TiltCard>
+    </ScrollReveal>
+  );
+}
+
+/* ─────────────────────────────────────────────
    Main content component
 ───────────────────────────────────────────── */
 export function RealisationsContent() {
@@ -377,8 +452,15 @@ export function RealisationsContent() {
             subtext="Sites vitrines, landing pages, sites produit."
             color={SITES_COLOR}
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {siteProjects.map((project, i) => (
+          {/* Featured sites — full-width cards */}
+          <div className="flex flex-col gap-6">
+            {siteProjects.filter(p => p.featured).map((project, i) => (
+              <FeaturedProjectCard key={project.name} project={project} delay={i * 0.1} onExpand={setExpanded} />
+            ))}
+          </div>
+          {/* Other sites — standard grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            {siteProjects.filter(p => !p.featured).map((project, i) => (
               <ProjectCard key={project.name} project={project} delay={i * 0.1} onExpand={setExpanded} />
             ))}
           </div>
