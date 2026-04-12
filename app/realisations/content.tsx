@@ -166,13 +166,13 @@ const projects = [
   },
   {
     name: "EstimeIA",
-    what: "Estimation immobilière en 15 secondes à partir des données DVF",
-    how: "App avec recherche d'adresse, analyse IA et génération de dossier PDF",
-    tags: ["Next.js", "API DVF", "IA", "Maps"],
+    what: "Estimation immobilière en moins d'une minute, données marché + IA",
+    how: "App avec recherche d'adresse, analyse multi-sources et génération de dossier PDF",
+    tags: ["Next.js", "IA", "Data", "Maps"],
     url: null,
     category: "app" as const,
     image: null,
-    video: null,
+    video: "/realisations/estimeia-app.mp4",
   },
   {
     name: "PushQuest",
